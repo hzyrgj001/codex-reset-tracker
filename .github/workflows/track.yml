@@ -1,0 +1,47 @@
+name: track-resets
+
+on:
+  schedule:
+    - cron: "17 */4 * * *"   # every 4 hours (UTC)
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: track-resets
+  cancel-in-progress: false
+
+jobs:
+  track:
+    runs-on: ubuntu-latest
+    env:
+      X_BEARER_TOKEN: ${{ secrets.X_BEARER_TOKEN }}
+    steps:
+      - name: Skip when no X API token is configured
+        if: env.X_BEARER_TOKEN == ''
+        run: echo "::notice::X_BEARER_TOKEN secret not set; skipping scheduled fetch. See README > Automation."
+      - uses: actions/checkout@v4
+        if: env.X_BEARER_TOKEN != ''
+      - uses: actions/setup-python@v5
+        if: env.X_BEARER_TOKEN != ''
+        with:
+          python-version: "3.12"
+      - name: Fetch, classify, append
+        if: env.X_BEARER_TOKEN != ''
+        run: PYTHONPATH=src python -m codex_reset_tracker --x-api --json > run.json || (cat run.json; exit 1)
+      - name: Summary
+        if: env.X_BEARER_TOKEN != ''
+        run: |
+          PYTHONPATH=src python -m codex_reset_tracker --dry-run >> "$GITHUB_STEP_SUMMARY"
+          python -c "import json;j=json.load(open('run.json'));print('alert=' + str(j['alert']).lower())" >> "$GITHUB_OUTPUT"
+        id: summary
+      - name: Commit data changes
+        if: env.X_BEARER_TOKEN != ''
+        run: |
+          python scripts/render_timeline.py
+          git config user.name "codex-reset-tracker[bot]"
+          git config user.email "codex-reset-tracker@users.noreply.github.com"
+          git add data/ docs/timeline.md
+          git diff --cached --quiet || git commit -m "data: tracker update $(date -u +%Y-%m-%dT%H:%MZ)"
+          git push

@@ -1,0 +1,22 @@
+name: ci
+on:
+  push:
+  pull_request:
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ["3.11", "3.12", "3.13"]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+      - run: python -m unittest discover -s tests -v
+      - run: PYTHONPATH=src python -m codex_reset_tracker --dry-run
+      - name: Dataset is reproducible from the raw cache
+        run: |
+          python scripts/build_dataset.py
+          python scripts/render_timeline.py
+          git diff --exit-code -- data/resets.jsonl data/signals.jsonl docs/timeline.md

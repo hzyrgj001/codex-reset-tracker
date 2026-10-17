@@ -1,0 +1,20 @@
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+build/
+dist/
+.env
+.env.*
+*.tmp
+run.json
+chart.png
+*.png
+!docs/*.png
+.DS_Store
+.idea/
+.vscode/
+_site/
+# local polling cursor; remove this line if you want CI to persist it
+data/state.json

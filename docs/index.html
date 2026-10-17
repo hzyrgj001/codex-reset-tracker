@@ -1,0 +1,306 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Codex Reset Tracker (unofficial)</title>
+<meta name="description" content="Unofficial, open-source tracker of Codex / ChatGPT Work usage resets announced on X. Not affiliated with OpenAI or SpaceXAI.">
+<style>
+  :root { --bg:#0b1020; --panel:#121a33; --ink:#e6e9f2; --mute:#8b93ad; --line:#24305a;
+          --confirmed:#22c55e; --announced:#f59e0b; --hint:#a855f7; --outage:#ef4444; --recovery:#38bdf8;
+          --rivalry:#ec4899; --improvement:#94a3b8; --other:#475569; }
+  @media (prefers-color-scheme: light) { :root { --bg:#f6f7fb; --panel:#fff; --ink:#111827; --mute:#5b6478; --line:#dfe3ee; } }
+  * { box-sizing: border-box; }
+  body { margin:0; font:14px/1.45 system-ui,-apple-system,Segoe UI,Roboto,sans-serif; background:var(--bg); color:var(--ink); }
+  header, main, footer { max-width:1180px; margin:0 auto; padding:16px; }
+  h1 { font-size:22px; margin:8px 0 4px; } h2 { font-size:16px; margin:0 0 10px; }
+  .sub { color:var(--mute); }
+  .grid { display:grid; gap:14px; grid-template-columns: repeat(12, 1fr); }
+  .card { background:var(--panel); border:1px solid var(--line); border-radius:12px; padding:14px; grid-column: span 12; overflow:hidden; }
+  .s4 { grid-column: span 4; } .s6 { grid-column: span 6; } .s8 { grid-column: span 8; }
+  @media (max-width: 860px) { .s4,.s6,.s8 { grid-column: span 12; } }
+  .big { font-size:44px; font-weight:700; line-height:1.1; }
+  .pill { display:inline-block; padding:2px 8px; border-radius:999px; font-size:12px; font-weight:600; color:#fff; }
+  .legend span { margin-right:12px; white-space:nowrap; } .dot { display:inline-block; width:10px; height:10px; border-radius:50%; margin-right:4px; vertical-align:middle; }
+  svg text { fill: var(--mute); font-size:11px; }
+  .days { display:grid; grid-template-columns: repeat(14, 1fr); gap:6px; }
+  .day { border:1px solid var(--line); border-radius:8px; padding:6px 4px; text-align:center; font-size:12px; min-height:52px; }
+  .day b { display:block; font-size:15px; }
+  .day.reset { background: color-mix(in srgb, var(--confirmed) 30%, transparent); border-color: var(--confirmed); }
+  .day.banked { background: color-mix(in srgb, var(--announced) 25%, transparent); border-color: var(--announced); }
+  .day.impr { background: color-mix(in srgb, var(--improvement) 18%, transparent); }
+  .day.today { outline: 2px dashed var(--ink); }
+  .day a { color: inherit; text-decoration: none; }
+  table { width:100%; border-collapse: collapse; font-size:13px; }
+  th, td { text-align:left; padding:6px 6px; border-bottom:1px solid var(--line); vertical-align: top; }
+  th { color: var(--mute); font-weight:600; position: sticky; top:0; background: var(--panel); }
+  .tablewrap { max-height: 520px; overflow:auto; }
+  a { color: #60a5fa; }
+  .meter { height:14px; border-radius:7px; background: var(--line); overflow:hidden; }
+  .meter > div { height:100%; background: linear-gradient(90deg, var(--recovery), var(--announced), var(--confirmed)); }
+  .heat { display:grid; grid-template-columns: 90px repeat(24, 1fr); gap:2px; font-size:11px; align-items:center; }
+  .heat div.c { height:22px; border-radius:3px; text-align:center; line-height:22px; color:#fff; }
+  .controls { display:flex; gap:10px; flex-wrap:wrap; align-items:center; margin-bottom:8px; }
+  select, input[type=file], button { background: var(--panel); color: var(--ink); border:1px solid var(--line); border-radius:8px; padding:4px 8px; }
+  .warn { border-left: 4px solid var(--announced); padding: 8px 12px; background: color-mix(in srgb, var(--announced) 10%, transparent); border-radius: 6px; }
+  .tip { position: fixed; pointer-events:none; background: var(--panel); border:1px solid var(--line); border-radius:8px; padding:8px; max-width:360px; font-size:12px; display:none; z-index:9; box-shadow: 0 6px 24px rgba(0,0,0,.3); }
+</style>
+</head>
+<body>
+<header>
+  <h1>Codex Reset Tracker <span class="sub">(unofficial)</span></h1>
+  <div class="sub">Tracks global Codex / ChatGPT Work usage resets announced publicly on X by
+    <a href="https://x.com/thsottiaux" rel="noopener">@thsottiaux</a>, plus related signals.
+    <b>Not affiliated with OpenAI or SpaceXAI.</b> Apache-2.0 · <a href="https://github.com/hzyrgj001/codex-reset-tracker">source</a> ·
+    <a href="patterns.md">patterns</a> · <a href="schema.md">schema</a></div>
+  <p id="status" class="sub">Loading data…</p>
+  <div id="fallback" class="warn" style="display:none">
+    Could not fetch <code>data/*.jsonl</code> (opening this file directly via <code>file://</code> blocks fetch).
+    Run <code>python -m http.server</code> in the repo root and open <code>http://localhost:8000/docs/</code>,
+    or load the two files here: <input type="file" id="files" multiple accept=".jsonl,.json">
+  </div>
+</header>
+<main class="grid">
+  <section class="card s4"><h2>Days since last confirmed reset</h2>
+    <div class="big" id="since">–</div><div class="sub" id="sinceDetail"></div></section>
+  <section class="card s4"><h2>Reset likelihood <span class="sub">(heuristic)</span></h2>
+    <div style="display:flex;align-items:center;gap:10px"><div class="big" id="lkScore">–</div><span id="lkLevel" class="pill"></span></div>
+    <div class="meter" style="margin:8px 0"><div id="lkBar" style="width:0"></div></div>
+    <div id="lkFactors" class="sub"></div>
+    <p class="sub" style="margin:8px 0 0">A transparent sum of weights over public posts (same formula as the CLI).
+      <b>Not a prediction or a promise</b>; resets are entirely at OpenAI's discretion.</p></section>
+  <section class="card s4"><h2>Dataset</h2><div id="totals"></div></section>
+
+  <section class="card"><h2>Timeline</h2>
+    <div class="controls">
+      <label>Range <select id="range"><option value="2026-09-20">since 2026-09-20</option><option value="2026-07-01">since 2026-07-01</option><option value="all">all</option></select></label>
+      <label><input type="checkbox" id="showSig" checked> signals</label>
+      <span class="legend" id="legend"></span>
+    </div>
+    <svg id="timeline" width="100%" height="270" role="img" aria-label="Timeline of resets and signals"></svg>
+    <div class="sub">Hover to read a post; click to open it on X. Diamonds are reset announce/confirm posts; dots are signals. Times are shown in your local zone (<span class="tzname"></span>).</div>
+  </section>
+
+  <section class="card s8"><h2>The 28-day series (Day N, Pacific calendar)</h2>
+    <div class="days" id="days"></div>
+    <div class="sub" style="margin-top:6px">Green = full reset · amber = banked reset · grey = improvement-only day · dashed = today. Day 12 broke the even-day pattern after “Let's break the cycle”.</div></section>
+  <section class="card s4"><h2>Announce → confirm lag</h2>
+    <svg id="lag" width="100%" height="230"></svg><div class="sub" id="lagStats"></div></section>
+
+  <section class="card"><h2>Hour of day of reset posts</h2>
+    <div class="controls"><label>Posts <select id="heatWhich"><option value="first">first post of each event</option><option value="confirm">confirmations</option></select></label>
+      <label>Range <select id="heatRange"><option value="2026-09-20">since 2026-09-20</option><option value="all">all</option></select></label></div>
+    <div id="heat"></div>
+    <div class="sub">Two rows: UTC, and your local time (<span class="tzname"></span>). Darker = more events.</div></section>
+
+  <section class="card"><h2>Events</h2>
+    <div class="controls"><label>Show <select id="tableWhich"><option value="resets">reset events</option><option value="signals">signals</option></select></label></div>
+    <div class="tablewrap"><table id="table"></table></div></section>
+</main>
+<footer class="sub">
+  Unofficial community project. Not affiliated with, endorsed by, or speaking for OpenAI or SpaceXAI.
+  Data are public X posts; quotes are abbreviated. Post times are not per-account delivery times.
+</footer>
+<div class="tip" id="tip"></div>
+<script>
+"use strict";
+const COLORS = { reset_confirmed:"--confirmed", reset_announced:"--announced", reset_hint:"--hint", outage:"--outage",
+  recovery:"--recovery", rivalry_hint:"--rivalry", usage_improvement:"--improvement", other:"--other" };
+const css = v => getComputedStyle(document.documentElement).getPropertyValue(v).trim();
+const color = l => css(COLORS[l] || "--other");
+const LOCAL_TZ = Intl.DateTimeFormat().resolvedOptions().timeZone || "local";
+// Same constants as src/codex_reset_tracker/analysis.py
+const W = { base:0.05, time_since_reset_max:0.30, time_since_reset_full_h:96, campaign_even_day:0.20,
+            outage_24h:0.15, hint_24h:0.10, rivalry_24h:0.05, day_slot_used:-0.25 };
+const PENDING = 0.95, DAY0 = "2026-10-04", CAMPAIGN_LEN = 28;
+let RESETS = [], SIGNALS = [];
+
+const el = (tag, attrs = {}, ...kids) => { const e = document.createElement(tag);
+  for (const [k, v] of Object.entries(attrs)) { if (k === "class") e.className = v; else if (k === "style") e.style.cssText = v; else e.setAttribute(k, v); }
+  for (const k of kids) e.append(k instanceof Node ? k : document.createTextNode(String(k))); return e; };
+const svgEl = (tag, attrs = {}) => { const e = document.createElementNS("http://www.w3.org/2000/svg", tag);
+  for (const [k, v] of Object.entries(attrs)) e.setAttribute(k, v); return e; };
+const link = (url, text) => { const a = el("a", { href: url, target: "_blank", rel: "noopener noreferrer" }, text); return a; };
+const parseJsonl = txt => txt.split(/\r?\n/).map(l => l.trim()).filter(l => l && !l.startsWith("//")).map(l => JSON.parse(l));
+const t = s => new Date(s).getTime();
+const fmtLocal = s => new Date(s).toLocaleString(undefined, { year:"numeric", month:"2-digit", day:"2-digit", hour:"2-digit", minute:"2-digit" });
+const fmtTpe = s => new Date(s).toLocaleString("en-CA", { timeZone:"Asia/Taipei", year:"numeric", month:"2-digit", day:"2-digit", hour:"2-digit", minute:"2-digit", hour12:false });
+const evTime = e => (e.confirm || e.announce).utc;
+const firstTime = e => (e.announce || e.confirm).utc;
+function pacificDate(ms) { const p = new Intl.DateTimeFormat("en-CA", { timeZone:"America/Los_Angeles", year:"numeric", month:"2-digit", day:"2-digit" }).format(new Date(ms)); return p; }
+function campaignDay(ms) { const n = Math.round((Date.parse(pacificDate(ms) + "T00:00:00Z") - Date.parse(DAY0 + "T00:00:00Z")) / 86400000); return (n >= 1 && n <= CAMPAIGN_LEN) ? n : null; }
+const labelsOf = s => s.labels && s.labels.length ? s.labels : [s.label];
+
+async function load() {
+  for (const base of ["../data/", "data/", "./"]) {
+    try {
+      const [r, s] = await Promise.all([fetch(base + "resets.jsonl"), fetch(base + "signals.jsonl")]);
+      if (r.ok && s.ok) { RESETS = parseJsonl(await r.text()); SIGNALS = parseJsonl(await s.text()); render(base); return; }
+    } catch (_) { /* try next */ }
+  }
+  document.getElementById("status").textContent = "No data loaded.";
+  document.getElementById("fallback").style.display = "block";
+}
+document.getElementById("files").addEventListener("change", async ev => {
+  for (const f of ev.target.files) { const rows = parseJsonl(await f.text());
+    if (rows.length && "event_id" in rows[0]) RESETS = rows; else SIGNALS = rows; }
+  if (RESETS.length) render("local files");
+});
+
+function likelihood(now) {
+  const f = [["base rate", W.base]];
+  const conf = RESETS.filter(e => e.status === "confirmed").sort((a, b) => t(evTime(a)) - t(evTime(b)));
+  const lastT = conf.length ? t(evTime(conf[conf.length - 1])) : null;
+  const pending = RESETS.some(e => e.status === "announced" && e.announce && now - t(e.announce.utc) < 48 * 3600e3 && now >= t(e.announce.utc));
+  if (lastT) { const h = (now - lastT) / 3600e3; f.push([`${h.toFixed(0)} h since last confirmed reset`, W.time_since_reset_max * Math.min(1, h / W.time_since_reset_full_h)]); }
+  const day = campaignDay(now);
+  if (day) {
+    const broken = SIGNALS.some(s => (s.text || "").toLowerCase().includes("break the cycle") && (!lastT || t(s.utc) > lastT));
+    if (day % 2 === 0) f.push([`Day ${day} is even` + (broken ? " (cycle declared broken: halved)" : ""), W.campaign_even_day * (broken ? 0.5 : 1)]);
+    const today = pacificDate(now);
+    if (SIGNALS.some(s => s.author === "thsottiaux" && labelsOf(s).includes("usage_improvement") && (s.text || "").toLowerCase().startsWith(`day ${day}`) && pacificDate(t(s.utc)) === today))
+      f.push([`Day ${day}/ already shipped an improvement`, W.day_slot_used]);
+  }
+  const recent = SIGNALS.filter(s => !s.false_positive && now - t(s.utc) >= 0 && now - t(s.utc) <= 24 * 3600e3);
+  for (const [lab, w, name] of [["outage", W.outage_24h, "outage/capacity signal in last 24 h"], ["reset_hint", W.hint_24h, "strong hint in last 24 h"], ["rivalry_hint", W.rivalry_24h, "Tibo/poteto banter in last 24 h"]])
+    if (recent.some(s => labelsOf(s).includes(lab))) f.push([name, w]);
+  let score = Math.max(0, Math.min(1, f.reduce((a, [, v]) => a + v, 0)));
+  if (pending) { f.push(["announced reset not yet confirmed", Math.max(0, PENDING - score)]); score = Math.max(score, PENDING); }
+  const level = pending ? "pending" : score >= 0.5 ? "high" : score >= 0.25 ? "medium" : "low";
+  return { score, level, day, factors: f };
+}
+
+function render(src) {
+  const now = Date.now();
+  document.querySelectorAll(".tzname").forEach(n => n.textContent = LOCAL_TZ);
+  const conf = RESETS.filter(e => e.status === "confirmed").sort((a, b) => t(evTime(a)) - t(evTime(b)));
+  document.getElementById("status").textContent = `Loaded ${RESETS.length} reset events and ${SIGNALS.length} signals from ${src}. Latest post in data: ${fmtLocal(Math.max(...RESETS.map(e => t(evTime(e))), ...SIGNALS.map(s => t(s.utc))))} (${LOCAL_TZ}).`;
+  // since
+  if (conf.length) { const last = conf[conf.length - 1]; const d = (now - t(evTime(last))) / 86400e3;
+    document.getElementById("since").textContent = d.toFixed(1);
+    const box = document.getElementById("sinceDetail"); box.replaceChildren(`Last: ${fmtLocal(evTime(last))} local · ${fmtTpe(evTime(last))} Taipei · `, link((last.confirm || last.announce).url, "post"), ` · ${last.kind}${last.day_n ? `, Day ${last.day_n}` : ""}`); }
+  // likelihood
+  const lk = likelihood(now);
+  document.getElementById("lkScore").textContent = lk.score.toFixed(2);
+  const lv = document.getElementById("lkLevel"); lv.textContent = lk.level.toUpperCase();
+  lv.style.background = { low: css("--recovery"), medium: css("--announced"), high: css("--confirmed"), pending: css("--hint") }[lk.level];
+  document.getElementById("lkBar").style.width = (lk.score * 100) + "%";
+  document.getElementById("lkFactors").replaceChildren(...lk.factors.map(([n, v]) => el("div", {}, `${v >= 0 ? "+" : ""}${v.toFixed(2)}  ${n}`)),
+    el("div", {}, lk.day ? `Campaign Day ${lk.day} of ${CAMPAIGN_LEN}` : "Outside the 28-day series"));
+  // totals
+  const lags = RESETS.map(e => e.lag_hours).filter(v => v != null).sort((a, b) => a - b);
+  const med = a => a.length ? (a.length % 2 ? a[(a.length - 1) / 2] : (a[a.length / 2 - 1] + a[a.length / 2]) / 2) : null;
+  const ivals = conf.slice(1).map((e, i) => (t(evTime(e)) - t(evTime(conf[i]))) / 86400e3).sort((a, b) => a - b);
+  document.getElementById("totals").replaceChildren(
+    el("div", {}, `Reset events: ${RESETS.length}`), el("div", {}, `Confirmed: ${conf.length} (${conf.filter(e => e.kind === "full").length} full)`),
+    el("div", {}, `Announced only: ${RESETS.filter(e => e.status === "announced").length}`), el("div", {}, `Signals: ${SIGNALS.length}`),
+    el("div", {}, `Median gap between confirmed resets: ${med(ivals)?.toFixed(1)} d`), el("div", {}, `Median announce→confirm: ${med(lags)?.toFixed(1)} h (n=${lags.length})`));
+  drawTimeline(); drawDays(lk.day); drawLag(); drawHeat(); drawTable();
+}
+
+const tip = document.getElementById("tip");
+function showTip(evt, lines) { tip.replaceChildren(...lines.map((l, i) => el(i ? "div" : "b", {}, l))); tip.style.display = "block";
+  tip.style.left = Math.min(window.innerWidth - 370, evt.clientX + 12) + "px"; tip.style.top = (evt.clientY + 12) + "px"; }
+const hideTip = () => tip.style.display = "none";
+
+function drawTimeline() {
+  const svg = document.getElementById("timeline"); svg.replaceChildren();
+  const rng = document.getElementById("range").value, showSig = document.getElementById("showSig").checked;
+  const lo = rng === "all" ? -Infinity : Date.parse(rng + "T00:00:00Z");
+  const rows = ["reset_confirmed", "reset_announced", "reset_hint", "outage", "recovery", "rivalry_hint", "usage_improvement", "other"];
+  const pts = [];
+  for (const e of RESETS) for (const [k, lab] of [["announce", "reset_announced"], ["confirm", "reset_confirmed"]]) if (e[k] && t(e[k].utc) >= lo) pts.push({ ms: t(e[k].utc), lab, ref: e[k], diamond: true, ev: e });
+  if (showSig) for (const s of SIGNALS) if (t(s.utc) >= lo) pts.push({ ms: t(s.utc), lab: s.label, ref: s, fp: s.false_positive });
+  if (!pts.length) return;
+  const W_ = svg.clientWidth || 1100, H = 270, L = 120, R = 16, T = 10, B = 30, rowH = (H - T - B) / rows.length;
+  const min = Math.min(...pts.map(p => p.ms)), max = Math.max(Date.now(), ...pts.map(p => p.ms));
+  const x = ms => L + (ms - min) / Math.max(1, max - min) * (W_ - L - R);
+  rows.forEach((r, i) => { const y = T + rowH * (i + .5);
+    svg.append(svgEl("line", { x1: L, x2: W_ - R, y1: y, y2: y, stroke: css("--line") }));
+    const tx = svgEl("text", { x: 4, y: y + 4 }); tx.textContent = r; svg.append(tx); });
+  const span = max - min, step = span > 200 * 86400e3 ? 30 : span > 40 * 86400e3 ? 7 : 2;
+  for (let d = new Date(min); d.getTime() <= max; d = new Date(d.getTime() + step * 86400e3)) {
+    const xx = x(d.getTime()); svg.append(svgEl("line", { x1: xx, x2: xx, y1: T, y2: H - B, stroke: css("--line"), "stroke-dasharray": "2 4" }));
+    const tx = svgEl("text", { x: xx - 16, y: H - 10 }); tx.textContent = d.toLocaleDateString(undefined, { month: "short", day: "numeric" }); svg.append(tx); }
+  const nx = x(Date.now()); svg.append(svgEl("line", { x1: nx, x2: nx, y1: T, y2: H - B, stroke: css("--ink"), "stroke-width": 1.5 }));
+  for (const p of pts) {
+    const y = T + rowH * (rows.indexOf(p.lab) + .5), cx = x(p.ms);
+    const shape = p.diamond ? svgEl("rect", { x: cx - 5, y: y - 5, width: 10, height: 10, transform: `rotate(45 ${cx} ${y})`, fill: color(p.lab), stroke: css("--ink"), "stroke-width": .6 })
+                            : svgEl("circle", { cx, cy: y, r: 4.5, fill: p.fp ? "none" : color(p.lab), stroke: color(p.lab), "stroke-width": 1.5 });
+    shape.style.cursor = "pointer";
+    shape.addEventListener("mousemove", evt => showTip(evt, [`${p.lab}${p.fp ? " (false positive)" : ""}${p.ev && p.ev.day_n ? ` · Day ${p.ev.day_n}` : ""}`,
+      `${fmtLocal(p.ref.utc)} local · ${fmtTpe(p.ref.utc)} TPE · ${p.ref.utc.slice(0, 16).replace("T", " ")} UTC`, `@${p.ref.author}: ${p.ref.text}`]));
+    shape.addEventListener("mouseleave", hideTip);
+    shape.addEventListener("click", () => window.open(p.ref.url, "_blank", "noopener"));
+    svg.append(shape);
+  }
+  document.getElementById("legend").replaceChildren(...rows.map(r => el("span", {}, el("i", { class: "dot", style: `background:${color(r)}` }), r)), el("span", {}, "○ hollow = false positive"));
+}
+
+function drawDays(today) {
+  const box = document.getElementById("days"); box.replaceChildren();
+  const byDay = {};
+  for (const e of RESETS) if (e.day_n) (byDay[e.day_n] ||= []).push({ kind: e.status === "confirmed" ? e.kind : "announced", url: (e.confirm || e.announce).url });
+  for (const s of SIGNALS) if (s.author === "thsottiaux" && s.day_n && labelsOf(s).includes("usage_improvement") && (s.text || "").toLowerCase().startsWith("day ")) (byDay[s.day_n] ||= []).push({ kind: "improvement", url: s.url });
+  for (let d = 1; d <= CAMPAIGN_LEN; d++) {
+    const items = byDay[d] || [], kinds = items.map(i => i.kind);
+    const cls = kinds.includes("full") ? "reset" : kinds.includes("banked") ? "banked" : kinds.includes("improvement") ? "impr" : "";
+    const label = kinds.includes("full") ? "RESET" : kinds.includes("banked") ? "banked" : kinds.includes("improvement") ? "ship" : (today && d > today ? "" : "–");
+    const cell = el("div", { class: `day ${cls}${today === d ? " today" : ""}`, title: kinds.join(", ") || "no data" }, el("b", {}, d), label);
+    if (items.length) { const a = link(items[0].url, ""); a.append(...cell.childNodes); cell.replaceChildren(a); }
+    box.append(cell);
+  }
+}
+
+function drawLag() {
+  const svg = document.getElementById("lag"); svg.replaceChildren();
+  const ev = RESETS.filter(e => e.lag_hours != null).sort((a, b) => t(firstTime(a)) - t(firstTime(b))).slice(-12);
+  const W_ = svg.clientWidth || 360, H = 230, L = 70, R = 30, rowH = (H - 10) / Math.max(ev.length, 1), maxL = Math.max(...ev.map(e => e.lag_hours), 1);
+  ev.forEach((e, i) => { const y = 5 + i * rowH, w = (W_ - L - R) * e.lag_hours / maxL;
+    const lab = svgEl("text", { x: 0, y: y + rowH * .7 }); lab.textContent = (e.day_n ? `Day ${e.day_n} ` : "") + firstTime(e).slice(5, 10); svg.append(lab);
+    const r = svgEl("rect", { x: L, y: y + 2, width: Math.max(2, w), height: rowH - 4, rx: 3, fill: color(e.kind === "full" ? "reset_confirmed" : "reset_announced") });
+    r.style.cursor = "pointer"; r.addEventListener("click", () => window.open(e.confirm.url, "_blank", "noopener"));
+    r.addEventListener("mousemove", evt => showTip(evt, [`${e.lag_hours} h`, `announce ${fmtTpe(e.announce.utc)} TPE`, `confirm ${fmtTpe(e.confirm.utc)} TPE`, e.notes || ""])); r.addEventListener("mouseleave", hideTip);
+    svg.append(r); const v = svgEl("text", { x: L + w + 4, y: y + rowH * .7 }); v.textContent = e.lag_hours.toFixed(1); svg.append(v); });
+  const all = RESETS.map(e => e.lag_hours).filter(v => v != null);
+  document.getElementById("lagStats").textContent = `Last ${ev.length} of ${all.length} events with both posts. Hours from first announcement to confirmation.`;
+}
+
+function drawHeat() {
+  const which = document.getElementById("heatWhich").value, rng = document.getElementById("heatRange").value;
+  const lo = rng === "all" ? -Infinity : Date.parse(rng + "T00:00:00Z");
+  const times = RESETS.map(e => which === "first" ? firstTime(e) : e.confirm && e.confirm.utc).filter(Boolean).filter(s => t(s) >= lo);
+  const utc = Array(24).fill(0), loc = Array(24).fill(0);
+  for (const s of times) { const d = new Date(s); utc[d.getUTCHours()]++; loc[d.getHours()]++; }
+  const mx = Math.max(1, ...utc, ...loc), box = el("div", { class: "heat" });
+  box.append(el("div", {}, ""), ...Array.from({ length: 24 }, (_, h) => el("div", { style: "text-align:center" }, h)));
+  for (const [name, arr] of [["UTC", utc], [`Local`, loc]]) {
+    box.append(el("div", {}, name === "Local" ? `Local` : "UTC"));
+    arr.forEach((v, h) => box.append(el("div", { class: "c", title: `${name} ${h}:00 – ${v} event(s)`,
+      style: `background: color-mix(in srgb, ${css("--confirmed")} ${Math.round(v / mx * 100)}%, ${css("--line")})` }, v || ""))); }
+  document.getElementById("heat").replaceChildren(box, el("div", { class: "sub" }, `${times.length} events. Taipei (UTC+8) morning window 06:00–13:00 = 22:00–05:00 UTC.`));
+}
+
+function drawTable() {
+  const which = document.getElementById("tableWhich").value, tbl = document.getElementById("table"); tbl.replaceChildren();
+  if (which === "resets") {
+    tbl.append(el("tr", {}, ...["Day", "Kind", "Status", "Announce (TPE)", "Confirm (TPE)", "Lag h", "Triggers", "Notes"].map(h => el("th", {}, h))));
+    for (const e of [...RESETS].sort((a, b) => t(firstTime(b)) - t(firstTime(a)))) tbl.append(el("tr", {},
+      el("td", {}, e.day_n || ""), el("td", {}, e.kind), el("td", {}, e.status),
+      el("td", {}, e.announce ? link(e.announce.url, fmtTpe(e.announce.utc)) : "—"), el("td", {}, e.confirm ? link(e.confirm.url, fmtTpe(e.confirm.utc)) : "—"),
+      el("td", {}, e.lag_hours ?? ""), el("td", {}, (e.triggers || []).join(", ")), el("td", {}, e.notes || "")));
+  } else {
+    tbl.append(el("tr", {}, ...["Time (TPE)", "Label", "Author", "Text", "Notes"].map(h => el("th", {}, h))));
+    for (const s of [...SIGNALS].sort((a, b) => t(b.utc) - t(a.utc))) tbl.append(el("tr", {},
+      el("td", {}, link(s.url, fmtTpe(s.utc))), el("td", {}, el("span", { class: "pill", style: `background:${color(s.label)}` }, s.label + (s.false_positive ? " ✗" : ""))),
+      el("td", {}, "@" + s.author), el("td", {}, s.text), el("td", {}, s.notes || "")));
+  }
+}
+for (const id of ["range", "showSig"]) document.getElementById(id).addEventListener("change", drawTimeline);
+for (const id of ["heatWhich", "heatRange"]) document.getElementById(id).addEventListener("change", drawHeat);
+document.getElementById("tableWhich").addEventListener("change", drawTable);
+window.addEventListener("resize", () => { if (RESETS.length) { drawTimeline(); drawLag(); } });
+load();
+</script>
+</body>
+</html>
