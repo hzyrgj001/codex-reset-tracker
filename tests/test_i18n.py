@@ -19,7 +19,8 @@ MUST_DIFFER = [
     "lagTitle", "heatTitle", "events", "refresh", "footer", "label_reset_announced",
     "label_reset_confirmed", "label_outage", "label_recovery", "label_rivalry_hint",
     "label_usage_improvement", "kind_banked", "fallbackLead", "noData", "disclaimerEmph",
-    "openVisualizer",
+    "openVisualizer", "tendenciesTitle", "weekdayTitle", "verdict_supported",
+    "verdict_not_supported", "verdict_insufficient_data", "factorWeekday", "noTendencies",
 ]
 
 

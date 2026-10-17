@@ -41,6 +41,7 @@ Day N is counted on the **Pacific** calendar (Day 1 = Oct 5 PT; Day 28 = Nov 1 P
 
 * Even days: 4 of 6 were resets (2, 6, 8, 10). Days 6, 8 and 10 ran 3 for 3 in a row; Day 4 and Day 12 were not resets.
 * Odd days: no full resets. Day 3 was a banked reset only.
+* The tendencies check does **not** call "resets land on even Day numbers" supported. Of confirmed resets that have a Day number, 4 of 5 are even (Days 2, 6, 8, 10; Day 3 is the odd one). Five trials is under the 10-trial line, so the verdict is **insufficient data** (80% vs 50% expected, one-sided p=0.188).
 * **Break:** on 2026-10-16 04:30 UTC (12:30 TPE), replying to a parody of him, Tibo wrote *"Can't argue with that, Let's break the cycle."*
   ([post](https://x.com/thsottiaux/status/2110951585983631505); parody: [post](https://x.com/maria_rcks/status/2110880198660882719)).
   Day 12 then shipped a usage improvement, not a reset. The detector halves the even-day weight once "break the cycle" appears after the last reset.
@@ -89,7 +90,7 @@ Rule: executed-language regexes, and "done/landed/fixed" only when the post quot
 ## P5. Morning announce window in Taipei (≈06:00–13:00 TPE = 22:00–05:00 UTC) ●●●
 
 * Since 2026-09-20, the first post of 8 of 9 events fell between 06:00 and 13:00 TPE. The exception was the Day 3 banked reset at 03:19 TPE.
-* All-time: 35 of 62 events (56%) fell in that window.
+* All-time: 35 of 62 events (56%) fell in that window. Against a flat 7/24 (29.2%) baseline that is **supported** (56.5% vs 29.2%, one-sided p<0.001, n=62).
 * The campaign Day-N reset posts drifted about 3 h later each time: 06:15 → 09:03 → 12:55 TPE (Pacific: 15:15 → 18:03 → 21:55).
 * Confirmations since Sep 20 landed between 02:17 and 14:28 TPE.
 * See the hour-of-day heatmap in the visualizer, which shows both UTC and your local time.
@@ -109,6 +110,8 @@ There is a running Tibo ↔ lauren ([@poteto](https://x.com/poteto)) "beef". A f
 
 Score: banter came within ±2 h of 3 of 5 campaign resets, but it also happens on non-reset days. Weight: 0.05.
 
+The co-occurrence claim "poteto banter tends to land within two hours of a reset" **is supported** on the stored signals: 10 of 14 rivalry posts fall inside ±2 h of an announcement or confirmation, against 3.0% of the timeline (one-sided p<0.001). n=14 is a small sample, and these are the posts the dataset kept, so this is co-occurrence, not a forecast. The likelihood heuristic still uses the 0.05 rivalry weight, not this verdict.
+
 ## P7. Outage → recovery → reset ●●●
 
 Outage or recovery is the most common reset trigger: 9 events are tagged `outage`, 7 `recovery`, and 3 more `incident`/`capacity`.
@@ -121,6 +124,8 @@ The usual sequence is outage acknowledged → recovery post → reset promised *
   2026-04-20 *"incident is mitigated … rate limit reset incoming"*; 2026-07-25 *"almost global outage … We learn. We reset."*
 * **Exception:** the Day 11 capacity-error fix ([x](https://x.com/thsottiaux/status/2110750421367287996)) *was* that day's ship. No reset followed.
   A planned capacity improvement is different from an incident recovery.
+
+Separate Tibo outage/recovery posts (clustered within 6 h) are only three episodes. Two were followed by a reset within 48 h (Sep 25, Oct 1); Day 11 was not. 2 of 3 against 28.7% of the timeline is **insufficient data**, so the tracker does not treat "outage → reset" as a supported tendency. Older resets that mention an outage inside the reset post itself are not extra trials.
 
 ## P8. "Let's break the cycle" and the missing Day-12 reset ●●
 
@@ -159,6 +164,28 @@ The classifier labels community "did we just get a reset?" posts `reset_hint`, a
 * Oct 1 *"I can't really give a reset"* for dots ([x](https://x.com/thsottiaux/status/2105672058269212820)). This is an explicit negative, and the negation guard catches it.
 
 All of these are labelled `usage_improvement` (or `other`), never `reset_*`.
+
+## P13. Weekday the reset lands on — Monday is not supported
+
+Counts use each event's **announcement** time, or the confirmation time when there was no announcement. Computed for 2026-10-17 10:30 UTC (`weekday` in the CLI JSON). Pacific time is America/Los_Angeles, Tibo's zone.
+
+Confirmed resets, all-time, **Pacific** (n=45):
+
+| Mon | Tue | Wed | Thu | Fri | Sat | Sun |
+|---|---|---|---|---|---|---|
+| 6 | 6 | 6 | 5 | 8 | 10 | 4 |
+
+Monday is 6/45 = **13.3%**, against 1/7 = **14.3%** expected if weekdays were flat. One-sided binomial p=0.637. The seeded claim "Tibo tends to reset on Mondays" (a community observation) is **not supported**. Saturday is the busiest day (10/45 = 22.2%) and is still short of p<0.05 (p=0.100), so the spread is compatible with a flat week. The likelihood heuristic adds a weekday weight only when a weekday tendency's verdict is `supported`. On this dataset it does not add one.
+
+The same 45 confirmed resets in **Taipei** (n=45): Mon 3, Tue 6, Wed 7, Thu 6, Fri 5, Sat 7, Sun 11. Sunday leads because a Pacific evening is already the next calendar day in Taipei. That is the zone change, not a second habit.
+
+All events, Pacific, all-time (n=62): Mon 10, Tue 9, Wed 10, Thu 8, Fri 11, Sat 10, Sun 4.
+
+Last 60 days (since 2026-08-18), confirmed, Pacific (n=16): Mon 2, Tue 2, Wed 2, Thu 2, Fri 4, Sat 3, Sun 1. Too few to crown a day.
+
+Pacific hour-of-day for confirmed resets is broad. The busiest hour is 20:00 (6 of 45); 16:00–21:00 holds 21 of 45. There is no single morning-Pacific spike.
+
+Verdict rule used above (and in the visualizer): **supported** only if the share is above its baseline and the one-sided binomial p-value is under 0.05; **insufficient data** when n<10. A small sample (n<30, or fewer than 5 expected under the null) is a caveat and does not by itself change the verdict.
 
 ---
 
