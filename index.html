@@ -1,2 +1,38 @@
-<!doctype html><meta charset="utf-8"><title>Codex Reset Tracker (unofficial)</title>
-<meta http-equiv="refresh" content="0; url=docs/"><a href="docs/">Open the visualizer</a>
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Codex Reset Tracker (unofficial)</title>
+<meta name="description" content="Unofficial, open-source tracker of Codex / ChatGPT Work usage resets announced on X. Not affiliated with OpenAI or SpaceXAI.">
+<meta http-equiv="refresh" content="0; url=docs/">
+</head>
+<body>
+<p><a id="go" href="docs/">Open the visualizer</a></p>
+<script>
+"use strict";
+(function () {
+  var KEY = "codexResetTracker.lang";
+  var stored = null;
+  try { stored = localStorage.getItem(KEY); } catch (e) {}
+  var query = null;
+  try { query = new URLSearchParams(location.search).get("lang"); } catch (e) {}
+  var languages = (navigator.languages && navigator.languages.length) ? navigator.languages : [navigator.language || "en"];
+  var lang = (stored === "en" || stored === "zh") ? stored
+    : ((query === "en" || query === "zh") ? query
+    : (Array.prototype.some.call(languages, function (l) { return String(l || "").toLowerCase().indexOf("zh") === 0; }) ? "zh" : "en"));
+  var zh = lang === "zh";
+  document.documentElement.lang = zh ? "zh-CN" : "en";
+  document.title = zh ? "Codex 重置追踪器（非官方）" : "Codex Reset Tracker (unofficial)";
+  var meta = document.querySelector('meta[name="description"]');
+  if (meta) meta.setAttribute("content", zh
+    ? "非官方开源项目，追踪在 X 上公布的 Codex / ChatGPT Work 用量重置。与 OpenAI 或 SpaceXAI 无隶属关系。"
+    : "Unofficial, open-source tracker of Codex / ChatGPT Work usage resets announced on X. Not affiliated with OpenAI or SpaceXAI.");
+  var dest = "docs/" + (location.search || "") + (location.hash || "");
+  var a = document.getElementById("go");
+  a.href = dest;
+  a.textContent = zh ? "打开可视化页面" : "Open the visualizer";
+  location.replace(dest);
+})();
+</script>
+</body>
+</html>

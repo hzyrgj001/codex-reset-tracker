@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="i18n-wait">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -11,10 +11,17 @@
           --rivalry:#ec4899; --improvement:#94a3b8; --other:#475569; }
   @media (prefers-color-scheme: light) { :root { --bg:#f6f7fb; --panel:#fff; --ink:#111827; --mute:#5b6478; --line:#dfe3ee; } }
   * { box-sizing: border-box; }
-  body { margin:0; font:14px/1.45 system-ui,-apple-system,Segoe UI,Roboto,sans-serif; background:var(--bg); color:var(--ink); }
+  html.i18n-wait body { visibility: hidden; }
+  body { margin:0; font:14px/1.45 system-ui,-apple-system,Segoe UI,Roboto,"Noto Sans SC","PingFang SC","Microsoft YaHei",sans-serif; background:var(--bg); color:var(--ink); }
   header, main, footer { max-width:1180px; margin:0 auto; padding:16px; }
   h1 { font-size:22px; margin:8px 0 4px; } h2 { font-size:16px; margin:0 0 10px; }
   .sub { color:var(--mute); }
+  .headrow { display:flex; justify-content:space-between; gap:12px; align-items:flex-start; flex-wrap:wrap; }
+  .headactions { display:flex; gap:8px; align-items:center; margin-top:8px; }
+  .lang-toggle { display:inline-flex; align-items:center; border:1px solid var(--line); border-radius:8px; overflow:hidden; }
+  .lang-toggle button { border:0; background:transparent; border-radius:0; padding:4px 10px; cursor:pointer; font-weight:650; }
+  .lang-toggle button.active { background:var(--ink); color:var(--bg); }
+  .lang-sep { color:var(--mute); user-select:none; }
   .grid { display:grid; gap:14px; grid-template-columns: repeat(12, 1fr); }
   .card { background:var(--panel); border:1px solid var(--line); border-radius:12px; padding:14px; grid-column: span 12; overflow:hidden; }
   .s4 { grid-column: span 4; } .s6 { grid-column: span 6; } .s8 { grid-column: span 8; }
@@ -42,66 +49,84 @@
   .heat div.c { height:22px; border-radius:3px; text-align:center; line-height:22px; color:#fff; }
   .controls { display:flex; gap:10px; flex-wrap:wrap; align-items:center; margin-bottom:8px; }
   select, input[type=file], button { background: var(--panel); color: var(--ink); border:1px solid var(--line); border-radius:8px; padding:4px 8px; }
+  .filebtn { position:relative; display:inline-flex; align-items:center; }
+  .filebtn span { border:1px solid var(--line); border-radius:8px; padding:4px 8px; cursor:pointer; background:var(--panel); }
+  .filebtn input { position:absolute; width:1px; height:1px; opacity:0; overflow:hidden; }
   .warn { border-left: 4px solid var(--announced); padding: 8px 12px; background: color-mix(in srgb, var(--announced) 10%, transparent); border-radius: 6px; }
   .tip { position: fixed; pointer-events:none; background: var(--panel); border:1px solid var(--line); border-radius:8px; padding:8px; max-width:360px; font-size:12px; display:none; z-index:9; box-shadow: 0 6px 24px rgba(0,0,0,.3); }
 </style>
+<noscript><style>html.i18n-wait body { visibility: visible; }</style></noscript>
 </head>
 <body>
 <header>
-  <h1>Codex Reset Tracker <span class="sub">(unofficial)</span></h1>
-  <div class="sub">Tracks global Codex / ChatGPT Work usage resets announced publicly on X by
+  <div class="headrow">
+    <h1><span data-i18n="title">Codex Reset Tracker</span> <span class="sub" data-i18n="unofficial">(unofficial)</span></h1>
+    <div class="headactions">
+      <div class="lang-toggle" role="group" data-i18n-attr="aria-label:langToggleAria" aria-label="Language">
+        <button type="button" class="lang-btn" data-set-lang="en" id="btnEn">EN</button>
+        <span class="lang-sep" aria-hidden="true">|</span>
+        <button type="button" class="lang-btn" data-set-lang="zh" id="btnZh">中文</button>
+      </div>
+      <button type="button" id="refresh" data-i18n="refresh">Refresh</button>
+    </div>
+  </div>
+  <div class="sub" id="subtitle">Tracks global Codex / ChatGPT Work usage resets announced publicly on X by
     <a href="https://x.com/thsottiaux" rel="noopener">@thsottiaux</a>, plus related signals.
     <b>Not affiliated with OpenAI or SpaceXAI.</b> Apache-2.0 · <a href="https://github.com/hzyrgj001/codex-reset-tracker">source</a> ·
     <a href="patterns.md">patterns</a> · <a href="schema.md">schema</a></div>
-  <p id="status" class="sub">Loading data…</p>
+  <p id="status" class="sub" data-i18n="loading">Loading data…</p>
   <div id="fallback" class="warn" style="display:none">
-    Could not fetch <code>data/*.jsonl</code> (opening this file directly via <code>file://</code> blocks fetch).
-    Run <code>python -m http.server</code> in the repo root and open <code>http://localhost:8000/docs/</code>,
-    or load the two files here: <input type="file" id="files" multiple accept=".jsonl,.json">
+    <span data-i18n="fallbackLead">Could not fetch</span> <code>data/*.jsonl</code>
+    <span data-i18n="fallbackMid">(opening this file directly via file:// blocks fetch). Run</span>
+    <code>python -m http.server</code>
+    <span data-i18n="fallbackThen">in the repo root and open</span>
+    <code>http://localhost:8000/docs/</code>
+    <span data-i18n="fallbackOr">, or load the two files here:</span>
+    <label class="filebtn"><span data-i18n="chooseFiles">Choose files</span><input type="file" id="files" multiple accept=".jsonl,.json"></label>
   </div>
 </header>
 <main class="grid">
-  <section class="card s4"><h2>Days since last confirmed reset</h2>
+  <section class="card s4"><h2 data-i18n="daysSince">Days since last confirmed reset</h2>
     <div class="big" id="since">–</div><div class="sub" id="sinceDetail"></div></section>
-  <section class="card s4"><h2>Reset likelihood <span class="sub">(heuristic)</span></h2>
+  <section class="card s4"><h2><span data-i18n="likelihoodTitle">Reset likelihood</span> <span class="sub" data-i18n="heuristic">(heuristic)</span></h2>
     <div style="display:flex;align-items:center;gap:10px"><div class="big" id="lkScore">–</div><span id="lkLevel" class="pill"></span></div>
     <div class="meter" style="margin:8px 0"><div id="lkBar" style="width:0"></div></div>
     <div id="lkFactors" class="sub"></div>
-    <p class="sub" style="margin:8px 0 0">A transparent sum of weights over public posts (same formula as the CLI).
-      <b>Not a prediction or a promise</b>; resets are entirely at OpenAI's discretion.</p></section>
-  <section class="card s4"><h2>Dataset</h2><div id="totals"></div></section>
+    <p class="sub" id="lkDisclaimer" style="margin:8px 0 0"><span data-i18n="disclaimerBefore">A transparent sum of weights over public posts (same formula as the CLI). </span><b data-i18n="disclaimerEmph">Not a prediction or a promise</b><span data-i18n="disclaimerAfter">; resets are entirely at OpenAI's discretion.</span></p></section>
+  <section class="card s4"><h2 data-i18n="dataset">Dataset</h2><div id="totals"></div></section>
 
-  <section class="card"><h2>Timeline</h2>
+  <section class="card"><h2 data-i18n="timeline">Timeline</h2>
     <div class="controls">
-      <label>Range <select id="range"><option value="2026-09-20">since 2026-09-20</option><option value="2026-07-01">since 2026-07-01</option><option value="all">all</option></select></label>
-      <label><input type="checkbox" id="showSig" checked> signals</label>
+      <label><span data-i18n="range">Range</span> <select id="range"><option value="2026-09-20" data-i18n="rangeSince0920">since 2026-09-20</option><option value="2026-07-01" data-i18n="rangeSince0701">since 2026-07-01</option><option value="all" data-i18n="rangeAll">all</option></select></label>
+      <label><input type="checkbox" id="showSig" checked> <span data-i18n="signals">signals</span></label>
       <span class="legend" id="legend"></span>
     </div>
-    <svg id="timeline" width="100%" height="270" role="img" aria-label="Timeline of resets and signals"></svg>
-    <div class="sub">Hover to read a post; click to open it on X. Diamonds are reset announce/confirm posts; dots are signals. Times are shown in your local zone (<span class="tzname"></span>).</div>
+    <svg id="timeline" width="100%" height="270" role="img" data-i18n-attr="aria-label:timelineAria" aria-label="Timeline of resets and signals"></svg>
+    <div class="sub" id="hoverHelp">Hover to read a post; click to open it on X. Diamonds are reset announce/confirm posts; dots are signals. Times are shown in your local zone (<span class="tzname"></span>).</div>
   </section>
 
-  <section class="card s8"><h2>The 28-day series (Day N, Pacific calendar)</h2>
+  <section class="card s8"><h2 data-i18n="seriesTitle">The 28-day series (Day N, Pacific calendar)</h2>
     <div class="days" id="days"></div>
-    <div class="sub" style="margin-top:6px">Green = full reset · amber = banked reset · grey = improvement-only day · dashed = today. Day 12 broke the even-day pattern after “Let's break the cycle”.</div></section>
-  <section class="card s4"><h2>Announce → confirm lag</h2>
+    <div class="sub" id="seriesNote" data-i18n="seriesNote" style="margin-top:6px">Green = full reset · amber = banked reset · grey = improvement-only day · dashed = today. Day 12 broke the even-day pattern after “Let's break the cycle”.</div></section>
+  <section class="card s4"><h2 data-i18n="lagTitle">Announce → confirm lag</h2>
     <svg id="lag" width="100%" height="230"></svg><div class="sub" id="lagStats"></div></section>
 
-  <section class="card"><h2>Hour of day of reset posts</h2>
-    <div class="controls"><label>Posts <select id="heatWhich"><option value="first">first post of each event</option><option value="confirm">confirmations</option></select></label>
-      <label>Range <select id="heatRange"><option value="2026-09-20">since 2026-09-20</option><option value="all">all</option></select></label></div>
+  <section class="card"><h2 data-i18n="heatTitle">Hour of day of reset posts</h2>
+    <div class="controls"><label><span data-i18n="postsLabel">Posts</span> <select id="heatWhich"><option value="first" data-i18n="heatFirst">first post of each event</option><option value="confirm" data-i18n="heatConfirm">confirmations</option></select></label>
+      <label><span data-i18n="range">Range</span> <select id="heatRange"><option value="2026-09-20" data-i18n="rangeSince0920">since 2026-09-20</option><option value="all" data-i18n="rangeAll">all</option></select></label></div>
     <div id="heat"></div>
-    <div class="sub">Two rows: UTC, and your local time (<span class="tzname"></span>). Darker = more events.</div></section>
+    <div class="sub" id="heatZone">Two rows: UTC, and your local time (<span class="tzname"></span>). Darker = more events.</div></section>
 
-  <section class="card"><h2>Events</h2>
-    <div class="controls"><label>Show <select id="tableWhich"><option value="resets">reset events</option><option value="signals">signals</option></select></label></div>
+  <section class="card"><h2 data-i18n="events">Events</h2>
+    <div class="controls"><label><span data-i18n="showLabel">Show</span> <select id="tableWhich"><option value="resets" data-i18n="tableResets">reset events</option><option value="signals" data-i18n="tableSignals">signals</option></select></label></div>
     <div class="tablewrap"><table id="table"></table></div></section>
 </main>
-<footer class="sub">
+<footer class="sub" data-i18n="footer">
   Unofficial community project. Not affiliated with, endorsed by, or speaking for OpenAI or SpaceXAI.
   Data are public X posts; quotes are abbreviated. Post times are not per-account delivery times.
 </footer>
 <div class="tip" id="tip"></div>
+<script src="i18n.js"></script>
 <script>
 "use strict";
 const COLORS = { reset_confirmed:"--confirmed", reset_announced:"--announced", reset_hint:"--hint", outage:"--outage",
@@ -113,88 +138,139 @@ const LOCAL_TZ = Intl.DateTimeFormat().resolvedOptions().timeZone || "local";
 const W = { base:0.05, time_since_reset_max:0.30, time_since_reset_full_h:96, campaign_even_day:0.20,
             outage_24h:0.15, hint_24h:0.10, rivalry_24h:0.05, day_slot_used:-0.25 };
 const PENDING = 0.95, DAY0 = "2026-10-04", CAMPAIGN_LEN = 28;
-let RESETS = [], SIGNALS = [];
+let RESETS = [], SIGNALS = [], LAST_SRC = "";
 
+const t = (key, vars) => I18N.t(key, vars);
+const tr = (prefix, id) => { if (!id) return ""; const k = prefix + id; const s = t(k); return s === k ? id : s; };
 const el = (tag, attrs = {}, ...kids) => { const e = document.createElement(tag);
   for (const [k, v] of Object.entries(attrs)) { if (k === "class") e.className = v; else if (k === "style") e.style.cssText = v; else e.setAttribute(k, v); }
   for (const k of kids) e.append(k instanceof Node ? k : document.createTextNode(String(k))); return e; };
 const svgEl = (tag, attrs = {}) => { const e = document.createElementNS("http://www.w3.org/2000/svg", tag);
   for (const [k, v] of Object.entries(attrs)) e.setAttribute(k, v); return e; };
-const link = (url, text) => { const a = el("a", { href: url, target: "_blank", rel: "noopener noreferrer" }, text); return a; };
+const link = (url, text) => el("a", { href: url, target: "_blank", rel: "noopener noreferrer" }, text);
 const parseJsonl = txt => txt.split(/\r?\n/).map(l => l.trim()).filter(l => l && !l.startsWith("//")).map(l => JSON.parse(l));
-const t = s => new Date(s).getTime();
-const fmtLocal = s => new Date(s).toLocaleString(undefined, { year:"numeric", month:"2-digit", day:"2-digit", hour:"2-digit", minute:"2-digit" });
-const fmtTpe = s => new Date(s).toLocaleString("en-CA", { timeZone:"Asia/Taipei", year:"numeric", month:"2-digit", day:"2-digit", hour:"2-digit", minute:"2-digit", hour12:false });
+const tms = s => new Date(s).getTime();
+const fmtLocal = s => new Date(s).toLocaleString(I18N.locale(), { year:"numeric", month:"2-digit", day:"2-digit", hour:"2-digit", minute:"2-digit" });
+const fmtTpe = s => new Date(s).toLocaleString(I18N.locale(), { timeZone:"Asia/Taipei", year:"numeric", month:"2-digit", day:"2-digit", hour:"2-digit", minute:"2-digit" });
 const evTime = e => (e.confirm || e.announce).utc;
 const firstTime = e => (e.announce || e.confirm).utc;
-function pacificDate(ms) { const p = new Intl.DateTimeFormat("en-CA", { timeZone:"America/Los_Angeles", year:"numeric", month:"2-digit", day:"2-digit" }).format(new Date(ms)); return p; }
+function pacificDate(ms) { return new Intl.DateTimeFormat("en-CA", { timeZone:"America/Los_Angeles", year:"numeric", month:"2-digit", day:"2-digit" }).format(new Date(ms)); }
 function campaignDay(ms) { const n = Math.round((Date.parse(pacificDate(ms) + "T00:00:00Z") - Date.parse(DAY0 + "T00:00:00Z")) / 86400000); return (n >= 1 && n <= CAMPAIGN_LEN) ? n : null; }
 const labelsOf = s => s.labels && s.labels.length ? s.labels : [s.label];
 
+function fillSubtitle() {
+  const box = document.getElementById("subtitle");
+  box.replaceChildren(
+    document.createTextNode(t("subtitleBefore") + " "),
+    link("https://x.com/thsottiaux", "@thsottiaux"),
+    document.createTextNode(t("subtitleAfter") + " "),
+    el("b", {}, t("notAffiliated")),
+    document.createTextNode(" Apache-2.0 · "),
+    link("https://github.com/hzyrgj001/codex-reset-tracker", t("source")),
+    document.createTextNode(" · "),
+    link("patterns.md", t("patterns")),
+    document.createTextNode(" · "),
+    link("schema.md", t("schema")));
+}
+function applyRuntimeChrome() {
+  fillSubtitle();
+  document.getElementById("hoverHelp").textContent = t("hoverHelp", { tz: LOCAL_TZ });
+  document.getElementById("heatZone").textContent = t("heatZone", { tz: LOCAL_TZ });
+}
+
 async function load() {
+  document.getElementById("status").textContent = t("loading");
+  let sawError = false;
   for (const base of ["../data/", "data/", "./"]) {
     try {
       const [r, s] = await Promise.all([fetch(base + "resets.jsonl"), fetch(base + "signals.jsonl")]);
-      if (r.ok && s.ok) { RESETS = parseJsonl(await r.text()); SIGNALS = parseJsonl(await s.text()); render(base); return; }
-    } catch (_) { /* try next */ }
+      if (r.ok && s.ok) {
+        RESETS = parseJsonl(await r.text()); SIGNALS = parseJsonl(await s.text());
+        document.getElementById("fallback").style.display = "none";
+        render(base); return;
+      }
+    } catch (_) { sawError = true; }
   }
-  document.getElementById("status").textContent = "No data loaded.";
+  if (RESETS.length || SIGNALS.length) {
+    document.getElementById("status").textContent = t("refreshFailed");
+    return;
+  }
+  document.getElementById("status").textContent = sawError ? t("parseError") : t("noData");
   document.getElementById("fallback").style.display = "block";
+  applyRuntimeChrome();
 }
 document.getElementById("files").addEventListener("change", async ev => {
-  for (const f of ev.target.files) { const rows = parseJsonl(await f.text());
-    if (rows.length && "event_id" in rows[0]) RESETS = rows; else SIGNALS = rows; }
-  if (RESETS.length) render("local files");
+  try {
+    for (const f of ev.target.files) { const rows = parseJsonl(await f.text());
+      if (rows.length && "event_id" in rows[0]) RESETS = rows; else SIGNALS = rows; }
+  } catch (_) {
+    document.getElementById("status").textContent = t("parseError");
+    return;
+  }
+  if (RESETS.length) { document.getElementById("fallback").style.display = "none"; render("local"); }
 });
+document.getElementById("refresh").addEventListener("click", () => load());
+document.querySelectorAll(".lang-btn").forEach(btn => btn.addEventListener("click", () => I18N.setLang(btn.getAttribute("data-set-lang"), true)));
 
 function likelihood(now) {
-  const f = [["base rate", W.base]];
-  const conf = RESETS.filter(e => e.status === "confirmed").sort((a, b) => t(evTime(a)) - t(evTime(b)));
-  const lastT = conf.length ? t(evTime(conf[conf.length - 1])) : null;
-  const pending = RESETS.some(e => e.status === "announced" && e.announce && now - t(e.announce.utc) < 48 * 3600e3 && now >= t(e.announce.utc));
-  if (lastT) { const h = (now - lastT) / 3600e3; f.push([`${h.toFixed(0)} h since last confirmed reset`, W.time_since_reset_max * Math.min(1, h / W.time_since_reset_full_h)]); }
+  const f = [["factorBase", W.base, null]];
+  const conf = RESETS.filter(e => e.status === "confirmed").sort((a, b) => tms(evTime(a)) - tms(evTime(b)));
+  const lastT = conf.length ? tms(evTime(conf[conf.length - 1])) : null;
+  const pending = RESETS.some(e => e.status === "announced" && e.announce && now - tms(e.announce.utc) < 48 * 3600e3 && now >= tms(e.announce.utc));
+  if (lastT) { const h = (now - lastT) / 3600e3; f.push(["factorHours", W.time_since_reset_max * Math.min(1, h / W.time_since_reset_full_h), { h: h.toFixed(0) }]); }
   const day = campaignDay(now);
   if (day) {
-    const broken = SIGNALS.some(s => (s.text || "").toLowerCase().includes("break the cycle") && (!lastT || t(s.utc) > lastT));
-    if (day % 2 === 0) f.push([`Day ${day} is even` + (broken ? " (cycle declared broken: halved)" : ""), W.campaign_even_day * (broken ? 0.5 : 1)]);
+    const broken = SIGNALS.some(s => (s.text || "").toLowerCase().includes("break the cycle") && (!lastT || tms(s.utc) > lastT));
+    if (day % 2 === 0) f.push([broken ? "factorEvenBroken" : "factorEven", W.campaign_even_day * (broken ? 0.5 : 1), { day }]);
     const today = pacificDate(now);
-    if (SIGNALS.some(s => s.author === "thsottiaux" && labelsOf(s).includes("usage_improvement") && (s.text || "").toLowerCase().startsWith(`day ${day}`) && pacificDate(t(s.utc)) === today))
-      f.push([`Day ${day}/ already shipped an improvement`, W.day_slot_used]);
+    if (SIGNALS.some(s => s.author === "thsottiaux" && labelsOf(s).includes("usage_improvement") && (s.text || "").toLowerCase().startsWith(`day ${day}`) && pacificDate(tms(s.utc)) === today))
+      f.push(["factorShipped", W.day_slot_used, { day }]);
   }
-  const recent = SIGNALS.filter(s => !s.false_positive && now - t(s.utc) >= 0 && now - t(s.utc) <= 24 * 3600e3);
-  for (const [lab, w, name] of [["outage", W.outage_24h, "outage/capacity signal in last 24 h"], ["reset_hint", W.hint_24h, "strong hint in last 24 h"], ["rivalry_hint", W.rivalry_24h, "Tibo/poteto banter in last 24 h"]])
-    if (recent.some(s => labelsOf(s).includes(lab))) f.push([name, w]);
+  const recent = SIGNALS.filter(s => !s.false_positive && now - tms(s.utc) >= 0 && now - tms(s.utc) <= 24 * 3600e3);
+  for (const [lab, w, key] of [["outage", W.outage_24h, "factorOutage"], ["reset_hint", W.hint_24h, "factorHint"], ["rivalry_hint", W.rivalry_24h, "factorRivalry"]])
+    if (recent.some(s => labelsOf(s).includes(lab))) f.push([key, w, null]);
   let score = Math.max(0, Math.min(1, f.reduce((a, [, v]) => a + v, 0)));
-  if (pending) { f.push(["announced reset not yet confirmed", Math.max(0, PENDING - score)]); score = Math.max(score, PENDING); }
+  if (pending) { f.push(["factorPending", Math.max(0, PENDING - score), null]); score = Math.max(score, PENDING); }
   const level = pending ? "pending" : score >= 0.5 ? "high" : score >= 0.25 ? "medium" : "low";
   return { score, level, day, factors: f };
 }
 
 function render(src) {
+  LAST_SRC = src;
   const now = Date.now();
-  document.querySelectorAll(".tzname").forEach(n => n.textContent = LOCAL_TZ);
-  const conf = RESETS.filter(e => e.status === "confirmed").sort((a, b) => t(evTime(a)) - t(evTime(b)));
-  document.getElementById("status").textContent = `Loaded ${RESETS.length} reset events and ${SIGNALS.length} signals from ${src}. Latest post in data: ${fmtLocal(Math.max(...RESETS.map(e => t(evTime(e))), ...SIGNALS.map(s => t(s.utc))))} (${LOCAL_TZ}).`;
-  // since
-  if (conf.length) { const last = conf[conf.length - 1]; const d = (now - t(evTime(last))) / 86400e3;
+  applyRuntimeChrome();
+  const conf = RESETS.filter(e => e.status === "confirmed").sort((a, b) => tms(evTime(a)) - tms(evTime(b)));
+  const latest = Math.max(...RESETS.map(e => tms(evTime(e))), ...SIGNALS.map(s => tms(s.utc)));
+  document.getElementById("status").textContent = t("loadedStatus", {
+    resets: RESETS.length, signals: SIGNALS.length, src: src === "local" ? t("srcLocal") : src, time: fmtLocal(latest), tz: LOCAL_TZ });
+  if (conf.length) { const last = conf[conf.length - 1]; const d = (now - tms(evTime(last))) / 86400e3;
     document.getElementById("since").textContent = d.toFixed(1);
-    const box = document.getElementById("sinceDetail"); box.replaceChildren(`Last: ${fmtLocal(evTime(last))} local · ${fmtTpe(evTime(last))} Taipei · `, link((last.confirm || last.announce).url, "post"), ` · ${last.kind}${last.day_n ? `, Day ${last.day_n}` : ""}`); }
-  // likelihood
+    const dayBit = last.day_n ? " · " + t("wordDay", { n: last.day_n }) : "";
+    document.getElementById("sinceDetail").replaceChildren(
+      document.createTextNode(t("lastPrefix") + " " + fmtLocal(evTime(last)) + " " + t("wordLocal") + " · " + fmtTpe(evTime(last)) + " " + t("wordTaipei") + " · "),
+      link((last.confirm || last.announce).url, t("wordPost")),
+      document.createTextNode(" · " + tr("kind_", last.kind) + dayBit));
+  }
   const lk = likelihood(now);
   document.getElementById("lkScore").textContent = lk.score.toFixed(2);
-  const lv = document.getElementById("lkLevel"); lv.textContent = lk.level.toUpperCase();
+  const lv = document.getElementById("lkLevel");
+  const levelName = t("level_" + lk.level);
+  lv.textContent = I18N.lang === "en" ? levelName.toUpperCase() : levelName;
   lv.style.background = { low: css("--recovery"), medium: css("--announced"), high: css("--confirmed"), pending: css("--hint") }[lk.level];
   document.getElementById("lkBar").style.width = (lk.score * 100) + "%";
-  document.getElementById("lkFactors").replaceChildren(...lk.factors.map(([n, v]) => el("div", {}, `${v >= 0 ? "+" : ""}${v.toFixed(2)}  ${n}`)),
-    el("div", {}, lk.day ? `Campaign Day ${lk.day} of ${CAMPAIGN_LEN}` : "Outside the 28-day series"));
-  // totals
+  document.getElementById("lkFactors").replaceChildren(...lk.factors.map(([key, v, vars]) => el("div", {}, `${v >= 0 ? "+" : ""}${v.toFixed(2)}  ${t(key, vars || {})}`)),
+    el("div", {}, lk.day ? t("campaignDay", { day: lk.day, len: CAMPAIGN_LEN }) : t("outsideSeries")));
   const lags = RESETS.map(e => e.lag_hours).filter(v => v != null).sort((a, b) => a - b);
   const med = a => a.length ? (a.length % 2 ? a[(a.length - 1) / 2] : (a[a.length / 2 - 1] + a[a.length / 2]) / 2) : null;
-  const ivals = conf.slice(1).map((e, i) => (t(evTime(e)) - t(evTime(conf[i]))) / 86400e3).sort((a, b) => a - b);
+  const ivals = conf.slice(1).map((e, i) => (tms(evTime(e)) - tms(evTime(conf[i]))) / 86400e3).sort((a, b) => a - b);
+  const gap = med(ivals), lagMed = med(lags);
   document.getElementById("totals").replaceChildren(
-    el("div", {}, `Reset events: ${RESETS.length}`), el("div", {}, `Confirmed: ${conf.length} (${conf.filter(e => e.kind === "full").length} full)`),
-    el("div", {}, `Announced only: ${RESETS.filter(e => e.status === "announced").length}`), el("div", {}, `Signals: ${SIGNALS.length}`),
-    el("div", {}, `Median gap between confirmed resets: ${med(ivals)?.toFixed(1)} d`), el("div", {}, `Median announce→confirm: ${med(lags)?.toFixed(1)} h (n=${lags.length})`));
+    el("div", {}, t("totalsEvents", { n: RESETS.length })),
+    el("div", {}, t("totalsConfirmed", { n: conf.length, full: conf.filter(e => e.kind === "full").length })),
+    el("div", {}, t("totalsAnnounced", { n: RESETS.filter(e => e.status === "announced").length })),
+    el("div", {}, t("totalsSignals", { n: SIGNALS.length })),
+    el("div", {}, t("totalsGap", { n: gap == null ? "—" : gap.toFixed(1) })),
+    el("div", {}, t("totalsLag", { n: lagMed == null ? "—" : lagMed.toFixed(1), count: lags.length })));
   drawTimeline(); drawDays(lk.day); drawLag(); drawHeat(); drawTable();
 }
 
@@ -209,32 +285,40 @@ function drawTimeline() {
   const lo = rng === "all" ? -Infinity : Date.parse(rng + "T00:00:00Z");
   const rows = ["reset_confirmed", "reset_announced", "reset_hint", "outage", "recovery", "rivalry_hint", "usage_improvement", "other"];
   const pts = [];
-  for (const e of RESETS) for (const [k, lab] of [["announce", "reset_announced"], ["confirm", "reset_confirmed"]]) if (e[k] && t(e[k].utc) >= lo) pts.push({ ms: t(e[k].utc), lab, ref: e[k], diamond: true, ev: e });
-  if (showSig) for (const s of SIGNALS) if (t(s.utc) >= lo) pts.push({ ms: t(s.utc), lab: s.label, ref: s, fp: s.false_positive });
-  if (!pts.length) return;
-  const W_ = svg.clientWidth || 1100, H = 270, L = 120, R = 16, T = 10, B = 30, rowH = (H - T - B) / rows.length;
+  for (const e of RESETS) for (const [k, lab] of [["announce", "reset_announced"], ["confirm", "reset_confirmed"]]) if (e[k] && tms(e[k].utc) >= lo) pts.push({ ms: tms(e[k].utc), lab, ref: e[k], diamond: true, ev: e });
+  if (showSig) for (const s of SIGNALS) if (tms(s.utc) >= lo) pts.push({ ms: tms(s.utc), lab: s.label, ref: s, fp: s.false_positive });
+  const W_ = svg.clientWidth || 1100, H = 270, L = 148, R = 16, T = 10, B = 30, rowH = (H - T - B) / rows.length;
+  if (!pts.length) {
+    const tx = svgEl("text", { x: 8, y: 24 }); tx.textContent = t("timelineEmpty"); svg.append(tx);
+    document.getElementById("legend").replaceChildren();
+    return;
+  }
   const min = Math.min(...pts.map(p => p.ms)), max = Math.max(Date.now(), ...pts.map(p => p.ms));
   const x = ms => L + (ms - min) / Math.max(1, max - min) * (W_ - L - R);
   rows.forEach((r, i) => { const y = T + rowH * (i + .5);
     svg.append(svgEl("line", { x1: L, x2: W_ - R, y1: y, y2: y, stroke: css("--line") }));
-    const tx = svgEl("text", { x: 4, y: y + 4 }); tx.textContent = r; svg.append(tx); });
+    const tx = svgEl("text", { x: 4, y: y + 4 }); tx.textContent = tr("label_", r); svg.append(tx); });
   const span = max - min, step = span > 200 * 86400e3 ? 30 : span > 40 * 86400e3 ? 7 : 2;
   for (let d = new Date(min); d.getTime() <= max; d = new Date(d.getTime() + step * 86400e3)) {
     const xx = x(d.getTime()); svg.append(svgEl("line", { x1: xx, x2: xx, y1: T, y2: H - B, stroke: css("--line"), "stroke-dasharray": "2 4" }));
-    const tx = svgEl("text", { x: xx - 16, y: H - 10 }); tx.textContent = d.toLocaleDateString(undefined, { month: "short", day: "numeric" }); svg.append(tx); }
+    const tx = svgEl("text", { x: xx - 16, y: H - 10 }); tx.textContent = d.toLocaleDateString(I18N.locale(), { month: "short", day: "numeric" }); svg.append(tx); }
   const nx = x(Date.now()); svg.append(svgEl("line", { x1: nx, x2: nx, y1: T, y2: H - B, stroke: css("--ink"), "stroke-width": 1.5 }));
   for (const p of pts) {
     const y = T + rowH * (rows.indexOf(p.lab) + .5), cx = x(p.ms);
     const shape = p.diamond ? svgEl("rect", { x: cx - 5, y: y - 5, width: 10, height: 10, transform: `rotate(45 ${cx} ${y})`, fill: color(p.lab), stroke: css("--ink"), "stroke-width": .6 })
                             : svgEl("circle", { cx, cy: y, r: 4.5, fill: p.fp ? "none" : color(p.lab), stroke: color(p.lab), "stroke-width": 1.5 });
     shape.style.cursor = "pointer";
-    shape.addEventListener("mousemove", evt => showTip(evt, [`${p.lab}${p.fp ? " (false positive)" : ""}${p.ev && p.ev.day_n ? ` · Day ${p.ev.day_n}` : ""}`,
-      `${fmtLocal(p.ref.utc)} local · ${fmtTpe(p.ref.utc)} TPE · ${p.ref.utc.slice(0, 16).replace("T", " ")} UTC`, `@${p.ref.author}: ${p.ref.text}`]));
+    const fp = p.fp ? " (" + t("falsePositive") + ")" : "";
+    const day = p.ev && p.ev.day_n ? " · " + t("wordDay", { n: p.ev.day_n }) : "";
+    shape.addEventListener("mousemove", evt => showTip(evt, [
+      tr("label_", p.lab) + fp + day,
+      `${fmtLocal(p.ref.utc)} ${t("wordLocal")} · ${fmtTpe(p.ref.utc)} ${t("wordTaipei")} · ${p.ref.utc.slice(0, 16).replace("T", " ")} UTC`,
+      `@${p.ref.author}: ${p.ref.text}`]));
     shape.addEventListener("mouseleave", hideTip);
     shape.addEventListener("click", () => window.open(p.ref.url, "_blank", "noopener"));
     svg.append(shape);
   }
-  document.getElementById("legend").replaceChildren(...rows.map(r => el("span", {}, el("i", { class: "dot", style: `background:${color(r)}` }), r)), el("span", {}, "○ hollow = false positive"));
+  document.getElementById("legend").replaceChildren(...rows.map(r => el("span", {}, el("i", { class: "dot", style: `background:${color(r)}` }), tr("label_", r))), el("span", {}, t("legendHollow")));
 }
 
 function drawDays(today) {
@@ -245,8 +329,8 @@ function drawDays(today) {
   for (let d = 1; d <= CAMPAIGN_LEN; d++) {
     const items = byDay[d] || [], kinds = items.map(i => i.kind);
     const cls = kinds.includes("full") ? "reset" : kinds.includes("banked") ? "banked" : kinds.includes("improvement") ? "impr" : "";
-    const label = kinds.includes("full") ? "RESET" : kinds.includes("banked") ? "banked" : kinds.includes("improvement") ? "ship" : (today && d > today ? "" : "–");
-    const cell = el("div", { class: `day ${cls}${today === d ? " today" : ""}`, title: kinds.join(", ") || "no data" }, el("b", {}, d), label);
+    const label = kinds.includes("full") ? t("cellReset") : kinds.includes("banked") ? t("cellBanked") : kinds.includes("improvement") ? t("cellShip") : (today && d > today ? "" : "–");
+    const cell = el("div", { class: `day ${cls}${today === d ? " today" : ""}`, title: kinds.length ? kinds.map(k => tr("kind_", k)).join(", ") : t("dayNoData") }, el("b", {}, d), label);
     if (items.length) { const a = link(items[0].url, ""); a.append(...cell.childNodes); cell.replaceChildren(a); }
     box.append(cell);
   }
@@ -254,45 +338,52 @@ function drawDays(today) {
 
 function drawLag() {
   const svg = document.getElementById("lag"); svg.replaceChildren();
-  const ev = RESETS.filter(e => e.lag_hours != null).sort((a, b) => t(firstTime(a)) - t(firstTime(b))).slice(-12);
-  const W_ = svg.clientWidth || 360, H = 230, L = 70, R = 30, rowH = (H - 10) / Math.max(ev.length, 1), maxL = Math.max(...ev.map(e => e.lag_hours), 1);
+  const ev = RESETS.filter(e => e.lag_hours != null).sort((a, b) => tms(firstTime(a)) - tms(firstTime(b))).slice(-12);
+  const W_ = svg.clientWidth || 360, H = 230, L = 78, R = 30, rowH = (H - 10) / Math.max(ev.length, 1), maxL = Math.max(...ev.map(e => e.lag_hours), 1);
   ev.forEach((e, i) => { const y = 5 + i * rowH, w = (W_ - L - R) * e.lag_hours / maxL;
-    const lab = svgEl("text", { x: 0, y: y + rowH * .7 }); lab.textContent = (e.day_n ? `Day ${e.day_n} ` : "") + firstTime(e).slice(5, 10); svg.append(lab);
+    const lab = svgEl("text", { x: 0, y: y + rowH * .7 }); lab.textContent = (e.day_n ? t("lagDay", { n: e.day_n }) + " " : "") + firstTime(e).slice(5, 10); svg.append(lab);
     const r = svgEl("rect", { x: L, y: y + 2, width: Math.max(2, w), height: rowH - 4, rx: 3, fill: color(e.kind === "full" ? "reset_confirmed" : "reset_announced") });
     r.style.cursor = "pointer"; r.addEventListener("click", () => window.open(e.confirm.url, "_blank", "noopener"));
-    r.addEventListener("mousemove", evt => showTip(evt, [`${e.lag_hours} h`, `announce ${fmtTpe(e.announce.utc)} TPE`, `confirm ${fmtTpe(e.confirm.utc)} TPE`, e.notes || ""])); r.addEventListener("mouseleave", hideTip);
+    r.addEventListener("mousemove", evt => showTip(evt, [t("tipHours", { h: e.lag_hours }), t("tipAnnounce", { time: fmtTpe(e.announce.utc) }), t("tipConfirm", { time: fmtTpe(e.confirm.utc) }), e.notes || ""]));
+    r.addEventListener("mouseleave", hideTip);
     svg.append(r); const v = svgEl("text", { x: L + w + 4, y: y + rowH * .7 }); v.textContent = e.lag_hours.toFixed(1); svg.append(v); });
   const all = RESETS.map(e => e.lag_hours).filter(v => v != null);
-  document.getElementById("lagStats").textContent = `Last ${ev.length} of ${all.length} events with both posts. Hours from first announcement to confirmation.`;
+  document.getElementById("lagStats").textContent = t("lagStats", { n: ev.length, all: all.length });
 }
 
 function drawHeat() {
   const which = document.getElementById("heatWhich").value, rng = document.getElementById("heatRange").value;
   const lo = rng === "all" ? -Infinity : Date.parse(rng + "T00:00:00Z");
-  const times = RESETS.map(e => which === "first" ? firstTime(e) : e.confirm && e.confirm.utc).filter(Boolean).filter(s => t(s) >= lo);
+  const times = RESETS.map(e => which === "first" ? firstTime(e) : e.confirm && e.confirm.utc).filter(Boolean).filter(s => tms(s) >= lo);
   const utc = Array(24).fill(0), loc = Array(24).fill(0);
   for (const s of times) { const d = new Date(s); utc[d.getUTCHours()]++; loc[d.getHours()]++; }
   const mx = Math.max(1, ...utc, ...loc), box = el("div", { class: "heat" });
   box.append(el("div", {}, ""), ...Array.from({ length: 24 }, (_, h) => el("div", { style: "text-align:center" }, h)));
-  for (const [name, arr] of [["UTC", utc], [`Local`, loc]]) {
-    box.append(el("div", {}, name === "Local" ? `Local` : "UTC"));
-    arr.forEach((v, h) => box.append(el("div", { class: "c", title: `${name} ${h}:00 – ${v} event(s)`,
+  for (const [name, arr] of [["UTC", utc], ["Local", loc]]) {
+    const label = name === "Local" ? t("heatLocal") : "UTC";
+    box.append(el("div", {}, label));
+    arr.forEach((v, h) => box.append(el("div", { class: "c", title: t("heatCell", { name: label, h, v }),
       style: `background: color-mix(in srgb, ${css("--confirmed")} ${Math.round(v / mx * 100)}%, ${css("--line")})` }, v || ""))); }
-  document.getElementById("heat").replaceChildren(box, el("div", { class: "sub" }, `${times.length} events. Taipei (UTC+8) morning window 06:00–13:00 = 22:00–05:00 UTC.`));
+  document.getElementById("heat").replaceChildren(box, el("div", { class: "sub" }, t("heatNote", { n: times.length })));
 }
 
 function drawTable() {
   const which = document.getElementById("tableWhich").value, tbl = document.getElementById("table"); tbl.replaceChildren();
   if (which === "resets") {
-    tbl.append(el("tr", {}, ...["Day", "Kind", "Status", "Announce (TPE)", "Confirm (TPE)", "Lag h", "Triggers", "Notes"].map(h => el("th", {}, h))));
-    for (const e of [...RESETS].sort((a, b) => t(firstTime(b)) - t(firstTime(a)))) tbl.append(el("tr", {},
-      el("td", {}, e.day_n || ""), el("td", {}, e.kind), el("td", {}, e.status),
+    tbl.append(el("tr", {}, ...["thDay", "thKind", "thStatus", "thAnnounce", "thConfirm", "thLag", "thTriggers", "thNotes"].map(h => el("th", {}, t(h)))));
+    const rows = [...RESETS].sort((a, b) => tms(firstTime(b)) - tms(firstTime(a)));
+    if (!rows.length) { tbl.append(el("tr", {}, el("td", { colspan: "8" }, t("tableEmpty")))); return; }
+    for (const e of rows) tbl.append(el("tr", {},
+      el("td", {}, e.day_n || ""), el("td", {}, tr("kind_", e.kind)), el("td", {}, tr("status_", e.status)),
       el("td", {}, e.announce ? link(e.announce.url, fmtTpe(e.announce.utc)) : "—"), el("td", {}, e.confirm ? link(e.confirm.url, fmtTpe(e.confirm.utc)) : "—"),
-      el("td", {}, e.lag_hours ?? ""), el("td", {}, (e.triggers || []).join(", ")), el("td", {}, e.notes || "")));
+      el("td", {}, e.lag_hours ?? ""), el("td", {}, (e.triggers || []).map(x => tr("trigger_", x)).join(", ")), el("td", {}, e.notes || "")));
   } else {
-    tbl.append(el("tr", {}, ...["Time (TPE)", "Label", "Author", "Text", "Notes"].map(h => el("th", {}, h))));
-    for (const s of [...SIGNALS].sort((a, b) => t(b.utc) - t(a.utc))) tbl.append(el("tr", {},
-      el("td", {}, link(s.url, fmtTpe(s.utc))), el("td", {}, el("span", { class: "pill", style: `background:${color(s.label)}` }, s.label + (s.false_positive ? " ✗" : ""))),
+    tbl.append(el("tr", {}, ...["thTime", "thLabel", "thAuthor", "thText", "thNotes"].map(h => el("th", {}, t(h)))));
+    const rows = [...SIGNALS].sort((a, b) => tms(b.utc) - tms(a.utc));
+    if (!rows.length) { tbl.append(el("tr", {}, el("td", { colspan: "5" }, t("tableEmpty")))); return; }
+    for (const s of rows) tbl.append(el("tr", {},
+      el("td", {}, link(s.url, fmtTpe(s.utc))),
+      el("td", {}, el("span", { class: "pill", title: s.false_positive ? t("falsePositive") : "", style: `background:${color(s.label)}` }, tr("label_", s.label) + (s.false_positive ? " ✗" : ""))),
       el("td", {}, "@" + s.author), el("td", {}, s.text), el("td", {}, s.notes || "")));
   }
 }
@@ -300,7 +391,12 @@ for (const id of ["range", "showSig"]) document.getElementById(id).addEventListe
 for (const id of ["heatWhich", "heatRange"]) document.getElementById(id).addEventListener("change", drawHeat);
 document.getElementById("tableWhich").addEventListener("change", drawTable);
 window.addEventListener("resize", () => { if (RESETS.length) { drawTimeline(); drawLag(); } });
-load();
+I18N.onChange(() => { if (LAST_SRC) render(LAST_SRC); else if (I18N.ready()) applyRuntimeChrome(); });
+I18N.loadDicts().then(ok => {
+  if (ok) applyRuntimeChrome();
+  document.documentElement.classList.remove("i18n-wait");
+  return load();
+});
 </script>
 </body>
 </html>
