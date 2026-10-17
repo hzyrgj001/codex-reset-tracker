@@ -113,7 +113,7 @@ Headline findings (details and links are in patterns.md):
 
 ## Automation (GitHub Actions)
 
-* `.github/workflows/track.yml` runs every 4 h. If the `X_BEARER_TOKEN` repository secret is **not** set, it prints a notice and skips.
+* `.github/workflows/track.yml` runs hourly. If the `X_BEARER_TOKEN` repository secret is **not** set, it prints a notice and skips.
   If it is set, it fetches, classifies, appends to `data/`, re-renders the timeline, and commits.
 * `.github/workflows/ci.yml` runs the tests on Python 3.11–3.13 and checks that the dataset rebuilds exactly.
 * `.github/workflows/pages.yml` publishes the visualizer.
