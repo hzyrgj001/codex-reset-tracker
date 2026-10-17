@@ -1,4 +1,5 @@
 import json
+import subprocess
 import sys
 import tempfile
 import unittest
@@ -112,6 +113,15 @@ class DatasetTests(unittest.TestCase):
                     self.assertTrue(ev[k]["url"].endswith(ev[k]["post_id"]))
         for line in (ROOT / "data/signals.jsonl").read_text().splitlines():
             self.assertIn(json.loads(line)["post_id"], raw)
+
+    def test_committed_dataset_matches_rebuild(self):
+        subprocess.run([sys.executable, "scripts/build_dataset.py"], cwd=ROOT, check=True)
+        subprocess.run([sys.executable, "scripts/render_timeline.py"], cwd=ROOT, check=True)
+        diff = subprocess.run(
+            ["git", "diff", "--exit-code", "--", "data/resets.jsonl", "data/signals.jsonl", "docs/timeline.md"],
+            cwd=ROOT, capture_output=True, text=True,
+        )
+        self.assertEqual(diff.returncode, 0, diff.stdout[-2000:])
 
 
 if __name__ == "__main__":
