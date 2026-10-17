@@ -72,6 +72,21 @@ Only `thsottiaux` can create `reset_*` **events**. Mirror and community posts be
 Verbatim cache of X API results (`id`, `author_id`, `author`, `created_at`, `text`, `referenced`, `url`).
 `scripts/build_dataset.py` regenerates both JSONL files from this cache plus the curation table in that script.
 
+## `data/tendencies.json`
+
+Claims to test. **Verdicts are not stored here.** `evaluate_tendencies` (and `docs/tendency.js`) fill them at read time.
+
+| field | type | description |
+|---|---|---|
+| `id` | string | stable id |
+| `claim` | string | plain sentence, not a verdict |
+| `source` | enum | `community observation` · `data` |
+| `test` | object | how to count trials. `kind` is `weekday`, `even_campaign_day`, `hour_window`, `signal_then_reset`, or `signal_near_reset` |
+
+A computed result adds `verdict` (`supported` · `not supported` · `insufficient data`), `k`, `n`, `share`, `baseline`, `baseline_name` (`1/7`, `1/2`, `7/24`, or `timeline`), `p_value`, and `small_sample`. Supported means the share is above the baseline and the one-sided binomial p-value is under 0.05. Fewer than 10 trials is insufficient data.
+
+Weekday and hour counts use each event's `announce.utc`, or `confirm.utc` when there was no announcement.
+
 ## `data/state.json` (optional, git-ignored by default)
 
 `{"since_id": "<last seen post id>"}` for incremental X API polling.

@@ -39,6 +39,10 @@ jobs:
       - name: Commit data changes
         if: env.X_BEARER_TOKEN != ''
         run: |
+          # CI requires jsonl to match scripts/build_dataset.py. The detector
+          # writes source=detector rows; the rebuild classifies the raw cache
+          # as source=curated. Rebuild before committing so those stay equal.
+          python scripts/build_dataset.py
           python scripts/render_timeline.py
           git config user.name "codex-reset-tracker[bot]"
           git config user.email "codex-reset-tracker@users.noreply.github.com"

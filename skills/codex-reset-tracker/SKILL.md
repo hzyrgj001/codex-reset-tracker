@@ -84,7 +84,12 @@ Read `/tmp/crt.json`:
 * `alert: true` means at least one **new** `reset_announced`, `reset_confirmed`, or `reset_hint`. Message the user.
 * Otherwise stay silent. Do **not** send "nothing new" messages unless the user asked for them.
 * `likelihood` is a transparent heuristic. Mention it only inside an alert or when the user asks, always with
-  "heuristic, not a promise".
+  "heuristic, not a promise". A weekday factor is included only when that tendency's verdict is `supported`.
+* `stats.tendencies` is the computed check of `data/tendencies.json` (claims only; verdicts are not stored).
+  Each row has `claim`, `source`, `verdict` (`supported`, `not supported`, or `insufficient data`), `k`/`n`,
+  the baseline, and a p-value. When the user asks what Tibo tends to do, report the verdict and the counts.
+  Do **not** say resets land on Mondays unless `monday_resets` is `supported`. The same block has the weekday
+  distribution under `stats.weekday` (Pacific and Taipei, confirmed and all events, all-time and last 60 days).
 
 Message template (keep it short):
 

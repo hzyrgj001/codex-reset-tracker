@@ -1,0 +1,60 @@
+{
+  "note": "Claims only. Verdicts are computed by codex_reset_tracker.analysis.evaluate_tendencies and docs/tendency.js. Do not write verdicts into this file.",
+  "tendencies": [
+    {
+      "id": "monday_resets",
+      "claim": "Tibo tends to reset on Mondays",
+      "source": "community observation",
+      "test": {
+        "kind": "weekday",
+        "weekday": "Mon",
+        "zone": "America/Los_Angeles",
+        "population": "confirmed",
+        "window": "all_time"
+      }
+    },
+    {
+      "id": "even_day_cadence",
+      "claim": "During the 28-day series, confirmed resets land on even Day numbers",
+      "source": "data",
+      "test": {
+        "kind": "even_campaign_day"
+      }
+    },
+    {
+      "id": "morning_taipei",
+      "claim": "Reset announcements tend to land in the Taipei morning (06:00–13:00)",
+      "source": "data",
+      "test": {
+        "kind": "hour_window",
+        "zone": "Asia/Taipei",
+        "start_hour": 6,
+        "end_hour": 13,
+        "population": "all",
+        "window": "all_time"
+      }
+    },
+    {
+      "id": "outage_recovery_reset",
+      "claim": "An outage or recovery post by Tibo tends to be followed by a reset within 48 hours",
+      "source": "data",
+      "test": {
+        "kind": "signal_then_reset",
+        "authors": ["thsottiaux"],
+        "labels": ["outage", "recovery"],
+        "within_hours": 48,
+        "cluster_hours": 6
+      }
+    },
+    {
+      "id": "poteto_banter",
+      "claim": "Poteto banter tends to land within two hours of a reset",
+      "source": "data",
+      "test": {
+        "kind": "signal_near_reset",
+        "labels": ["rivalry_hint"],
+        "within_hours": 2
+      }
+    }
+  ]
+}

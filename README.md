@@ -46,6 +46,7 @@ The page shows:
 * announce→confirm lag bars;
 * a days-since-last-reset counter;
 * an hour-of-day heatmap in UTC and in **your** local time;
+* a weekday bar chart (Pacific or your local time) and a tendencies list with a computed verdict for each claim;
 * the likelihood indicator, with every factor shown;
 * the event tables.
 
@@ -90,7 +91,7 @@ Posts are labelled `reset_announced`, `reset_confirmed`, `reset_hint`, `outage`,
 * `data/resets.jsonl` holds one reset event per line: announce/confirm posts, lag, kind (`full`/`banked`/`makeup`), status, Day N, triggers and co-signals.
 * `data/signals.jsonl` holds related non-reset posts.
 * Both are keyed by X post id, so re-ingesting is **idempotent**. Field reference: [docs/schema.md](docs/schema.md).
-* `--json` prints `{changes, alert, stats, likelihood}`. `alert` is true when a new announcement, confirmation, or strong hint arrives.
+* `--json` prints `{changes, alert, stats, likelihood}`. `stats` includes the weekday breakdown and the computed tendency verdicts. `alert` is true when a new announcement, confirmation, or strong hint arrives.
 
 ## Data and research
 
@@ -110,11 +111,12 @@ Headline findings (details and links are in patterns.md):
 5. **Outage → recovery → reset:** the most common trigger historically. The reset is usually promised in the recovery post.
 6. **@poteto banter** came within ±2 h of 3 of 5 campaign resets. It also happens on non-reset days, so it gets a low weight.
 7. **Banked (personal reset button) ≠ global reset.** Polls about 2X usage and "simple plan" posts are not resets.
+8. **Monday is not a supported reset day.** Confirmed resets by Pacific weekday are Mon 6, Tue 6, Wed 6, Thu 5, Fri 8, Sat 10, Sun 4 (n=45). Monday is 13.3% vs 14.3% expected (p=0.637). Verdicts live in the CLI output, not in `data/tendencies.json`.
 
 ## Automation (GitHub Actions)
 
 * `.github/workflows/track.yml` runs hourly. If the `X_BEARER_TOKEN` repository secret is **not** set, it prints a notice and skips.
-  If it is set, it fetches, classifies, appends to `data/`, re-renders the timeline, and commits.
+  If it is set, it fetches, appends new posts to the raw cache, rebuilds the JSONL with `scripts/build_dataset.py` (the same script CI checks), re-renders the timeline, and commits.
 * `.github/workflows/ci.yml` runs the tests on Python 3.11–3.13 and checks that the dataset rebuilds exactly.
 * `.github/workflows/pages.yml` publishes the visualizer.
 
@@ -131,7 +133,7 @@ The bot follows [skills/codex-reset-tracker/SKILL.md](skills/codex-reset-tracker
 ## Repository layout
 
 ```
-data/resets.jsonl  data/signals.jsonl  data/raw/posts.json
+data/resets.jsonl  data/signals.jsonl  data/tendencies.json  data/raw/posts.json
 docs/index.html (visualizer)  docs/patterns.md  docs/schema.md  docs/timeline.md
 src/codex_reset_tracker/  (classifier, sources, store, analysis, chart, cli)
 scripts/build_dataset.py  scripts/render_timeline.py  scripts/fetch_sample.sh

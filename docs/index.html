@@ -47,6 +47,15 @@
   .meter > div { height:100%; background: linear-gradient(90deg, var(--recovery), var(--announced), var(--confirmed)); }
   .heat { display:grid; grid-template-columns: 90px repeat(24, 1fr); gap:2px; font-size:11px; align-items:center; }
   .heat div.c { height:22px; border-radius:3px; text-align:center; line-height:22px; color:#fff; }
+  .bars { display:grid; grid-template-columns: repeat(7, 1fr); gap:8px; align-items:end; height:168px; }
+  .bars .col { display:flex; flex-direction:column; align-items:center; justify-content:flex-end; height:100%; gap:4px; min-width:0; }
+  .bars .bar { width:100%; max-width:48px; background:var(--confirmed); border-radius:6px 6px 0 0; }
+  .bars .n { font-weight:650; font-size:12px; }
+  .tend-row { border-top:1px solid var(--line); padding:8px 0; }
+  .tend-top { display:flex; gap:8px; align-items:baseline; flex-wrap:wrap; }
+  .pill.ok { background:var(--confirmed); }
+  .pill.no { background:var(--other); }
+  .pill.ins { background:var(--announced); color:#111; }
   .controls { display:flex; gap:10px; flex-wrap:wrap; align-items:center; margin-bottom:8px; }
   select, input[type=file], button { background: var(--panel); color: var(--ink); border:1px solid var(--line); border-radius:8px; padding:4px 8px; }
   .filebtn { position:relative; display:inline-flex; align-items:center; }
@@ -117,6 +126,25 @@
     <div id="heat"></div>
     <div class="sub" id="heatZone">Two rows: UTC, and your local time (<span class="tzname"></span>). Darker = more events.</div></section>
 
+  <section class="card"><h2 data-i18n="tendenciesTitle">Tendencies</h2>
+    <h3 data-i18n="weekdayTitle" style="font-size:14px;margin:0 0 8px">Weekday of reset posts</h3>
+    <div class="controls">
+      <div class="lang-toggle" id="wdZone" role="group" data-i18n-attr="aria-label:weekdayZoneAria" aria-label="Time zone for weekdays">
+        <button type="button" class="zone-btn active" data-zone="America/Los_Angeles" data-i18n="zonePacific" aria-pressed="true">Pacific time</button>
+        <span class="lang-sep" aria-hidden="true">|</span>
+        <button type="button" class="zone-btn" data-zone="local" data-i18n="zoneLocal">Your local time</button>
+      </div>
+      <label><span data-i18n="events">Events</span>
+        <select id="wdPop"><option value="confirmed" data-i18n="populationConfirmed">Confirmed only</option><option value="all" data-i18n="populationAll">All events</option></select></label>
+      <label><span data-i18n="range">Range</span>
+        <select id="wdWindow"><option value="all_time" data-i18n="windowAllTime">All-time</option><option value="last_60_days" data-i18n="window60">Last 60 days</option></select></label>
+    </div>
+    <div id="weekday"></div>
+    <div class="sub" id="weekdayNote" data-i18n="weekdayNote">Counted from each event's announcement time, or the confirmation if it was never announced.</div>
+    <div id="tendencyList"></div>
+    <p class="sub" data-i18n="tendenciesNote">Each claim is tested on this dataset. Supported means the share is above its baseline and the one-sided binomial p-value is under 0.05. Fewer than 10 trials is insufficient data.</p>
+  </section>
+
   <section class="card"><h2 data-i18n="events">Events</h2>
     <div class="controls"><label><span data-i18n="showLabel">Show</span> <select id="tableWhich"><option value="resets" data-i18n="tableResets">reset events</option><option value="signals" data-i18n="tableSignals">signals</option></select></label></div>
     <div class="tablewrap"><table id="table"></table></div></section>
@@ -127,6 +155,7 @@
 </footer>
 <div class="tip" id="tip"></div>
 <script src="i18n.js"></script>
+<script src="tendency.js"></script>
 <script>
 "use strict";
 const COLORS = { reset_confirmed:"--confirmed", reset_announced:"--announced", reset_hint:"--hint", outage:"--outage",
@@ -136,9 +165,9 @@ const color = l => css(COLORS[l] || "--other");
 const LOCAL_TZ = Intl.DateTimeFormat().resolvedOptions().timeZone || "local";
 // Same constants as src/codex_reset_tracker/analysis.py
 const W = { base:0.05, time_since_reset_max:0.30, time_since_reset_full_h:96, campaign_even_day:0.20,
-            outage_24h:0.15, hint_24h:0.10, rivalry_24h:0.05, day_slot_used:-0.25 };
+            outage_24h:0.15, hint_24h:0.10, rivalry_24h:0.05, day_slot_used:-0.25, weekday_supported:0.10 };
 const PENDING = 0.95, DAY0 = "2026-10-04", CAMPAIGN_LEN = 28;
-let RESETS = [], SIGNALS = [], LAST_SRC = "";
+let RESETS = [], SIGNALS = [], TENDENCIES = [], LAST_SRC = "", WD_ZONE = "America/Los_Angeles";
 
 const t = (key, vars) => I18N.t(key, vars);
 const tr = (prefix, id) => { if (!id) return ""; const k = prefix + id; const s = t(k); return s === k ? id : s; };
@@ -183,9 +212,14 @@ async function load() {
   let sawError = false;
   for (const base of ["../data/", "data/", "./"]) {
     try {
-      const [r, s] = await Promise.all([fetch(base + "resets.jsonl"), fetch(base + "signals.jsonl")]);
+      const [r, s, td] = await Promise.all([fetch(base + "resets.jsonl"), fetch(base + "signals.jsonl"), fetch(base + "tendencies.json")]);
       if (r.ok && s.ok) {
         RESETS = parseJsonl(await r.text()); SIGNALS = parseJsonl(await s.text());
+        TENDENCIES = [];
+        if (td.ok) {
+          try { const body = await td.json(); TENDENCIES = body.tendencies || []; }
+          catch (_) { TENDENCIES = []; }
+        }
         document.getElementById("fallback").style.display = "none";
         render(base); return;
       }
@@ -201,7 +235,14 @@ async function load() {
 }
 document.getElementById("files").addEventListener("change", async ev => {
   try {
-    for (const f of ev.target.files) { const rows = parseJsonl(await f.text());
+    for (const f of ev.target.files) {
+      const text = await f.text();
+      const trimmed = text.trim();
+      if (trimmed.startsWith("{")) {
+        const body = JSON.parse(trimmed);
+        if (body.tendencies) { TENDENCIES = body.tendencies; continue; }
+      }
+      const rows = parseJsonl(text);
       if (rows.length && "event_id" in rows[0]) RESETS = rows; else SIGNALS = rows; }
   } catch (_) {
     document.getElementById("status").textContent = t("parseError");
@@ -212,7 +253,7 @@ document.getElementById("files").addEventListener("change", async ev => {
 document.getElementById("refresh").addEventListener("click", () => load());
 document.querySelectorAll(".lang-btn").forEach(btn => btn.addEventListener("click", () => I18N.setLang(btn.getAttribute("data-set-lang"), true)));
 
-function likelihood(now) {
+function likelihood(now, evaluated) {
   const f = [["factorBase", W.base, null]];
   const conf = RESETS.filter(e => e.status === "confirmed").sort((a, b) => tms(evTime(a)) - tms(evTime(b)));
   const lastT = conf.length ? tms(evTime(conf[conf.length - 1])) : null;
@@ -229,6 +270,16 @@ function likelihood(now) {
   const recent = SIGNALS.filter(s => !s.false_positive && now - tms(s.utc) >= 0 && now - tms(s.utc) <= 24 * 3600e3);
   for (const [lab, w, key] of [["outage", W.outage_24h, "factorOutage"], ["reset_hint", W.hint_24h, "factorHint"], ["rivalry_hint", W.rivalry_24h, "factorRivalry"]])
     if (recent.some(s => labelsOf(s).includes(lab))) f.push([key, w, null]);
+  if (evaluated && window.Tendency) {
+    for (const item of evaluated) {
+      const spec = item.test || {};
+      if (spec.kind !== "weekday" || item.verdict !== "supported") continue;
+      if (Tendency.weekdayOf(now, spec.zone) !== spec.weekday) continue;
+      const zoneName = spec.zone === "America/Los_Angeles" ? t("zonePacific") : spec.zone === "Asia/Taipei" ? t("zoneTaipei") : spec.zone;
+      f.push(["factorWeekday", W.weekday_supported, { day: t("wdLong_" + spec.weekday), zone: zoneName }]);
+      break;
+    }
+  }
   let score = Math.max(0, Math.min(1, f.reduce((a, [, v]) => a + v, 0)));
   if (pending) { f.push(["factorPending", Math.max(0, PENDING - score), null]); score = Math.max(score, PENDING); }
   const level = pending ? "pending" : score >= 0.5 ? "high" : score >= 0.25 ? "medium" : "low";
@@ -251,7 +302,8 @@ function render(src) {
       link((last.confirm || last.announce).url, t("wordPost")),
       document.createTextNode(" · " + tr("kind_", last.kind) + dayBit));
   }
-  const lk = likelihood(now);
+  const evaluated = window.Tendency ? Tendency.evaluateTendencies(TENDENCIES, RESETS, SIGNALS, now) : [];
+  const lk = likelihood(now, evaluated);
   document.getElementById("lkScore").textContent = lk.score.toFixed(2);
   const lv = document.getElementById("lkLevel");
   const levelName = t("level_" + lk.level);
@@ -271,7 +323,7 @@ function render(src) {
     el("div", {}, t("totalsSignals", { n: SIGNALS.length })),
     el("div", {}, t("totalsGap", { n: gap == null ? "—" : gap.toFixed(1) })),
     el("div", {}, t("totalsLag", { n: lagMed == null ? "—" : lagMed.toFixed(1), count: lags.length })));
-  drawTimeline(); drawDays(lk.day); drawLag(); drawHeat(); drawTable();
+  drawTimeline(); drawDays(lk.day); drawLag(); drawHeat(); drawWeekday(); drawTendencies(evaluated); drawTable();
 }
 
 const tip = document.getElementById("tip");
@@ -367,6 +419,45 @@ function drawHeat() {
   document.getElementById("heat").replaceChildren(box, el("div", { class: "sub" }, t("heatNote", { n: times.length })));
 }
 
+function drawWeekday() {
+  const pop = document.getElementById("wdPop").value;
+  const windowName = document.getElementById("wdWindow").value;
+  const got = Tendency.weekdayCounts(RESETS, { zone: WD_ZONE, population: pop, window: windowName, now: Date.now() });
+  const counts = Tendency.WEEKDAYS.map(d => got.counts[d] || 0);
+  const max = Math.max(1, ...counts);
+  const box = el("div", { class: "bars", role: "img" });
+  box.setAttribute("aria-label", t("weekdayTitle"));
+  Tendency.WEEKDAYS.forEach((d, i) => {
+    const h = Math.round((counts[i] / max) * 120);
+    box.append(el("div", { class: "col" },
+      el("div", { class: "n" }, String(counts[i])),
+      el("div", { class: "bar", title: t("weekdayBar", { day: t("wd_" + d), n: counts[i] }),
+        style: `height:${counts[i] ? Math.max(4, h) : 0}px` }),
+      el("div", {}, t("wd_" + d))));
+  });
+  document.getElementById("weekday").replaceChildren(box);
+  document.getElementById("weekdayNote").textContent = t("weekdayNote") + " " + t("weekdayN", { n: got.n });
+}
+
+function fmtPct(x) { return x == null ? "—" : (x * 100).toFixed(1); }
+function fmtP(p) { return p == null ? "—" : (p < 0.001 ? "< 0.001" : "= " + Number(p).toFixed(3)); }
+function drawTendencies(rows) {
+  const box = document.getElementById("tendencyList");
+  if (!rows.length) { box.replaceChildren(el("div", { class: "sub" }, t("noTendencies"))); return; }
+  box.replaceChildren(...rows.map(row => {
+    const badge = row.verdict === "supported" ? "ok" : row.verdict === "not supported" ? "no" : "ins";
+    const key = row.verdict === "supported" ? "verdict_supported" : row.verdict === "not supported" ? "verdict_not_supported" : "verdict_insufficient_data";
+    const baseName = row.baseline_name === "timeline" ? t("baselineTimeline") : row.baseline_name;
+    const src = row.source === "community observation" ? t("tendencySourceCommunity") : row.source === "data" ? t("tendencySourceData") : row.source;
+    const extra = row.small_sample ? " · " + t("tendencyCaveat") : "";
+    return el("div", { class: "tend-row" },
+      el("div", { class: "tend-top" }, el("span", { class: "pill " + badge }, t(key)), el("span", {}, row.claim)),
+      el("div", { class: "sub" }, t("tendencyCounts", {
+        k: row.k, n: row.n, share: fmtPct(row.share), baseline: fmtPct(row.baseline), baselineName: baseName
+      }) + " · " + t("tendencyP", { p: fmtP(row.p_value) }) + " · " + src + extra));
+  }));
+}
+
 function drawTable() {
   const which = document.getElementById("tableWhich").value, tbl = document.getElementById("table"); tbl.replaceChildren();
   if (which === "resets") {
@@ -389,6 +480,16 @@ function drawTable() {
 }
 for (const id of ["range", "showSig"]) document.getElementById(id).addEventListener("change", drawTimeline);
 for (const id of ["heatWhich", "heatRange"]) document.getElementById(id).addEventListener("change", drawHeat);
+for (const id of ["wdPop", "wdWindow"]) document.getElementById(id).addEventListener("change", () => { if (RESETS.length) drawWeekday(); });
+document.querySelectorAll(".zone-btn").forEach(btn => btn.addEventListener("click", () => {
+  WD_ZONE = btn.getAttribute("data-zone");
+  document.querySelectorAll(".zone-btn").forEach(b => {
+    const on = b === btn;
+    b.classList.toggle("active", on);
+    b.setAttribute("aria-pressed", on ? "true" : "false");
+  });
+  if (RESETS.length) drawWeekday();
+}));
 document.getElementById("tableWhich").addEventListener("change", drawTable);
 window.addEventListener("resize", () => { if (RESETS.length) { drawTimeline(); drawLag(); } });
 I18N.onChange(() => { if (LAST_SRC) render(LAST_SRC); else if (I18N.ready()) applyRuntimeChrome(); });
