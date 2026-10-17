@@ -2349,6 +2349,34 @@
    "referenced": [],
    "author": "codex_resets",
    "url": "https://x.com/codex_resets/status/2111351614170870003"
+  },
+  {
+   "id": "2111492673890824348",
+   "author": "thsottiaux",
+   "created_at": "2026-10-17T16:20:57Z",
+   "text": "Day 13/ Le limit reset https://t.co/zXd2DIH5xf",
+   "referenced": [],
+   "url": "https://x.com/thsottiaux/status/2111492673890824348"
+  },
+  {
+   "id": "2111492738025959922",
+   "author": "thsottiaux",
+   "created_at": "2026-10-17T16:21:13Z",
+   "text": "Landing sometime today by EOD PST",
+   "referenced": [
+    "2111492673890824348"
+   ],
+   "url": "https://x.com/thsottiaux/status/2111492738025959922"
+  },
+  {
+   "id": "2111492941046771971",
+   "author": "codex_resets",
+   "created_at": "2026-10-17T16:22:01Z",
+   "text": "🗓️ Codex reset announced by Oct 18, 07:00 UTC\n\nExecution not yet confirmed. https://t.co/y7abicVRCO\n\nhttps://t.co/E02KWlEpjM",
+   "referenced": [
+    "2111492738025959922"
+   ],
+   "url": "https://x.com/codex_resets/status/2111492941046771971"
   }
  ]
 }
