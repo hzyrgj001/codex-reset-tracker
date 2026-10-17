@@ -1,5 +1,7 @@
 # codex-reset-tracker
 
+> **中文。** [可视化页面](docs/index.html)会按浏览器语言在 English 与简体中文之间自动切换，也可用页眉的 **EN | 中文** 手动切换（记在 localStorage）。帖子原文不翻译。数据集和其余文档仍是英文。
+
 **An unofficial, open-source tracker of Codex / ChatGPT Work usage resets.** It includes:
 
 * a **historical dataset** of 62 reset events since 2025-09 (45 confirmed), each with links to its X posts, in Taipei (UTC+8) and UTC;
@@ -51,6 +53,10 @@ Every point links to its X post. If you open the HTML file directly (`file://`),
 The page then offers a file picker for the two `.jsonl` files.
 
 For GitHub Pages: Settings → Pages → Source: **GitHub Actions**. The `pages` workflow then publishes `docs/` together with `data/`.
+
+## Languages
+
+The visualizer auto-selects **English** or **Simplified Chinese**. If any entry in `navigator.languages` (falling back to `navigator.language`) starts with `zh` — `zh`, `zh-CN`, `zh-TW`, `zh-Hans`, `zh-Hant`, and similar — the chrome is Mandarin; otherwise it is English. The **EN | 中文** toggle stores the choice in `localStorage` under `codexResetTracker.lang` and overrides auto-detect until that key is cleared. `?lang=zh` or `?lang=en` applies when nothing is stored. Dates and times format with `en-US` or `zh-CN`. X post text, curated notes, and URLs stay as written.
 
 Optional PNG chart: `pip install matplotlib`, then `PYTHONPATH=src python3 -m codex_reset_tracker --dry-run --chart chart.png`.
 
