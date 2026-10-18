@@ -28,9 +28,10 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          # workflow_run checkout defaults to the workflow file's SHA; pin to the
-          # triggering track-resets commit (or the push SHA) so we publish fresh data.
-          ref: ${{ github.event.workflow_run.head_sha || github.sha }}
+          # For workflow_run, check out the tip of main: track-resets pushes its data
+          # commit during the run, so workflow_run.head_sha (the commit the run
+          # started on) is one update behind. For push/dispatch, use github.sha.
+          ref: ${{ github.event_name == 'workflow_run' && 'main' || github.sha }}
       - name: Assemble site
         run: |
           mkdir -p _site
