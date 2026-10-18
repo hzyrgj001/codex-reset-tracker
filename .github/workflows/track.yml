@@ -2,7 +2,7 @@ name: track-resets
 
 on:
   schedule:
-    - cron: "0 * * * *"   # every hour (UTC)
+    - cron: "17 * * * *"  # hourly at :17 UTC; :00 is GitHub's busiest slot and runs get dropped
   workflow_dispatch: {}
 
 permissions:
