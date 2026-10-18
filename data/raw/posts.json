@@ -2455,6 +2455,22 @@
     "2110750421367287996"
    ],
    "url": "https://x.com/bbzz1067029/status/2111790266592207298"
+  },
+  {
+   "id": "2111815056136737039",
+   "author": "heykarthikm",
+   "created_at": "2026-10-18T13:41:59Z",
+   "text": "Was mid-build with a few Codex agents and GPT-6-Astra tapped out: “Selected model is at capacity.” 🫠\n\nCodex handed the unfinished work to 6.1-Sol and didn’t lose a line, but I’d love Astra back.\n\n@thsottiaux @OpenAIDevs any ETA on more capacity?",
+   "referenced": [],
+   "url": "https://x.com/heykarthikm/status/2111815056136737039"
+  },
+  {
+   "id": "2111836181088669854",
+   "author": "StErMi",
+   "created_at": "2026-10-18T15:05:56Z",
+   "text": "Here we go again... \n\n\"Error running remote compact task: Selected model is at capacity. Please try a different model.\"\n\n@thsottiaux 😭",
+   "referenced": [],
+   "url": "https://x.com/StErMi/status/2111836181088669854"
   }
  ]
 }
