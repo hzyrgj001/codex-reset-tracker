@@ -2471,6 +2471,34 @@
    "text": "Here we go again... \n\n\"Error running remote compact task: Selected model is at capacity. Please try a different model.\"\n\n@thsottiaux 😭",
    "referenced": [],
    "url": "https://x.com/StErMi/status/2111836181088669854"
+  },
+  {
+   "id": "2111853323716575473",
+   "author": "cm2cDrON7V3956",
+   "created_at": "2026-10-18T16:14:03Z",
+   "text": "@thsottiaux What's cooking? Mostly \"Selected model is at capacity. Please try a different model.\" on repeat, with a 277-second retry timer for dessert 😂 Limits hurt, but a model that's too busy to even start the task is the real pain. https://t.co/2xOlPZjGve",
+   "referenced": [
+    "2111849858374177222"
+   ],
+   "url": "https://x.com/cm2cDrON7V3956/status/2111853323716575473"
+  },
+  {
+   "id": "2111859158500675862",
+   "author": "ToofunWest",
+   "created_at": "2026-10-18T16:37:14Z",
+   "text": "I found the cause: both previous runs stopped because Codex reported, “Selected model is at capacity. Please try a different model.” I verified that in this chat’s recorded history. It was a model-availability failure! Daily issues with Codex 🫤 @thsottiaux @OpenAIDevs",
+   "referenced": [],
+   "url": "https://x.com/ToofunWest/status/2111859158500675862"
+  },
+  {
+   "id": "2111875639418745033",
+   "author": "SomeguyProbable",
+   "created_at": "2026-10-18T17:42:43Z",
+   "text": "@thsottiaux Woke up to a stalled goal with 'selected model at capacity' so nothing.",
+   "referenced": [
+    "2111849858374177222"
+   ],
+   "url": "https://x.com/SomeguyProbable/status/2111875639418745033"
   }
  ]
 }
