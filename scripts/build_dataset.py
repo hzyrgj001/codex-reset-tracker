@@ -106,6 +106,10 @@ EVENTS = [
       co=["2110580418898780462", "2110584758950588537", "2110591392691159317", "2110612709423362109"],
       mirror={"announced": "2110595789282021677", "confirmed": "2110618853877117162"},
       notes="After >24 h of silence (theo: 'Anyone check in on @thsottiaux'), poteto 'come back', Tibo 'I made it alive', then Day 10/ Reset."),
+    E("2111492673890824348", "2111566005684289735", scope="Codex + ChatGPT Work", triggers=["campaign_day"],
+      extra=["2111492738025959922"],
+      mirror={"announced": "2111492941046771971", "confirmed": "2111566174722941349"},
+      notes="'Day 13/ Le limit reset' + 'Landing sometime today by EOD PST' -> standalone 'Done' (~4.85 h later)."),
 ]
 
 SIGNAL_OVERRIDES = {
@@ -119,7 +123,7 @@ SIGNAL_OVERRIDES = {
     "2105173168281506088": {"notes": "Per quotaalert.com this is the credit-grant + extra banked reset confirmation; the post itself has no reset wording. Uncertain."},
     "2106845241357824205": {"notes": "Start of the 28-day series: each day an improvement OR a full reset."},
     "2109152716954222849": {"notes": "Pro poll: '5h limits, 2X week usage' vs 'no 5h limits, same usage'. Not a reset."},
-    "2111337472349343856": {"notes": "Counter-example: Tibo -> @poteto banter on Day 13 with no reset (as of 2026-10-17 10:30 UTC)."},
+    "2111337472349343856": {"notes": "Tibo -> @poteto banter earlier on Oct 17; Day 13 reset later that UTC evening."},
     "2109892247580000595": {"notes": "'simple plan' for significantly more usage. Not a reset (as of 2026-10-17)."},
 }
 KEEP_OTHER = {"2105672058269212820", "2110580418898780462", "2105173168281506088", "2110626828260192425", "2110989212686405684", "2111351614170870003", "2106239435461579088"}

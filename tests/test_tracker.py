@@ -35,6 +35,9 @@ class ClassifierTests(unittest.TestCase):
         self.assertEqual(self.t("Done and dusted", refs=["1"], ctx={"1"}), "reset_confirmed")
         self.assertEqual(self.t("What would you like with your side of reset? It's done.", refs=["1"], ctx={"1"}), "reset_confirmed")
         self.assertEqual(self.t("Landing within the next 2 hours", refs=["1"], ctx={"1"}), "reset_announced")
+        self.assertEqual(self.t("Landing sometime today by EOD PST", refs=["1"], ctx={"1"}), "reset_announced")
+        self.assertEqual(self.t("Day 13/ Le limit reset"), "reset_announced")
+        self.assertEqual(self.t("Done", refs=["1"], ctx={"1"}), "reset_confirmed")
 
     def test_improvement_not_reset(self):
         self.assertEqual(self.t("Day 12/\n\nWe've made improvements to Codex & Work that increase the effective usage you get."), "usage_improvement")

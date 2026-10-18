@@ -5,7 +5,7 @@ import json
 from pathlib import Path
 from typing import Any, Iterable
 
-from .classifier import TRUSTED_RESET_AUTHORS, MIRROR_AUTHORS, classify
+from .classifier import TRUSTED_RESET_AUTHORS, MIRROR_AUTHORS, CONTEXT_CONFIRM_RX, Classification, classify
 from .timeutil import campaign_day, fmt_tpe, fmt_utc, parse_ts
 
 ABBREV = 200
@@ -114,6 +114,21 @@ class Store:
             c = classify(post.get("text", ""), author, list(refs), self.reset_context_ids())
             at = parse_ts(post["created_at"])
             ref = post_ref(post)
+            # Standalone short confirms ("Done") often have no reply refs; attach to an
+            # open announcement within 48 h instead of dropping them as "other".
+            if (
+                author in TRUSTED_RESET_AUTHORS
+                and c.label == "other"
+                and CONTEXT_CONFIRM_RX.search(post.get("text", "") or "")
+                and self._open_announcement(at, 48) is not None
+            ):
+                c = Classification(
+                    label="reset_confirmed",
+                    labels=["reset_confirmed"],
+                    day_n=c.day_n,
+                    day_is_reset=c.day_is_reset,
+                    reasons=["reset_confirmed: short confirmation near open announcement"],
+                )
             if author in TRUSTED_RESET_AUTHORS and c.label in ("reset_announced", "reset_confirmed"):
                 ev = self._event_for_refs(refs)
                 if c.label == "reset_confirmed":

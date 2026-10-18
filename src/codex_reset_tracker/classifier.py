@@ -70,6 +70,8 @@ CONTEXT_CONFIRM_RX = _rx(
 ANNOUNCE_RX = _rx(
     r"\bglobal reset\b",
     r"\bday \d+\s*/\s*reset\b",
+    # e.g. "Day 13/ Le limit reset" — Reset not immediately after the slash
+    r"\bday \d+\s*/[^\n]{0,80}\breset\b",
     r"\b(will|we'll|we will|going to|team will)( also)? (do (a|the) )?(full |global )?(banked )?reset",
     r"\breset (will )?land(s|ing)?\b",
     r"\b(we are|we're|are) (once again )?reset(t)?ing\b",
@@ -90,7 +92,11 @@ ANNOUNCE_RX = _rx(
     r"\bfully reset again\b",
     r"\bperformative reset\b",
 )
-CONTEXT_ANNOUNCE_RX = _rx(r"^\s*landing (within|in) (the )?next\b")
+CONTEXT_ANNOUNCE_RX = _rx(
+    r"^\s*landing (within|in) (the )?next\b",
+    r"^\s*landing sometime\b",
+    r"^\s*landing\b.{0,60}\b(eod|today|by end)\b",
+)
 NEGATION_RX = _rx(
     r"can'?t (really )?give a reset",
     r"\bno reset\b",
@@ -185,7 +191,9 @@ def classify(
 
     m = DAY_N_RX.match(text)
     day_n = int(m.group(1)) if m else None
-    day_is_reset = bool(m and m.group(2))
+    # "Day 13/ Le limit reset" has Reset later on the same line — still a reset day.
+    first_line = text.split("\n", 1)[0]
+    day_is_reset = bool(m and (m.group(2) or re.search(r"\breset\b", first_line, re.I)))
 
     negated = bool(NEGATION_RX.search(text))
 

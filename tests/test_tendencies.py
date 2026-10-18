@@ -39,12 +39,12 @@ class WeekdayTests(unittest.TestCase):
         store, _ = _load()
         report = weekday_breakdown(store.resets, NOW)
         confirmed = report["slices"]["all_time"]["confirmed"]
-        self.assertEqual(confirmed["n"], 45)
+        self.assertEqual(confirmed["n"], 46)
         self.assertEqual(confirmed["America/Los_Angeles"],
-                         {"Mon": 6, "Tue": 6, "Wed": 6, "Thu": 5, "Fri": 8, "Sat": 10, "Sun": 4})
+                         {"Mon": 6, "Tue": 6, "Wed": 6, "Thu": 5, "Fri": 8, "Sat": 11, "Sun": 4})
         self.assertEqual(confirmed["Asia/Taipei"],
-                         {"Mon": 3, "Tue": 6, "Wed": 7, "Thu": 6, "Fri": 5, "Sat": 7, "Sun": 11})
-        self.assertEqual(sum(confirmed["hour_pacific"]), 45)
+                         {"Mon": 3, "Tue": 6, "Wed": 7, "Thu": 6, "Fri": 5, "Sat": 7, "Sun": 12})
+        self.assertEqual(sum(confirmed["hour_pacific"]), 46)
         self.assertEqual(confirmed["hour_pacific"][20], 6)
         self.assertEqual(confirmed["hour_pacific"][1], 0)
 
@@ -52,15 +52,15 @@ class WeekdayTests(unittest.TestCase):
         store, _ = _load()
         report = weekday_breakdown(store.resets, NOW)
         all_time = report["slices"]["all_time"]["all"]
-        self.assertEqual(all_time["n"], 62)
+        self.assertEqual(all_time["n"], 63)
         self.assertEqual(all_time["America/Los_Angeles"],
-                         {"Mon": 10, "Tue": 9, "Wed": 10, "Thu": 8, "Fri": 11, "Sat": 10, "Sun": 4})
+                         {"Mon": 10, "Tue": 9, "Wed": 10, "Thu": 8, "Fri": 11, "Sat": 11, "Sun": 4})
         recent = report["slices"]["last_60_days"]
         self.assertEqual(recent["since"], "2026-08-18T10:30:00Z")
-        self.assertEqual(recent["confirmed"]["n"], 16)
+        self.assertEqual(recent["confirmed"]["n"], 17)
         self.assertEqual(recent["confirmed"]["America/Los_Angeles"],
-                         {"Mon": 2, "Tue": 2, "Wed": 2, "Thu": 2, "Fri": 4, "Sat": 3, "Sun": 1})
-        self.assertEqual(recent["all"]["Asia/Taipei"]["Sun"], 3)
+                         {"Mon": 2, "Tue": 2, "Wed": 2, "Thu": 2, "Fri": 4, "Sat": 4, "Sun": 1})
+        self.assertEqual(recent["all"]["Asia/Taipei"]["Sun"], 4)
 
     def test_anchor_is_announce_then_confirm(self):
         # 2026-10-19T06:30Z is Sunday 23:30 PDT; the confirmation later that UTC day is Monday PT.
@@ -98,23 +98,23 @@ class VerdictTests(unittest.TestCase):
         self.assertEqual((ROOT / "data" / "tendencies.json").read_text(encoding="utf-8"), before)
         monday = rows["monday_resets"]
         self.assertEqual(monday["verdict"], "not supported")
-        self.assertEqual((monday["k"], monday["n"]), (6, 45))
+        self.assertEqual((monday["k"], monday["n"]), (6, 46))
         self.assertEqual(monday["baseline_name"], "1/7")
         self.assertGreater(monday["p_value"], 0.05)
         self.assertFalse(monday["small_sample"])
         even = rows["even_day_cadence"]
         self.assertEqual(even["verdict"], "insufficient data")
-        self.assertEqual((even["k"], even["n"]), (4, 5))
+        self.assertEqual((even["k"], even["n"]), (4, 6))
         morning = rows["morning_taipei"]
         self.assertEqual(morning["verdict"], "supported")
-        self.assertEqual((morning["k"], morning["n"]), (35, 62))
+        self.assertEqual((morning["k"], morning["n"]), (35, 63))
         self.assertLess(morning["p_value"], 0.05)
         outage = rows["outage_recovery_reset"]
         self.assertEqual(outage["verdict"], "insufficient data")
         self.assertEqual((outage["k"], outage["n"]), (2, 3))
         banter = rows["poteto_banter"]
         self.assertEqual(banter["verdict"], "supported")
-        self.assertEqual((banter["k"], banter["n"]), (10, 14))
+        self.assertEqual((banter["k"], banter["n"]), (12, 16))
         self.assertTrue(banter["small_sample"])
 
     def test_weekday_factor_only_when_supported(self):
@@ -146,7 +146,7 @@ class VerdictTests(unittest.TestCase):
         store, tendencies = _load()
         rows = evaluate_tendencies(tendencies, store.resets, store.signals, NOW)
         lk = likelihood(store.resets, store.signals, NOW, rows)
-        self.assertEqual(lk["score"], 0.41)
+        self.assertEqual(lk["score"], 0.22)
         self.assertFalse(any("weekday" in f["factor"] for f in lk["factors"]))
 
     def test_cli_prints_computed_verdicts(self):
