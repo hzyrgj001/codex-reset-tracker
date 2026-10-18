@@ -2499,6 +2499,86 @@
     "2111849858374177222"
    ],
    "url": "https://x.com/SomeguyProbable/status/2111875639418745033"
+  },
+  {
+   "id": "2111910671566696706",
+   "author": "0xjohnfx",
+   "created_at": "2026-10-18T20:01:56Z",
+   "text": "@thsottiaux ■ Selected model is at capacity. Please try a different model",
+   "referenced": [
+    "2111849858374177222"
+   ],
+   "url": "https://x.com/0xjohnfx/status/2111910671566696706"
+  },
+  {
+   "id": "2111918595907178801",
+   "author": "DavidCesal",
+   "created_at": "2026-10-18T20:33:25Z",
+   "text": "@thsottiaux It was cooking fine, but now \"Selected model is at capacity. Please try a different model.\" for a while.",
+   "referenced": [
+    "2111849858374177222"
+   ],
+   "url": "https://x.com/DavidCesal/status/2111918595907178801"
+  },
+  {
+   "id": "2111920715863626050",
+   "author": "korkin_igor",
+   "created_at": "2026-10-18T20:41:50Z",
+   "text": "@thsottiaux Selected model is at capacity. Please try a different model.",
+   "referenced": [
+    "2111918768733753664"
+   ],
+   "url": "https://x.com/korkin_igor/status/2111920715863626050"
+  },
+  {
+   "id": "2111922199061999780",
+   "author": "exeytv",
+   "created_at": "2026-10-18T20:47:44Z",
+   "text": "@thsottiaux Currently at capacity",
+   "referenced": [
+    "2111849858374177222"
+   ],
+   "url": "https://x.com/exeytv/status/2111922199061999780"
+  },
+  {
+   "id": "2111927647269974311",
+   "author": "Hestrny",
+   "created_at": "2026-10-18T21:09:23Z",
+   "text": "@thsottiaux Still seeing model at capacity, using 6.1 sol light @thsottiaux https://t.co/oMSO64IZC8",
+   "referenced": [
+    "2110750421367287996"
+   ],
+   "url": "https://x.com/Hestrny/status/2111927647269974311"
+  },
+  {
+   "id": "2111927769399693367",
+   "author": "CrisPierry",
+   "created_at": "2026-10-18T21:09:52Z",
+   "text": "@thsottiaux @thsottiaux We’re still running into the model-at-capacity error right now. Screenshot attached. Is this the same issue, or a separate capacity limit? https://t.co/Ns1eLlfi4O",
+   "referenced": [
+    "2110750421367287996"
+   ],
+   "url": "https://x.com/CrisPierry/status/2111927769399693367"
+  },
+  {
+   "id": "2111929560598221244",
+   "author": "CrisPierry",
+   "created_at": "2026-10-18T21:16:59Z",
+   "text": "@thsottiaux @thsottiaux Additional details: GPT-6 Astra with High reasoning in the Codex macOS app. Exact error: “Selected model is at capacity. Please try a different model.”",
+   "referenced": [
+    "2111927769399693367"
+   ],
+   "url": "https://x.com/CrisPierry/status/2111929560598221244"
+  },
+  {
+   "id": "2111931776247693379",
+   "author": "firechickensol",
+   "created_at": "2026-10-18T21:25:47Z",
+   "text": "@thsottiaux Astra \"Selected model is at capacity. Please try a different model.\"\n6.1 Sol \"Selected model is at capacity. Please try a different model.\"\nChatGPT \"This response couldn’t load\"\n\nYa'll good?",
+   "referenced": [
+    "2111849858374177222"
+   ],
+   "url": "https://x.com/firechickensol/status/2111931776247693379"
   }
  ]
 }
