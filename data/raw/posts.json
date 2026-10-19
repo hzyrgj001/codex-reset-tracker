@@ -2925,6 +2925,14 @@
    "url": "https://x.com/Junyuxeqv/status/2112014158732591381"
   },
   {
+   "id": "2112014847777124840",
+   "author": "HopeTruthxx",
+   "created_at": "2026-10-19T02:55:53Z",
+   "text": "@thsottiaux Hi Tibo, here is Weekly Roundup. Another health check on all my suggestions. Some survived. Some escaped. One was fixed, then mysteriously disappeared. (´･ω･`)\n\nWeekly score: 2 solved, 1 partially solved, 11 still waiting, 1 regression. My feedback portfolio is growing faster than my returns. (¬‿¬)\n\n#1 Permission Center\n[Still waiting] Multiple tasks can ask for approval at once. I still have to open them one by one. One permission hub would save a lot of clicks. (‘-’*)\n\n#2 Quick Chat sync speed\n[Solved] thank you! (‘▽’)\n\n#3 Always-visible Usage\n[Still waiting] I’d still love a small usage indicator on screen without click action. Usage is basically battery percentage for heavy Codex users. We really do check it that often. (‘ω’)\n\n#4 In-app auto updates\n[Still waiting] Updates still often mean closing and reopening Codex. An optional background update mode would make life much smoother. (._.)\n\n# 5A Share files to an existing ChatGPT chat\n[Still waiting] Please let us choose an existing conversation. Not every file needs to be reborn in a brand-new chat. (‘▽’)\n\n# 5B Loyalty rewards\n[Still waiting] Long-term Free, Plus, Pro, and Business users could earn points or small perks. Loyalty deserves XP too. (¬‿¬)\n\n# 6A Cookie Preferences space\n[Solved] Thank you! (‘▽’)\n\n# 6B Project sorting\n[Still waiting] “Sort by latest update” still does not always feel truly latest. My recent Projects sometimes remain mysteriously buried. (・・?)\n\n#7 Open in a Quick Chat\n[Regressed] It was fixed, it worked, and then it disappeared. We finally repaired the bridge, only to watch it get demolished. (；ω；)\n\n# 8A Show all Projects in Schedule\n[Still waiting] With “Run on computer,” I can choose a Project, but only part of the list seems to appear. Full list plus search would be lovely. (‘-’*)\n\n# 8B Web Projects for cloud schedules\n[Still waiting] Without “Run on computer,” Project selection disappears. But ChatGPT Web already has Projects. Cloud tasks deserve a home too. (´･ω･`)\n\n# 9 Project Cleanup and Archiving\n[Partially solved] Finally, some good news! The new disk-state storage optimizations reportedly reduce disk usage for stored state by around 60%. (‘▽’)\n\nStill hoping for Light, Medium, and Deep cleanup options, plus ZIP or tar.gz archiving for future recovery.\n\nMy SSD can finally breathe, but my inner data hoarder still refuses to let go. (¬‿¬)\n\n#10 Model at Capacity\n[Still waiting] Codex sometimes stops halfway through long tasks because the model is at capacity. Could we have automatic retries, checkpoints, and task resumption? I'd rather wait for the train than get thrown off halfway through the journey. (´･ω･`)\n\n#11 Bring Back Open in a Quick Chat\n[Still waiting] This deserves another mention. Many of us use ChatGPT on our phones throughout the day, then continue working in Codex at home. Losing the ability to transfer full conversations makes that workflow much harder.\n\nI finally learned to cross the bridge, and now I'm back to carrying everything by hand. Please bring it back. (；ω；)\n\n#12 Codex Project Sidebar Scrolling\n[Still waiting] In the latest Codex version, collapsing a Project under Codex (Computer) makes the sidebar jump down to its conversation. This makes switching Projects frustrating. Please preserve the scroll position. I'm changing Projects, not training for the Olympic scrolling championships. (¬‿¬)\n\nFinal score: 2 fully solved, 1 partially solved, 11 pending, 1 regression.\n\nTibo, I'll be back next week. Hopefully with more fixes, fewer surprises, and fewer suggestions returning from the dead. (￣▽￣;)\n\nAt this rate, I might hit suggestion #1000 before Tibo hits the reply button. My loyalty is unlimited, and apparently, so is the waiting list. (¬‿¬)",
+   "referenced": [],
+   "url": "https://x.com/HopeTruthxx/status/2112014847777124840"
+  },
+  {
    "id": "2112032933540458808",
    "author": "PAPS1299315",
    "created_at": "2026-10-19T04:07:45Z",
@@ -3001,6 +3009,356 @@
     "2112039275344941371"
    ],
    "url": "https://x.com/hex_J_/status/2112042182618333320"
+  },
+  {
+   "id": "2112044137939943524",
+   "author": "meenochtec",
+   "created_at": "2026-10-19T04:52:17Z",
+   "text": "@thsottiaux Automatic approval review failed: Selected model is at capacity. Please try a different model.\nThe action was not executed because automatic approval review could not be completed. This is a review failure, not a determination that the action is unsafe. Do not bypass the approval check; resolve the error or ask the user for guidance.",
+   "referenced": [],
+   "url": "https://x.com/meenochtec/status/2112044137939943524"
+  },
+  {
+   "id": "2112046350552764662",
+   "author": "AIReelMotion",
+   "created_at": "2026-10-19T05:01:04Z",
+   "text": "@thsottiaux Automatic approval review failed: Selected model is at capacity. Please try a different model.",
+   "referenced": [
+    "2112039275344941371"
+   ],
+   "url": "https://x.com/AIReelMotion/status/2112046350552764662"
+  },
+  {
+   "id": "2112046822130905478",
+   "author": "meenochtec",
+   "created_at": "2026-10-19T05:02:56Z",
+   "text": "Automatic approval review failed: Selected model is at capacity. Please try a different model.\nThe action was not executed because automatic approval review could not be completed. This is a review failure, not a determination that the action is unsafe. Do not bypass the approval check; resolve the error or ask the user for guidance.@thsottiaux",
+   "referenced": [
+    "2112034063934742720"
+   ],
+   "url": "https://x.com/meenochtec/status/2112046822130905478"
+  },
+  {
+   "id": "2112048869895012426",
+   "author": "julianzhan9",
+   "created_at": "2026-10-19T05:11:05Z",
+   "text": "ChatGPT’s approval service is “at capacity,” so I asked it to report the error. Reporting the error needs approval too. Guess what’s still at capacity. @thsottiaux",
+   "referenced": [],
+   "url": "https://x.com/julianzhan9/status/2112048869895012426"
+  },
+  {
+   "id": "2112049417956262123",
+   "author": "AndrewW72469522",
+   "created_at": "2026-10-19T05:13:15Z",
+   "text": "@thsottiaux The uk and the us are not all on and already you are at capacity and have been for over an hour. The other stuff doesn’t matter if no one can get on and use it",
+   "referenced": [
+    "2111990254408434095"
+   ],
+   "url": "https://x.com/AndrewW72469522/status/2112049417956262123"
+  },
+  {
+   "id": "2112050753325932733",
+   "author": "christopherdosi",
+   "created_at": "2026-10-19T05:18:34Z",
+   "text": "@thsottiaux You should buy more capacity: $500 and \"Selected model is at capacity\" :(",
+   "referenced": [
+    "2112039275344941371"
+   ],
+   "url": "https://x.com/christopherdosi/status/2112050753325932733"
+  },
+  {
+   "id": "2112063168080134477",
+   "author": "AndrewTseZhou",
+   "created_at": "2026-10-19T06:07:54Z",
+   "text": "@thsottiaux Hello, I've recently been frequently encountering the \"Selected model is at capacity\" error when using GPT6 and GPT6.1, and retries haven't helped. I hope the service can be made more stable. Perhaps older models can be retired to free up more machine resources for SOTA models.",
+   "referenced": [
+    "2111990254408434095"
+   ],
+   "url": "https://x.com/AndrewTseZhou/status/2112063168080134477"
+  },
+  {
+   "id": "2112066786233602152",
+   "author": "wiintt",
+   "created_at": "2026-10-19T06:22:16Z",
+   "text": "@thsottiaux Model at capacity, same time as last Monday. 5.6 sol.",
+   "referenced": [],
+   "url": "https://x.com/wiintt/status/2112066786233602152"
+  },
+  {
+   "id": "2112068292169081251",
+   "author": "tianxcpn",
+   "created_at": "2026-10-19T06:28:15Z",
+   "text": "@thsottiaux Not solved. My 500$ account still at capacity.",
+   "referenced": [
+    "2110750421367287996"
+   ],
+   "url": "https://x.com/tianxcpn/status/2112068292169081251"
+  },
+  {
+   "id": "2112068696177058154",
+   "author": "zoujingli",
+   "created_at": "2026-10-19T06:29:52Z",
+   "text": "@thsottiaux Our servers are currently overloaded. Please try again later.\n\nSelected model is at capacity. Please try a different model.",
+   "referenced": [
+    "2111990254408434095"
+   ],
+   "url": "https://x.com/zoujingli/status/2112068696177058154"
+  },
+  {
+   "id": "2112069310646804852",
+   "author": "HanLeo14",
+   "created_at": "2026-10-19T06:32:18Z",
+   "text": "@thsottiaux Selected model is at capacity???",
+   "referenced": [
+    "2112039275344941371"
+   ],
+   "url": "https://x.com/HanLeo14/status/2112069310646804852"
+  },
+  {
+   "id": "2112070419775652299",
+   "author": "aici_interiors",
+   "created_at": "2026-10-19T06:36:43Z",
+   "text": "@thsottiaux @OpenAIDevs @OpenAI Getting repeated error messages this morning, 'Selected model at capacity'. Using Sol High. I thought we were not meant to have this problem anymore, @thsottiaux ? https://t.co/zFFpo3wEKI",
+   "referenced": [],
+   "url": "https://x.com/aici_interiors/status/2112070419775652299"
+  },
+  {
+   "id": "2112071876164174299",
+   "author": "nanniangim",
+   "created_at": "2026-10-19T06:42:30Z",
+   "text": "@thsottiaux 这就是你们作出的改进？\n我付了500$，开启了ultrafast，不是来看你们select model is at capacity的。。。 https://t.co/lQBNRoKkeG",
+   "referenced": [],
+   "url": "https://x.com/nanniangim/status/2112071876164174299"
+  },
+  {
+   "id": "2112075935344435573",
+   "author": "nichuchunb",
+   "created_at": "2026-10-19T06:58:38Z",
+   "text": "@thsottiaux Could you fix the Codex issue: “Selected model is at capacity. Please try a different model.”?",
+   "referenced": [
+    "2112039275344941371"
+   ],
+   "url": "https://x.com/nichuchunb/status/2112075935344435573"
+  },
+  {
+   "id": "2112078131704312233",
+   "author": "HAYYP_BABY_HAN",
+   "created_at": "2026-10-19T07:07:21Z",
+   "text": "@thsottiaux Selected model is at capacity. Please try a different model.  what i got🤣🤣🤣🤣🤣🤣",
+   "referenced": [
+    "2111990254408434095"
+   ],
+   "url": "https://x.com/HAYYP_BABY_HAN/status/2112078131704312233"
+  },
+  {
+   "id": "2112079004257669538",
+   "author": "_bnovc",
+   "created_at": "2026-10-19T07:10:49Z",
+   "text": "\"■ Selected model is at capacity. Please try a different model.\"\n\nThis is a really annoying addition @thsottiaux - now we have per model, 5hr, and weekly, and this one doesn't show when the model will be available again or status",
+   "referenced": [],
+   "url": "https://x.com/_bnovc/status/2112079004257669538"
+  },
+  {
+   "id": "2112080629546529148",
+   "author": "Eric_ef01",
+   "created_at": "2026-10-19T07:17:17Z",
+   "text": "@thsottiaux Error running remote compact task: Selected model is at capacity. Please try a different model.\nSelected model is at capacity. Please try a different model.\nONLY 6 Astra",
+   "referenced": [
+    "2112039275344941371"
+   ],
+   "url": "https://x.com/Eric_ef01/status/2112080629546529148"
+  },
+  {
+   "id": "2112081154056896536",
+   "author": "ternderai",
+   "created_at": "2026-10-19T07:19:22Z",
+   "text": "@thsottiaux Selected model is at capacity. Please try a different model.",
+   "referenced": [
+    "2111990254408434095"
+   ],
+   "url": "https://x.com/ternderai/status/2112081154056896536"
+  },
+  {
+   "id": "2112094625909682350",
+   "author": "Kim5S8UFQq25643",
+   "created_at": "2026-10-19T08:12:54Z",
+   "text": "@thsottiaux Error running remote compact task: Selected model is at capacity. Please try a different model.",
+   "referenced": [
+    "2112039275344941371"
+   ],
+   "url": "https://x.com/Kim5S8UFQq25643/status/2112094625909682350"
+  },
+  {
+   "id": "2112095712095944755",
+   "author": "asta_td",
+   "created_at": "2026-10-19T08:17:13Z",
+   "text": "@thsottiaux Is it possible to check the issue \"Selected model is at capacity. Please try a different model\" without purchasing a domain?\n\nI have plenty of quota, but the model itself is hitting a bottleneck. 😌",
+   "referenced": [
+    "2112039275344941371"
+   ],
+   "url": "https://x.com/asta_td/status/2112095712095944755"
+  },
+  {
+   "id": "2112100496366612684",
+   "author": "Thalie7414",
+   "created_at": "2026-10-19T08:36:13Z",
+   "text": "@thsottiaux I got “Selected model is at capacity. Please try a different model.” again and I’m very angry about it. Very. https://t.co/9Do8ORMoCe",
+   "referenced": [
+    "2112039275344941371"
+   ],
+   "url": "https://x.com/Thalie7414/status/2112100496366612684"
+  },
+  {
+   "id": "2112100717695811643",
+   "author": "wifibaby4u",
+   "created_at": "2026-10-19T08:37:06Z",
+   "text": "Hey @thsottiaux, I think I just set an Olympic record in Codex today:\n🔴 \"Selected model is at capacity\": 110 times\n⏳ Cumulative time lost: 4.5 hours\n⌨ Me typing \"continue\": 85+ times\nI'm no longer an engineer writing code, Tibo. I have become the cron job retry-loop. My own mental model is at capacity. Please send GPUs or send therapy. 😭💀",
+   "referenced": [],
+   "url": "https://x.com/wifibaby4u/status/2112100717695811643"
+  },
+  {
+   "id": "2112102223471841428",
+   "author": "lovexy2009",
+   "created_at": "2026-10-19T08:43:05Z",
+   "text": "@thsottiaux Selected model is at capacity. Please try a different model.",
+   "referenced": [
+    "2112039275344941371"
+   ],
+   "url": "https://x.com/lovexy2009/status/2112102223471841428"
+  },
+  {
+   "id": "2112102414245630317",
+   "author": "Gh0stCai",
+   "created_at": "2026-10-19T08:43:51Z",
+   "text": "@thsottiaux Selected model is at capacity. Please try a different model. \nSelected domain is at capacity. Please try a different domain.",
+   "referenced": [
+    "2112039275344941371"
+   ],
+   "url": "https://x.com/Gh0stCai/status/2112102414245630317"
+  },
+  {
+   "id": "2112102885869961371",
+   "author": "JanelleGon75314",
+   "created_at": "2026-10-19T08:45:43Z",
+   "text": "@thsottiaux Selected model is at capacity. Please try a different model.\n\n大量出现",
+   "referenced": [
+    "2112039275344941371"
+   ],
+   "url": "https://x.com/JanelleGon75314/status/2112102885869961371"
+  },
+  {
+   "id": "2112105146272698878",
+   "author": "Bbangbbang0223",
+   "created_at": "2026-10-19T08:54:42Z",
+   "text": "@thsottiaux Still seeing “Selected model is at capacity” in 2 separate Codex CLI sessions (GPT-6-Luna max) after Day 11. One /goal stalled instead of auto-resuming. Both /feedback uploads:\n\n01a09b17-2b9b-72e1-bad7-b8e37db994b9\n01a037c1-1459-7dc2-816d-ff3090748571\n\nCould you take a look?\nTHX",
+   "referenced": [
+    "2110750421367287996"
+   ],
+   "url": "https://x.com/Bbangbbang0223/status/2112105146272698878"
+  },
+  {
+   "id": "2112105514356310260",
+   "author": "fitzsmith2000",
+   "created_at": "2026-10-19T08:56:10Z",
+   "text": "@thsottiaux Hi tibo I just cant fall asleep cuz my sleep is at capacity 😂 https://t.co/O03lOSA50R",
+   "referenced": [
+    "2112039275344941371"
+   ],
+   "url": "https://x.com/fitzsmith2000/status/2112105514356310260"
+  },
+  {
+   "id": "2112109749315789065",
+   "author": "danph765",
+   "created_at": "2026-10-19T09:12:59Z",
+   "text": "@thsottiaux When the error \"Selected model is at capacity. Please try a different model\" occurs, can you automatically retry the session and resume the session goal at the same time?",
+   "referenced": [
+    "2110750421367287996"
+   ],
+   "url": "https://x.com/danph765/status/2112109749315789065"
+  },
+  {
+   "id": "2112111572697117133",
+   "author": "akira_papa_IT",
+   "created_at": "2026-10-19T09:20:14Z",
+   "text": "【Codexの状態データ60%削減見込み。Day 8〜14の改善まとめ】\n🧭 日々の作業の「詰まり」を減らす改善が中心の1週間でした。\n\n■ 1. 保存と編集のしやすさ\n  ▸ Day 9（10/14）：ChatGPTとCodexのデスクトップアプリで、ディスクへの状態保存方式を最適化。保存量は60%削減の見込みと発表。対象はアプリの状態データで、PC全体のファイル容量ではなく、こちらの実測ではありません\n  ▸ Day 14（10/19）：デスクトップアプリで、スレッド内の過去メッセージを編集できるように。長く要望されていた改善です\n\n■ 2. 混雑と利用量の改善\n  ▸ Day 11（10/16）：「Selected model is at capacity」の発生を大幅に減らす変更と計算資源の追加。発生しても止まったままにせず、いずれ自動で続行するよう改善\n  ▸ Day 12（10/17）：Codex & Workの実効利用量を増やす改善。サブエージェント間の文脈再利用、キャッシュ（一度処理した文脈の再利用）の長めの保持、経路改善によるキャッシュヒット増。上限の数値や倍率は示されていません\n\n■ 3. 利用枠のリセット\n  ▸ Day 8（10/13）・Day 10（10/15）・Day 13（10/18）：利用枠のリセット。新機能や恒久的な上限引き上げではなく、毎日行われる制度でもありません\n  ▸ 7日間の内訳は、改善4日（Day 9・11・12・14）とリセット3日。派手さより、日常の使いにくさに手を入れる週でした\n\n※Tibo（@thsottiaux）さんの発表を整理したもので、独自検証はしていません。\nDay 9：https://t.co/kCIn7uzSRo\nDay 14：https://t.co/UCgqEH2aUA",
+   "referenced": [
+    "2111990254408434095"
+   ],
+   "url": "https://x.com/akira_papa_IT/status/2112111572697117133"
+  },
+  {
+   "id": "2112112388572917955",
+   "author": "EthanWang07X",
+   "created_at": "2026-10-19T09:23:29Z",
+   "text": "fuck @thsottiaux \ni hate ' Selected model is at capacity. Please try a different model.'",
+   "referenced": [],
+   "url": "https://x.com/EthanWang07X/status/2112112388572917955"
+  },
+  {
+   "id": "2112114809118536139",
+   "author": "SeedLabStudio",
+   "created_at": "2026-10-19T09:33:06Z",
+   "text": "@thsottiaux why? @thsottiaux \n\nSelected model is at capacity. Please try a different model.",
+   "referenced": [
+    "2112039275344941371"
+   ],
+   "url": "https://x.com/SeedLabStudio/status/2112114809118536139"
+  },
+  {
+   "id": "2112114955105313061",
+   "author": "SJ091022",
+   "created_at": "2026-10-19T09:33:41Z",
+   "text": "@thsottiaux I'm still getting model is at capacity in codex and your smelly upgrades never worked it just kicked me out of codex",
+   "referenced": [
+    "2111990254408434095"
+   ],
+   "url": "https://x.com/SJ091022/status/2112114955105313061"
+  },
+  {
+   "id": "2112114985317040400",
+   "author": "SeedLabStudio",
+   "created_at": "2026-10-19T09:33:48Z",
+   "text": "@thsottiaux why codex Selected model is at capacity. Please try a different model?",
+   "referenced": [
+    "2112039275344941371"
+   ],
+   "url": "https://x.com/SeedLabStudio/status/2112114985317040400"
+  },
+  {
+   "id": "2112119160830374022",
+   "author": "DemirAnyvy",
+   "created_at": "2026-10-19T09:50:23Z",
+   "text": "@thsottiaux I upgraded to the ChatGPT Pro plan at $200 per month just a few days ago, but I have been frequently encountering the error \"Selected model is at capacity. Please try a different model.\"\n\nThis issue keeps interrupting my work, even when I still have plenty of usage quota remaining.\n\nI am paying $200 per month for a premium service, but these frequent interruptions are seriously affecting my productivity and development workflow.\n\nCould you please investigate why this keeps happening to my account and help resolve the issue as soon as possible?",
+   "referenced": [],
+   "url": "https://x.com/DemirAnyvy/status/2112119160830374022"
+  },
+  {
+   "id": "2112119885790609889",
+   "author": "Bogorad",
+   "created_at": "2026-10-19T09:53:16Z",
+   "text": "wtf is with Astra?! @OpenAI @thsottiaux \n\n■ Selected model is at capacity. Please try a different model.",
+   "referenced": [],
+   "url": "https://x.com/Bogorad/status/2112119885790609889"
+  },
+  {
+   "id": "2112120024320057459",
+   "author": "leip6z2",
+   "created_at": "2026-10-19T09:53:49Z",
+   "text": "@thsottiaux Selected model is at capacity. Please try a different model.",
+   "referenced": [
+    "2112039275344941371"
+   ],
+   "url": "https://x.com/leip6z2/status/2112120024320057459"
+  },
+  {
+   "id": "2112120054242570532",
+   "author": "ziyuanme",
+   "created_at": "2026-10-19T09:53:56Z",
+   "text": "@thsottiaux Selected model is at capacity. Please try a different model.   我对你的产品一直给我提示这个我对此非常烦躁。非常   （我2两个20x账号 不同电脑  一个电脑一直提示负载  一个账号慢的要命）",
+   "referenced": [
+    "2112039275344941371"
+   ],
+   "url": "https://x.com/ziyuanme/status/2112120054242570532"
   }
  ]
 }
