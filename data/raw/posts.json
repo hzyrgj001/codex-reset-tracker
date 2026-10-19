@@ -2579,6 +2579,72 @@
     "2111849858374177222"
    ],
    "url": "https://x.com/firechickensol/status/2111931776247693379"
+  },
+  {
+   "id": "2111940603374166426",
+   "author": "makescrape",
+   "created_at": "2026-10-18T22:00:52Z",
+   "text": "@thsottiaux Selected model is at capacity. Please try a different model.",
+   "referenced": [
+    "2111918768733753664"
+   ],
+   "url": "https://x.com/makescrape/status/2111940603374166426"
+  },
+  {
+   "id": "2111945260544766231",
+   "author": "wasjakehere",
+   "created_at": "2026-10-18T22:19:22Z",
+   "text": "@thsottiaux @LexnLin Why have I been getting a ton of at capacity error messages today ?",
+   "referenced": [
+    "2111941223187710114"
+   ],
+   "url": "https://x.com/wasjakehere/status/2111945260544766231"
+  },
+  {
+   "id": "2111956441577947599",
+   "author": "mikeascendx",
+   "created_at": "2026-10-18T23:03:48Z",
+   "text": "tired of these \"selected model is at capacity. please try a different model.\" @thsottiaux https://t.co/U4uWqogOB7",
+   "referenced": [],
+   "url": "https://x.com/mikeascendx/status/2111956441577947599"
+  },
+  {
+   "id": "2111966998909612255",
+   "author": "vampirexcom",
+   "created_at": "2026-10-18T23:45:45Z",
+   "text": "@thsottiaux Selected model is at capacity.\nSelected model is at capacity.\nSelected model is at capacity.\nSelected model is at capacity.\nSelected model is at capacity.\nSelected model is at capacity.",
+   "referenced": [
+    "2111849858374177222"
+   ],
+   "url": "https://x.com/vampirexcom/status/2111966998909612255"
+  },
+  {
+   "id": "2111969076881064087",
+   "author": "iRainbowsaur",
+   "created_at": "2026-10-18T23:54:01Z",
+   "text": "@thsottiaux It's happening again. Why is this even a thing? Why isn't it handled better? \n\nIf the model is at capacity, maybe just queue my prompt??? And if my job is already in process, don't kick me out midway and tell me it's that capacity mid job?? like seriously wtf.",
+   "referenced": [
+    "2110750421367287996"
+   ],
+   "url": "https://x.com/iRainbowsaur/status/2111969076881064087"
+  },
+  {
+   "id": "2111971713671888980",
+   "author": "parsarohani",
+   "created_at": "2026-10-19T00:04:29Z",
+   "text": "@thsottiaux selected model at capacity, 4 times today.",
+   "referenced": [
+    "2111918768733753664"
+   ],
+   "url": "https://x.com/parsarohani/status/2111971713671888980"
+  },
+  {
+   "id": "2111972375801860574",
+   "author": "toni_bonino",
+   "created_at": "2026-10-19T00:07:07Z",
+   "text": "first time seeing this from GPT Astra: \"Selected model is at capacity. Please try a different model.\" ... @thsottiaux what is happening?",
+   "referenced": [],
+   "url": "https://x.com/toni_bonino/status/2111972375801860574"
   }
  ]
 }
