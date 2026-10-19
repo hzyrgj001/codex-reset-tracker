@@ -2645,6 +2645,362 @@
    "text": "first time seeing this from GPT Astra: \"Selected model is at capacity. Please try a different model.\" ... @thsottiaux what is happening?",
    "referenced": [],
    "url": "https://x.com/toni_bonino/status/2111972375801860574"
+  },
+  {
+   "id": "2111977042006696260",
+   "author": "tokyo_roberto",
+   "created_at": "2026-10-19T00:25:40Z",
+   "text": "@thsottiaux @OpenAI @OpenAIDevs  come oooooon :( .. \n\n■ Selected model is at capacity. Please try a different model\n■ Selected model is at capacity. Please try a different model \n\n#openai #sol",
+   "referenced": [],
+   "url": "https://x.com/tokyo_roberto/status/2111977042006696260"
+  },
+  {
+   "id": "2111977801746125068",
+   "author": "jiangkixx",
+   "created_at": "2026-10-19T00:28:41Z",
+   "text": "@thsottiaux Selected model is at capacity.",
+   "referenced": [
+    "2110750421367287996"
+   ],
+   "url": "https://x.com/jiangkixx/status/2111977801746125068"
+  },
+  {
+   "id": "2111979815909880264",
+   "author": "cm2cDrON7V3956",
+   "created_at": "2026-10-19T00:36:41Z",
+   "text": "@thsottiaux Card idea: front says \"reset granted\", back says \"model at capacity, retrying in 277s\" 😂 Half joking, but a reset doesn't help much when the queue is too full to even start the task.",
+   "referenced": [
+    "2111918768733753664"
+   ],
+   "url": "https://x.com/cm2cDrON7V3956/status/2111979815909880264"
+  },
+  {
+   "id": "2111981736167162100",
+   "author": "lolwiaky",
+   "created_at": "2026-10-19T00:44:19Z",
+   "text": "@thsottiaux @thsottiaux my dot is getting frustrated at gpt's selected model is at capacity.",
+   "referenced": [
+    "2111918768733753664"
+   ],
+   "url": "https://x.com/lolwiaky/status/2111981736167162100"
+  },
+  {
+   "id": "2111982348984324469",
+   "author": "nothumanactual",
+   "created_at": "2026-10-19T00:46:45Z",
+   "text": "@thsottiaux This.. sol 6.1 subagent.. \nSelected model is at capacity. Please try a different model.",
+   "referenced": [
+    "2111849858374177222"
+   ],
+   "url": "https://x.com/nothumanactual/status/2111982348984324469"
+  },
+  {
+   "id": "2111982826543312954",
+   "author": "Dolphins_Oscar",
+   "created_at": "2026-10-19T00:48:39Z",
+   "text": "@thsottiaux Tibo the selected model at capacity is back, what gives?",
+   "referenced": [
+    "2111918768733753664"
+   ],
+   "url": "https://x.com/Dolphins_Oscar/status/2111982826543312954"
+  },
+  {
+   "id": "2111987294316179934",
+   "author": "BubTailOfficial",
+   "created_at": "2026-10-19T01:06:24Z",
+   "text": "@thsottiaux 什么时候能把 Selected model is at capacity. Please try a different model. 修复好  最近的使用体验实在是太差了  先是网页端chat不能用  然后是桌面端chatgpt模式里面的chat不能用  我不得不再开一个浏览器窗口在旁边用chat  现在codex又提示这个  太让你的用户失望了 这该死的重置并不能解决问题",
+   "referenced": [
+    "2111918768733753664"
+   ],
+   "url": "https://x.com/BubTailOfficial/status/2111987294316179934"
+  },
+  {
+   "id": "2111988408272949327",
+   "author": "k_yrreh",
+   "created_at": "2026-10-19T01:10:50Z",
+   "text": "@thsottiaux Still seeing “Selected model is at capacity” in the wild.\nRan ~18m40s then blocked. No auto-continue. https://t.co/YkvcuASpTf",
+   "referenced": [
+    "2110750421367287996"
+   ],
+   "url": "https://x.com/k_yrreh/status/2111988408272949327"
+  },
+  {
+   "id": "2111990254408434095",
+   "author": "thsottiaux",
+   "created_at": "2026-10-19T01:18:10Z",
+   "text": "Day 14/\n\nSmall quality of life improvement. You can now edit previous messages within a thread in the desktop app. Long time requested, and took way too long to get that one out.",
+   "referenced": [],
+   "url": "https://x.com/thsottiaux/status/2111990254408434095"
+  },
+  {
+   "id": "2111990403939619140",
+   "author": "GKev1n",
+   "created_at": "2026-10-19T01:18:45Z",
+   "text": "不是说已经大幅降低了Selected Model is at capacity吗？？？？怎么又出来了啊\n@thsottiaux https://t.co/2eNBASQmbj",
+   "referenced": [],
+   "url": "https://x.com/GKev1n/status/2111990403939619140"
+  },
+  {
+   "id": "2111990686182690822",
+   "author": "MentalBlock123",
+   "created_at": "2026-10-19T01:19:53Z",
+   "text": "@thsottiaux You said to mention model at capacity issues… hit 3 or so in one session running the last several hours..",
+   "referenced": [
+    "2111990254408434095"
+   ],
+   "url": "https://x.com/MentalBlock123/status/2111990686182690822"
+  },
+  {
+   "id": "2111994994366280024",
+   "author": "YZxia233",
+   "created_at": "2026-10-19T01:37:00Z",
+   "text": "@thsottiaux tibo，今天我的codex又弹出is at capacity的报错了",
+   "referenced": [
+    "2111990254408434095"
+   ],
+   "url": "https://x.com/YZxia233/status/2111994994366280024"
+  },
+  {
+   "id": "2112001165991018593",
+   "author": "rogersialves",
+   "created_at": "2026-10-19T02:01:31Z",
+   "text": "@thsottiaux How about resolving this definitively? \n\nSelected model is at capacity. Please try a different model.\n\n😡",
+   "referenced": [
+    "2111990254408434095"
+   ],
+   "url": "https://x.com/rogersialves/status/2112001165991018593"
+  },
+  {
+   "id": "2112001554764997061",
+   "author": "ScienceYoon88",
+   "created_at": "2026-10-19T02:03:04Z",
+   "text": "@thsottiaux I’m still running into selected model (6.1 sol high) at capacity issue 😭 Please send help",
+   "referenced": [
+    "2111990254408434095"
+   ],
+   "url": "https://x.com/ScienceYoon88/status/2112001554764997061"
+  },
+  {
+   "id": "2112003900861771978",
+   "author": "MennoDV30",
+   "created_at": "2026-10-19T02:12:23Z",
+   "text": "@thsottiaux Newsflash: After trying to resume the task I mentioned about ten minutes ago, I encountered the “model is at capacity” error roughly twelve times. That shouldn’t happen.",
+   "referenced": [
+    "2111990254408434095"
+   ],
+   "url": "https://x.com/MennoDV30/status/2112003900861771978"
+  },
+  {
+   "id": "2112003965412069831",
+   "author": "angerman",
+   "created_at": "2026-10-19T02:12:39Z",
+   "text": "Yo @thsottiaux, just a heads up:\n■ Selected model is at capacity. Please try a different model.",
+   "referenced": [],
+   "url": "https://x.com/angerman/status/2112003965412069831"
+  },
+  {
+   "id": "2112004294610440293",
+   "author": "jsustchekcvw9u",
+   "created_at": "2026-10-19T02:13:57Z",
+   "text": "@thsottiaux 6.1 Extra High - Constantly at capacity? https://t.co/rLObFyYprz",
+   "referenced": [
+    "2111990254408434095"
+   ],
+   "url": "https://x.com/jsustchekcvw9u/status/2112004294610440293"
+  },
+  {
+   "id": "2112005752764416293",
+   "author": "bazenganvnv",
+   "created_at": "2026-10-19T02:19:45Z",
+   "text": "@thsottiaux ASTRA ULTRA SELECTED MODEL IS AT CAPACITY . please try a different model\nlol what the improvement brooooooooo https://t.co/I3GdYpSzHJ",
+   "referenced": [
+    "2111990254408434095"
+   ],
+   "url": "https://x.com/bazenganvnv/status/2112005752764416293"
+  },
+  {
+   "id": "2112006923352690987",
+   "author": "nfremd",
+   "created_at": "2026-10-19T02:24:24Z",
+   "text": "@thsottiaux this afternoon I’ve been getting a lot of selected model is at capacity errors. I’m on the 200 plan, I thought this was addressed recently?",
+   "referenced": [],
+   "url": "https://x.com/nfremd/status/2112006923352690987"
+  },
+  {
+   "id": "2112007141254984169",
+   "author": "yangyang_2048",
+   "created_at": "2026-10-19T02:25:16Z",
+   "text": "What did you do on earth to make ChatGPT better?\nMy 6.1-Sol xhigh is at capacity again! @thsottiaux https://t.co/EnBAWELv0i",
+   "referenced": [],
+   "url": "https://x.com/yangyang_2048/status/2112007141254984169"
+  },
+  {
+   "id": "2112008081970511991",
+   "author": "Starve3Meals",
+   "created_at": "2026-10-19T02:29:00Z",
+   "text": "@thsottiaux Selected model is at capacity. Please try a different model.\nSelected model is at capacity. Please try a different model.\nSelected model is at capacity. Please try a different model.\nSelected model is at capacity. Please try a different model.\n!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!",
+   "referenced": [
+    "2111990254408434095"
+   ],
+   "url": "https://x.com/Starve3Meals/status/2112008081970511991"
+  },
+  {
+   "id": "2112008242415231103",
+   "author": "EvylGaming",
+   "created_at": "2026-10-19T02:29:38Z",
+   "text": "@thsottiaux LOL so uh,   \"Selected model is at capacity\" fix day is being refunded in the form of floating reset, yeah?",
+   "referenced": [
+    "2111990254408434095"
+   ],
+   "url": "https://x.com/EvylGaming/status/2112008242415231103"
+  },
+  {
+   "id": "2112010331715518672",
+   "author": "haqur",
+   "created_at": "2026-10-19T02:37:56Z",
+   "text": "@thsottiaux lol this is dumb, already ways to rollback changes. \n\nmodels all at capacity today.",
+   "referenced": [
+    "2111990254408434095"
+   ],
+   "url": "https://x.com/haqur/status/2112010331715518672"
+  },
+  {
+   "id": "2112011551964344786",
+   "author": "lesilles22",
+   "created_at": "2026-10-19T02:42:47Z",
+   "text": "@thsottiaux Selected model is at capacity. Please try a different model.\nSelected model is at capacity. Please try a different model.\nSelected model is at capacity. Please try a different model.\nSelected model is at capacity. Please try a different model.",
+   "referenced": [
+    "2111990254408434095"
+   ],
+   "url": "https://x.com/lesilles22/status/2112011551964344786"
+  },
+  {
+   "id": "2112012352837316773",
+   "author": "hellolaozh",
+   "created_at": "2026-10-19T02:45:58Z",
+   "text": "@thsottiaux Selected model is at capacity. Please try a different model.",
+   "referenced": [
+    "2111990254408434095"
+   ],
+   "url": "https://x.com/hellolaozh/status/2112012352837316773"
+  },
+  {
+   "id": "2112013127722447131",
+   "author": "Junyuxeqv",
+   "created_at": "2026-10-19T02:49:03Z",
+   "text": "@thsottiaux 为什么今天还出现了Selected model is at capacity. Please try a different model.的问题",
+   "referenced": [
+    "2111918768733753664"
+   ],
+   "url": "https://x.com/Junyuxeqv/status/2112013127722447131"
+  },
+  {
+   "id": "2112013232806445062",
+   "author": "ccomparanv",
+   "created_at": "2026-10-19T02:49:28Z",
+   "text": "@thsottiaux All day with sol at capacity and this is the improvement? Really 🥲🥲",
+   "referenced": [
+    "2111990254408434095"
+   ],
+   "url": "https://x.com/ccomparanv/status/2112013232806445062"
+  },
+  {
+   "id": "2112013978281050154",
+   "author": "tianxcpn",
+   "created_at": "2026-10-19T02:52:26Z",
+   "text": "@thsottiaux why my 500$ sub still get tons of model at capacity breaks 🤬",
+   "referenced": [
+    "2111990254408434095"
+   ],
+   "url": "https://x.com/tianxcpn/status/2112013978281050154"
+  },
+  {
+   "id": "2112014158732591381",
+   "author": "Junyuxeqv",
+   "created_at": "2026-10-19T02:53:09Z",
+   "text": "@thsottiaux 但今天还出现了Selected model is at capacity. Please try a different model. 我觉得你很有必要像你的pro用户解释一下",
+   "referenced": [
+    "2111990254408434095"
+   ],
+   "url": "https://x.com/Junyuxeqv/status/2112014158732591381"
+  },
+  {
+   "id": "2112032933540458808",
+   "author": "PAPS1299315",
+   "created_at": "2026-10-19T04:07:45Z",
+   "text": "@thsottiaux \n【The previous issue has not been fixed.】\nI am a user based in Japan. Thank you, Tibo, for all your help as always. Unfortunately, a previous issue has resurfaced: I am receiving an error message stating, \"Selected model is at capacity...\" Tasks that should normally continue running are stopping unexpectedly—even when specific goals have been set—which is disrupting my work. Could you please look into the situation and take the necessary steps, such as performing a reset or applying a fix, as soon as possible? 🤲",
+   "referenced": [],
+   "url": "https://x.com/PAPS1299315/status/2112032933540458808"
+  },
+  {
+   "id": "2112034545776378320",
+   "author": "jessrodriguezhz",
+   "created_at": "2026-10-19T04:14:10Z",
+   "text": "@thsottiaux Codex isn’t working, to any message reply “Error running remote compact task: Selected model is at capacity. Please try a different model”",
+   "referenced": [
+    "2112034063934742720"
+   ],
+   "url": "https://x.com/jessrodriguezhz/status/2112034545776378320"
+  },
+  {
+   "id": "2112035737638162479",
+   "author": "Rydermiser",
+   "created_at": "2026-10-19T04:18:54Z",
+   "text": "@thsottiaux 权限审核提示，selected model is at capacity",
+   "referenced": [
+    "2111990254408434095"
+   ],
+   "url": "https://x.com/Rydermiser/status/2112035737638162479"
+  },
+  {
+   "id": "2112036255588294693",
+   "author": "GG37394",
+   "created_at": "2026-10-19T04:20:57Z",
+   "text": "@thsottiaux Hi Tibo, \"Automatic approval review stopped twice because its review model was at capacity; neither attempt executed.\" Is it still using Luna for auto approval? How come luna is at capacity...",
+   "referenced": [
+    "2112034063934742720"
+   ],
+   "url": "https://x.com/GG37394/status/2112036255588294693"
+  },
+  {
+   "id": "2112038846083031152",
+   "author": "dhuitaeb",
+   "created_at": "2026-10-19T04:31:15Z",
+   "text": "@thsottiaux Automatic approval review failed: Selected model is at capacity. Please try a different model.\n\n해결해줘",
+   "referenced": [
+    "2112034063934742720"
+   ],
+   "url": "https://x.com/dhuitaeb/status/2112038846083031152"
+  },
+  {
+   "id": "2112039358736056744",
+   "author": "grunt180520",
+   "created_at": "2026-10-19T04:33:17Z",
+   "text": "@thsottiaux BUG: Codex’s automatic permission-review service reports “Selected model is at capacity.” right now.",
+   "referenced": [
+    "2111990254408434095"
+   ],
+   "url": "https://x.com/grunt180520/status/2112039358736056744"
+  },
+  {
+   "id": "2112041766321021366",
+   "author": "austinylyy",
+   "created_at": "2026-10-19T04:42:51Z",
+   "text": "@thsottiaux Selected model is at capacity. I have 8% capacity why？",
+   "referenced": [
+    "2112034063934742720"
+   ],
+   "url": "https://x.com/austinylyy/status/2112041766321021366"
+  },
+  {
+   "id": "2112042182618333320",
+   "author": "hex_J_",
+   "created_at": "2026-10-19T04:44:30Z",
+   "text": "@thsottiaux Hello, is codex down?",
+   "referenced": [
+    "2112039275344941371"
+   ],
+   "url": "https://x.com/hex_J_/status/2112042182618333320"
   }
  ]
 }
