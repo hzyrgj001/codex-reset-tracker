@@ -3529,6 +3529,70 @@
     "2112039275344941371"
    ],
    "url": "https://x.com/nickvangilder/status/2112233541006200891"
+  },
+  {
+   "id": "2112243699560448254",
+   "author": "Notcare66",
+   "created_at": "2026-10-19T18:05:16Z",
+   "text": "@thsottiaux Selected model is at capacity. Please try a different model.  问题又出现了？能不能解决",
+   "referenced": [
+    "2112039275344941371"
+   ],
+   "url": "https://x.com/Notcare66/status/2112243699560448254"
+  },
+  {
+   "id": "2112257137242181853",
+   "author": "rohit3a",
+   "created_at": "2026-10-19T18:58:40Z",
+   "text": "Here’s everything Tibo announced so far in the 28 days challenge \n\nDay 1\n> 50% faster default speed (GPT-6 Astra + GPT-6.1 Sol)\n> Applies to all subs + Sign in with ChatGPT partners\n\nDay 2 (RESET)\n> Usage reset\n> Free Auto-review\n> Easier API rate-limit tiers\n> Meetings notes plugin\n> Decisions API beta\n\nDay 3 (RESET, paid accounts)\n> Banked usage reset\n> New GPT-6 in ChatGPT\n> Codex Cloud re-shipped\n\nDay 4\n> Instant steering\n> GPT-6.1 Sol ultrafast\n\nDay 5\n> Composer predictions (Pro beta, free)\n> Text your dot from mobile\n> Dots can hand work to Codex\n> Personal ChatGPT plans work in Devin\n\nDay 6 (RESET)\n> Global usage reset\n\nDay 7\n> GPT-6.1 Sol context 272k -> 500k\n\nDay 8 (RESET)\n> Global usage reset\n\nDay 9\n> 60% less disk space for desktop apps\n\nDay 10 (RESET)\n> Usage reset\n\nDay 11\n> Far fewer \"model at capacity\" errors\n> Auto-resume instead of blocking\n\nDay 12\n> Context reused across subagents\n> Longer caching\n> Better routing\n> GPT-6 Pro upgrade with parallel agents\n> Dots Widget on Home Screen\n> Slides in ChatGPT Space\n\nDay 13 (RESET)\n> Usage reset\n\nDay 14\n> Edit earlier messages in a thread (desktop)\n\nDay 15\nNot announced yet\n\nRESET COUNTER: 6 resets in 15 days \n\n@thsottiaux reset man 👀",
+   "referenced": [],
+   "url": "https://x.com/rohit3a/status/2112257137242181853"
+  },
+  {
+   "id": "2112268918681485431",
+   "author": "thsottiaux",
+   "created_at": "2026-10-19T19:45:28Z",
+   "text": "Day 15/ We're cooked https://t.co/ciJpOJlmOn",
+   "referenced": [
+    "2112242739198959913"
+   ],
+   "url": "https://x.com/thsottiaux/status/2112268918681485431"
+  },
+  {
+   "id": "2112278228119191804",
+   "author": "Mrjudgero",
+   "created_at": "2026-10-19T20:22:28Z",
+   "text": "@thsottiaux @thsottiaux On my Pro lite I still have \"selected model is at capacity\" all the way, can't nothing.",
+   "referenced": [
+    "2112268918681485431"
+   ],
+   "url": "https://x.com/Mrjudgero/status/2112278228119191804"
+  },
+  {
+   "id": "2112300498409730504",
+   "author": "psds2020",
+   "created_at": "2026-10-19T21:50:58Z",
+   "text": "@thsottiaux you guys need to look at the retry system for when a model is at capacity. It will do the retry but when using goal mode the goal automatically stalls and codex does not resume the goal even after successfully retrying the model call",
+   "referenced": [],
+   "url": "https://x.com/psds2020/status/2112300498409730504"
+  },
+  {
+   "id": "2112305420219850974",
+   "author": "tiagoefreitas",
+   "created_at": "2026-10-19T22:10:31Z",
+   "text": "@thsottiaux still getting model at capacity errors and threads are not auto recovering :(",
+   "referenced": [
+    "2112268918681485431"
+   ],
+   "url": "https://x.com/tiagoefreitas/status/2112305420219850974"
+  },
+  {
+   "id": "2112305792582054328",
+   "author": "AojDevStudi0",
+   "created_at": "2026-10-19T22:12:00Z",
+   "text": "\"Selected model is at capacity. Please try a different model.\" -- @thsottiaux you promised us things would be better",
+   "referenced": [],
+   "url": "https://x.com/AojDevStudi0/status/2112305792582054328"
   }
  ]
 }
