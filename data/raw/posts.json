@@ -3359,6 +3359,176 @@
     "2112039275344941371"
    ],
    "url": "https://x.com/ziyuanme/status/2112120054242570532"
+  },
+  {
+   "id": "2112134548922527943",
+   "author": "fggyjdjeg46457",
+   "created_at": "2026-10-19T10:51:32Z",
+   "text": "@thsottiaux @xiangning0 fix the bug !\nError running remote compact task: Selected model is at capacity. Please try a different model.\nI have seen it 10h before,and it still!",
+   "referenced": [
+    "2112039554538770846"
+   ],
+   "url": "https://x.com/fggyjdjeg46457/status/2112134548922527943"
+  },
+  {
+   "id": "2112140888130416733",
+   "author": "TerryJCZhang",
+   "created_at": "2026-10-19T11:16:44Z",
+   "text": "@thsottiaux 500/month sub is constantly getting \"at capacity\" even for SOL",
+   "referenced": [
+    "2111990254408434095"
+   ],
+   "url": "https://x.com/TerryJCZhang/status/2112140888130416733"
+  },
+  {
+   "id": "2112143354981191889",
+   "author": "WhiskeyPolitik",
+   "created_at": "2026-10-19T11:26:32Z",
+   "text": "@thsottiaux Hey dude ever since you guys supposedly fixed the “model is at capacity” issue I’ve had goals blocked overnight the times on that exact problem.",
+   "referenced": [
+    "2112034063934742720"
+   ],
+   "url": "https://x.com/WhiskeyPolitik/status/2112143354981191889"
+  },
+  {
+   "id": "2112147433845293384",
+   "author": "Hbb14543249",
+   "created_at": "2026-10-19T11:42:44Z",
+   "text": "@thsottiaux Selected model is at capacity.Selected model is at capacity.Selected model is at capacity.Selected model is at capacity.Selected model is at capacity.Selected model is at capacity.Selected model is at capacity.Selected model is at capacity.Selected model is at capacity.",
+   "referenced": [
+    "2111990254408434095"
+   ],
+   "url": "https://x.com/Hbb14543249/status/2112147433845293384"
+  },
+  {
+   "id": "2112147484940321138",
+   "author": "Hbb14543249",
+   "created_at": "2026-10-19T11:42:56Z",
+   "text": "@thsottiaux Selected model is at capacity.Selected model is at capacity.Selected model is at capacity.Selected model is at capacity.Selected model is at capacity.Selected model is at capacity.Selected model is at capacity.Selected model is at capacity.Selected model is at capacity.",
+   "referenced": [
+    "2112039275344941371"
+   ],
+   "url": "https://x.com/Hbb14543249/status/2112147484940321138"
+  },
+  {
+   "id": "2112147530440126743",
+   "author": "Hbb14543249",
+   "created_at": "2026-10-19T11:43:07Z",
+   "text": "@thsottiaux Selected model is at capacity.Selected model is at capacity.Selected model is at capacity.Selected model is at capacity.Selected model is at capacity.Selected model is at capacity.Selected model is at capacity.Selected model is at capacity.Selected model is at capacity.",
+   "referenced": [
+    "2112034063934742720"
+   ],
+   "url": "https://x.com/Hbb14543249/status/2112147530440126743"
+  },
+  {
+   "id": "2112168650811867557",
+   "author": "panrobaczek",
+   "created_at": "2026-10-19T13:07:03Z",
+   "text": "@thsottiaux Selected model at capacity. Sol 6.1 max  is unusable now",
+   "referenced": [
+    "2111990254408434095"
+   ],
+   "url": "https://x.com/panrobaczek/status/2112168650811867557"
+  },
+  {
+   "id": "2112171773605142734",
+   "author": "DavidXJEA",
+   "created_at": "2026-10-19T13:19:27Z",
+   "text": "@thsottiaux You really need to fix the bug. “Selected model is at capacity. Please try a different model. “ when I still have 33% usage left.",
+   "referenced": [
+    "2112039275344941371"
+   ],
+   "url": "https://x.com/DavidXJEA/status/2112171773605142734"
+  },
+  {
+   "id": "2112180228584083663",
+   "author": "ternderai",
+   "created_at": "2026-10-19T13:53:03Z",
+   "text": "@thsottiaux Selected model is at capacity. Please try a different model.",
+   "referenced": [
+    "2111492673890824348"
+   ],
+   "url": "https://x.com/ternderai/status/2112180228584083663"
+  },
+  {
+   "id": "2112180664154169451",
+   "author": "ternderai",
+   "created_at": "2026-10-19T13:54:47Z",
+   "text": "@thsottiaux Selected model is at capacity. Please try a different model.",
+   "referenced": [
+    "2112039275344941371"
+   ],
+   "url": "https://x.com/ternderai/status/2112180664154169451"
+  },
+  {
+   "id": "2112190193033941024",
+   "author": "M0C1P",
+   "created_at": "2026-10-19T14:32:39Z",
+   "text": "@thsottiaux Selected model at capacity. Sol 6.1  is unusable now",
+   "referenced": [
+    "2111990254408434095"
+   ],
+   "url": "https://x.com/M0C1P/status/2112190193033941024"
+  },
+  {
+   "id": "2112199398520475698",
+   "author": "KCG3D",
+   "created_at": "2026-10-19T15:09:14Z",
+   "text": "I don't like getting the message: \"Selected model is at capacity. Please try a different model\" BUT today I saw this in action. \n\nIt took 10 seconds, Codex retried itself, and kept going. \n\nMerci @thsottiaux https://t.co/0fu20N2QGM",
+   "referenced": [
+    "2110750421367287996"
+   ],
+   "url": "https://x.com/KCG3D/status/2112199398520475698"
+  },
+  {
+   "id": "2112206688678035547",
+   "author": "etng",
+   "created_at": "2026-10-19T15:38:12Z",
+   "text": "@thsottiaux ■ Selected model is at capacity. Please try a different model.",
+   "referenced": [
+    "2112039275344941371"
+   ],
+   "url": "https://x.com/etng/status/2112206688678035547"
+  },
+  {
+   "id": "2112211550954299867",
+   "author": "donny_phan_2112",
+   "created_at": "2026-10-19T15:57:31Z",
+   "text": "But over the past month, Codex has become noticeably worse.\n\nConstant \"model at capacity\" errors, quotas draining insanely fast, and disrupted workflows.\n\nWhat's frustrating is how rarely these obvious issues seem to be acknowledged or addressed by the Codex team. @thsottiaux",
+   "referenced": [
+    "2112211300285878374"
+   ],
+   "url": "https://x.com/donny_phan_2112/status/2112211550954299867"
+  },
+  {
+   "id": "2112213687633367318",
+   "author": "qiyueyc",
+   "created_at": "2026-10-19T16:06:00Z",
+   "text": "@thsottiaux \"Selected model is at capacity. Please try a different model.\"",
+   "referenced": [
+    "2112039275344941371"
+   ],
+   "url": "https://x.com/qiyueyc/status/2112213687633367318"
+  },
+  {
+   "id": "2112215460997681412",
+   "author": "BlueHopezbw",
+   "created_at": "2026-10-19T16:13:03Z",
+   "text": "@thsottiaux Selected model is at capacity. Please try a different model.",
+   "referenced": [
+    "2112039275344941371"
+   ],
+   "url": "https://x.com/BlueHopezbw/status/2112215460997681412"
+  },
+  {
+   "id": "2112233541006200891",
+   "author": "nickvangilder",
+   "created_at": "2026-10-19T17:24:54Z",
+   "text": "@thsottiaux But will it fix the ongoing and repeated “selected model is at capacity issues”? If not, we don’t really care about your new domain",
+   "referenced": [
+    "2112039275344941371"
+   ],
+   "url": "https://x.com/nickvangilder/status/2112233541006200891"
   }
  ]
 }
