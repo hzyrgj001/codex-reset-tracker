@@ -4975,6 +4975,184 @@
     "2112592264686149749"
    ],
    "url": "https://x.com/aiwithanton/status/2112632549277356368"
+  },
+  {
+   "id": "2112693788154208633",
+   "author": "JohnsonChen66",
+   "created_at": "2026-10-20T23:53:45Z",
+   "text": "@thsottiaux is codex down?",
+   "referenced": [
+    "2112592264686149749"
+   ],
+   "url": "https://x.com/JohnsonChen66/status/2112693788154208633"
+  },
+  {
+   "id": "2112709703407124574",
+   "author": "lilu77195421",
+   "created_at": "2026-10-21T00:57:00Z",
+   "text": "@thsottiaux Hi Tibo! I’m a paying ChatGPT subscriber. My Work mode has been unavailable for over 48 hours, constantly showing “Selected model is at capacity.” This is seriously affecting our normal usage, and many people are experiencing the same issue. Could you help us resolve it? https://t.co/oJCz9JPYOw",
+   "referenced": [
+    "2112592264686149749"
+   ],
+   "url": "https://x.com/lilu77195421/status/2112709703407124574"
+  },
+  {
+   "id": "2112712984644784534",
+   "author": "thsottiaux",
+   "created_at": "2026-10-21T01:10:02Z",
+   "text": "Day 16/\n\nYou can now cache for 12h in the API and for logged in users across Codex &amp; Work we keep cache forever and you don’t have any penalty for coming back to an old conversation or resuming after a few hours and are now guaranteed to hit the cache. https://t.co/0HYeB01KVh",
+   "referenced": [
+    "2112603916076781778"
+   ],
+   "url": "https://x.com/thsottiaux/status/2112712984644784534"
+  },
+  {
+   "id": "2112713175439425745",
+   "author": "Fsshfg",
+   "created_at": "2026-10-21T01:10:47Z",
+   "text": "@vishalsingh2972 @thsottiaux I’m seeing this exact error too. Since Oct 18, every Codex model returns “Selected model is at capacity” across Windows, CLI, web, and iOS—even for a simple “Hello.” My Plus account has only used ~2% of its weekly limit. Support escalated my case, but it’s still unresolved. https://t.co/fZuRwVNQn1",
+   "referenced": [
+    "2112592467493359735"
+   ],
+   "url": "https://x.com/Fsshfg/status/2112713175439425745"
+  },
+  {
+   "id": "2112713415076860076",
+   "author": "NorthkinWeb3",
+   "created_at": "2026-10-21T01:11:45Z",
+   "text": "@thsottiaux 虽然如此，从昨天重置到现在，我codex都没动过，全是Selected model is at capacity. Please try a different model.",
+   "referenced": [
+    "2112712984644784534"
+   ],
+   "url": "https://x.com/NorthkinWeb3/status/2112713415076860076"
+  },
+  {
+   "id": "2112713716194312545",
+   "author": "Fsshfg",
+   "created_at": "2026-10-21T01:12:56Z",
+   "text": "@thsottiaux I’m seeing this exact error too. Since Oct 18, every Codex model returns “Selected model is at capacity” across Windows, CLI, web, and iOS—even for a simple “Hello.” My Plus account has only used ~2% of its weekly limit. Support escalated my case, but it’s still unresolved. https://t.co/bcJfDSsdgx",
+   "referenced": [
+    "2112592264686149749"
+   ],
+   "url": "https://x.com/Fsshfg/status/2112713716194312545"
+  },
+  {
+   "id": "2112713787442942229",
+   "author": "YidingDouokko",
+   "created_at": "2026-10-21T01:13:13Z",
+   "text": "@thsottiaux AT CAPACITY",
+   "referenced": [
+    "2112712984644784534"
+   ],
+   "url": "https://x.com/YidingDouokko/status/2112713787442942229"
+  },
+  {
+   "id": "2112716510309597354",
+   "author": "cooljdan",
+   "created_at": "2026-10-21T01:24:03Z",
+   "text": "@thsottiaux “Selected model is at capacity. Please try a different model” please stop reset, before solve this issue!",
+   "referenced": [
+    "2112712984644784534"
+   ],
+   "url": "https://x.com/cooljdan/status/2112716510309597354"
+  },
+  {
+   "id": "2112716885456548349",
+   "author": "ghost_cxl",
+   "created_at": "2026-10-21T01:25:32Z",
+   "text": "@thsottiaux Selected model is at capacity. Please try a different model. 上周还是正常的，本周开始出现问题。",
+   "referenced": [
+    "2112712984644784534"
+   ],
+   "url": "https://x.com/ghost_cxl/status/2112716885456548349"
+  },
+  {
+   "id": "2112717389586632981",
+   "author": "TomAndJerryOn",
+   "created_at": "2026-10-21T01:27:32Z",
+   "text": "@thsottiaux Selected model is at capacity. Please try a different model.",
+   "referenced": [
+    "2112712984644784534"
+   ],
+   "url": "https://x.com/TomAndJerryOn/status/2112717389586632981"
+  },
+  {
+   "id": "2112717510990815668",
+   "author": "yichuanapia",
+   "created_at": "2026-10-21T01:28:01Z",
+   "text": "@thsottiaux at capacity？？？again？？？",
+   "referenced": [
+    "2112712984644784534"
+   ],
+   "url": "https://x.com/yichuanapia/status/2112717510990815668"
+  },
+  {
+   "id": "2112717701705826631",
+   "author": "Manbo_jim",
+   "created_at": "2026-10-21T01:28:47Z",
+   "text": "@thsottiaux at capacity怎么解决？",
+   "referenced": [
+    "2112592264686149749"
+   ],
+   "url": "https://x.com/Manbo_jim/status/2112717701705826631"
+  },
+  {
+   "id": "2112717946703245728",
+   "author": "Trebor46393323",
+   "created_at": "2026-10-21T01:29:45Z",
+   "text": "@thsottiaux Selected model is at capacity is all i’m seeing 😢",
+   "referenced": [
+    "2112712984644784534"
+   ],
+   "url": "https://x.com/Trebor46393323/status/2112717946703245728"
+  },
+  {
+   "id": "2112718659114488072",
+   "author": "wynnja",
+   "created_at": "2026-10-21T01:32:35Z",
+   "text": "@thsottiaux ■ Selected model is at capacity. Please try a different model.",
+   "referenced": [],
+   "url": "https://x.com/wynnja/status/2112718659114488072"
+  },
+  {
+   "id": "2112718728940986555",
+   "author": "wkngsn72674",
+   "created_at": "2026-10-21T01:32:52Z",
+   "text": "@thsottiaux got hit with \"selected model is at capacity\" so I switched to a different model: waiting. infinite capacity, zero output 💀",
+   "referenced": [
+    "2112592264686149749"
+   ],
+   "url": "https://x.com/wkngsn72674/status/2112718728940986555"
+  },
+  {
+   "id": "2112719381461668194",
+   "author": "geiweiwubl34",
+   "created_at": "2026-10-21T01:35:27Z",
+   "text": "@thsottiaux Selected model is at capacity. Please try a different model。\nIt's almost completely unusable.",
+   "referenced": [
+    "2112712984644784534"
+   ],
+   "url": "https://x.com/geiweiwubl34/status/2112719381461668194"
+  },
+  {
+   "id": "2112719388524855526",
+   "author": "HiEvanZhao",
+   "created_at": "2026-10-21T01:35:29Z",
+   "text": "@thsottiaux tibo 你他妈傻逼啊，再重置打你人了，一重置就 Selected model is at capacity. Please try a different model.，根本用不了，求求你妈的别重置了",
+   "referenced": [
+    "2112712984644784534"
+   ],
+   "url": "https://x.com/HiEvanZhao/status/2112719388524855526"
+  },
+  {
+   "id": "2112719715923866043",
+   "author": "chen_cauch60272",
+   "created_at": "2026-10-21T01:36:47Z",
+   "text": "@thsottiaux I just wonder when u will solve the f**king \"Selected model is at capacity. Please try a different model.\"!!!",
+   "referenced": [
+    "2112712984644784534"
+   ],
+   "url": "https://x.com/chen_cauch60272/status/2112719715923866043"
   }
  ]
 }
