@@ -10662,6 +10662,74 @@
     "2113770573994299544"
    ],
    "url": "https://x.com/Mon1roe/status/2113985202649477479"
+  },
+  {
+   "id": "2114008348945489922",
+   "author": "Kevinlinyang001",
+   "created_at": "2026-10-24T14:57:21Z",
+   "text": "@thsottiaux you are right，but Selected model is at capacity. Please try a different model.",
+   "referenced": [
+    "2113838156193894447"
+   ],
+   "url": "https://x.com/Kevinlinyang001/status/2114008348945489922"
+  },
+  {
+   "id": "2114031656562753920",
+   "author": "Kevinlinyang001",
+   "created_at": "2026-10-24T16:29:58Z",
+   "text": "@thsottiaux but Coffee is at capacity. Please try a different Coffee.",
+   "referenced": [
+    "2114030784625647855"
+   ],
+   "url": "https://x.com/Kevinlinyang001/status/2114031656562753920"
+  },
+  {
+   "id": "2114033919389749370",
+   "author": "Trebor46393323",
+   "created_at": "2026-10-24T16:38:57Z",
+   "text": "@thsottiaux Please fix the bug that seems to be throttling certain accounts with endless “model is at capacity “ errors. @thsottiaux",
+   "referenced": [
+    "2114030784625647855"
+   ],
+   "url": "https://x.com/Trebor46393323/status/2114033919389749370"
+  },
+  {
+   "id": "2114037527598576003",
+   "author": "thsottiaux",
+   "created_at": "2026-10-24T16:53:18Z",
+   "text": "@vishalsingh2972 One day",
+   "referenced": [
+    "2114031587549659162"
+   ],
+   "url": "https://x.com/thsottiaux/status/2114037527598576003"
+  },
+  {
+   "id": "2114039961850904936",
+   "author": "SteveJakeson",
+   "created_at": "2026-10-24T17:02:58Z",
+   "text": "@thsottiaux 你他妈的到底打不打算解决model is at capacity的问题？网上有这么多人花着真金白银却根本没法用codex，你们真的太让人失望了",
+   "referenced": [
+    "2114030784625647855"
+   ],
+   "url": "https://x.com/SteveJakeson/status/2114039961850904936"
+  },
+  {
+   "id": "2114042490760368480",
+   "author": "jiajia1515",
+   "created_at": "2026-10-24T17:13:01Z",
+   "text": "@thsottiaux  请问你们是靠这清理信任你们的用户的吗？起因是最近首先一直 Selected model is at capacity. Please try a different model.根本不可用，甚至 luna 都不可用，我是充值的 pro200 用户，今天发现可用了，但体感很笨，就去测了一下指纹，发现是 gpt-5.6-luna，傻逼 openai，已转 claude！ https://t.co/Xkog01tYGs",
+   "referenced": [],
+   "url": "https://x.com/jiajia1515/status/2114042490760368480"
+  },
+  {
+   "id": "2114048656735396047",
+   "author": "chenwl2016",
+   "created_at": "2026-10-24T17:37:31Z",
+   "text": "@thsottiaux Selected model is at capacity. Please try a different model.",
+   "referenced": [
+    "2114030784625647855"
+   ],
+   "url": "https://x.com/chenwl2016/status/2114048656735396047"
   }
  ]
 }
