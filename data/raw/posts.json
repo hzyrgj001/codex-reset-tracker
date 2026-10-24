@@ -10452,12 +10452,80 @@
    "url": "https://x.com/7777Charles/status/2113715702024810696"
   },
   {
+   "id": "2113734407047790727",
+   "author": "7777Charles",
+   "created_at": "2026-10-23T20:48:48Z",
+   "text": "Selected model is at capacity. Please try a different model.Selected model is at capacity. Please try a different model.Selected model is at capacity. Please try a different model.Selected model is at capacity. Please try a different model.Selected model is at capacity. Please try a different model.Selected model is at capacity. Please try a different model.Selected model is at capacity. Please try a different model.Selected model is at capacity. Please try a different model.Selected model is at capacity. Please try a different model.Selected model is at capacity. Please try a different model.Selected model is at capacity. Please try a different model.Selected model is at capacity. Please try a different model.Selected model is at capacity. Please try a different model.",
+   "referenced": [
+    "2113492187770175603"
+   ],
+   "url": "https://x.com/7777Charles/status/2113734407047790727"
+  },
+  {
    "id": "2113734532491035102",
    "author": "7777Charles",
    "created_at": "2026-10-23T20:49:18Z",
    "text": "@thsottiaux Selected model is at capacity. Please try a different model.Selected model is at capacity. Please try a different model.Selected model is at capacity. Please try a different model.Selected model is at capacity. Please try a different model.Selected model is at capacity. Please try a different model.Selected model is at capacity. Please try a different model.Selected model is at capacity. Please try a different model.Selected model is at capacity. Please try a different model.",
    "referenced": [],
    "url": "https://x.com/7777Charles/status/2113734532491035102"
+  },
+  {
+   "id": "2113770461708607857",
+   "author": "Changxiang2007",
+   "created_at": "2026-10-23T23:12:04Z",
+   "text": "@thsottiaux \"Selected ambulance is at capacity. Please try a different ambulance.\" This really affects the user experience. For students, sometimes they need to use it a lot, and sometimes they need to use it less. If reset cards are given out, everyone will use them at different times,",
+   "referenced": [
+    "2113770393106575593"
+   ],
+   "url": "https://x.com/Changxiang2007/status/2113770461708607857"
+  },
+  {
+   "id": "2113770573994299544",
+   "author": "thsottiaux",
+   "created_at": "2026-10-23T23:12:31Z",
+   "text": "Day 19/ Small updates. Calls connect much faster for dots, changing reasoning in codex &amp; work mid conversation does not invalidate cache anymore and a we've also updated the codex cli.",
+   "referenced": [],
+   "url": "https://x.com/thsottiaux/status/2113770573994299544"
+  },
+  {
+   "id": "2113770862860222611",
+   "author": "thsottiaux",
+   "created_at": "2026-10-23T23:13:40Z",
+   "text": "On codex cli updates. We've added reusable prompt presets, inline model and permission settings, and enterprise MCP sign-in. We've also fixed failures when resuming long sessions and added Windows corporate-proxy authentication.\n\nSurprisingly the CLI has grown 2X in usage since devday.",
+   "referenced": [
+    "2113770573994299544"
+   ],
+   "url": "https://x.com/thsottiaux/status/2113770862860222611"
+  },
+  {
+   "id": "2113772703530594696",
+   "author": "forist_f",
+   "created_at": "2026-10-23T23:20:59Z",
+   "text": "@thsottiaux Codex support in a nutshell:\nUser opens Codex: “Selected model is at capacity. Please try a different model.”\nUser: OK, switch models.\nCodex: At capacity.\nUser: Switch again.\nCodex: Also at capacity.\nUser: Which one works?\nCodex: Try another company.",
+   "referenced": [
+    "2113770573994299544"
+   ],
+   "url": "https://x.com/forist_f/status/2113772703530594696"
+  },
+  {
+   "id": "2113776332509520367",
+   "author": "GimsonJess2088",
+   "created_at": "2026-10-23T23:35:24Z",
+   "text": "@thsottiaux Has the capacity issue still not been resolved? I keep getting the “Selected model is at capacity” error",
+   "referenced": [
+    "2113770862860222611"
+   ],
+   "url": "https://x.com/GimsonJess2088/status/2113776332509520367"
+  },
+  {
+   "id": "2113776669215605204",
+   "author": "GimsonJess2088",
+   "created_at": "2026-10-23T23:36:44Z",
+   "text": "@thsottiaux Hi Tibo, could you please help restore my Pro account's normal model access? I keep getting “Selected model is at capacity” and can't use the models I paid for. I've contacted support multiple times, but nothing has changed. Please help me resolve this. I'd really appreciate it!",
+   "referenced": [
+    "2113770862860222611"
+   ],
+   "url": "https://x.com/GimsonJess2088/status/2113776669215605204"
   }
  ]
 }
