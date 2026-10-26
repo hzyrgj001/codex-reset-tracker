@@ -10904,6 +10904,54 @@
    "text": "@thsottiaux I'm getting repeated messages like this: Selected model is at capacity. Please try a different model. \n\nModel is GPT-6.1 Sol Extra High\n\nKnown issue?",
    "referenced": [],
    "url": "https://x.com/TigerDonk/status/2114397058253635661"
+  },
+  {
+   "id": "2114555902695276843",
+   "author": "superhm798",
+   "created_at": "2026-10-26T03:13:08Z",
+   "text": "@thsottiaux Selected model is at capacity. Please try a different model.Selected model is at capacity. Please try a different model.Selected model is at capacity. Please try a different model.Selected model is at capacity. Please try a different model.",
+   "referenced": [
+    "2114237083652882932"
+   ],
+   "url": "https://x.com/superhm798/status/2114555902695276843"
+  },
+  {
+   "id": "2114555938523042262",
+   "author": "superhm798",
+   "created_at": "2026-10-26T03:13:16Z",
+   "text": "@thsottiaux Selected model is at capacity. Please try a different model.Selected model is at capacity. Please try a different model.Selected model is at capacity. Please try a different model.Selected model is at capacity. Please try a different model.",
+   "referenced": [
+    "2114200291319124163"
+   ],
+   "url": "https://x.com/superhm798/status/2114555938523042262"
+  },
+  {
+   "id": "2114561862839021893",
+   "author": "hughherald",
+   "created_at": "2026-10-26T03:36:49Z",
+   "text": "@thsottiaux I can only get work done on weekends. The downtime and reset help me avoid hitting capacity limits. But once Monday rolls around, that “at capacity” problem returns. \n\nOne question: Is OpenAI useful for my work? https://t.co/5gbKXira9I",
+   "referenced": [
+    "2114237083652882932"
+   ],
+   "url": "https://x.com/hughherald/status/2114561862839021893"
+  },
+  {
+   "id": "2114588174249071102",
+   "author": "thsottiaux",
+   "created_at": "2026-10-26T05:21:22Z",
+   "text": "Day 21/ Wonder what happens the remaining seven days. But today is a reset.",
+   "referenced": [],
+   "url": "https://x.com/thsottiaux/status/2114588174249071102"
+  },
+  {
+   "id": "2114594034027291027",
+   "author": "dingxinglizi",
+   "created_at": "2026-10-26T05:44:39Z",
+   "text": "@thsottiaux hi tibo 我是openai以及你的忠实中国区粉丝，可以先修复一下selected model is at capacity这个问题吗！我下个月打算升级pro500，但这个问题一直困扰着我",
+   "referenced": [
+    "2114588174249071102"
+   ],
+   "url": "https://x.com/dingxinglizi/status/2114594034027291027"
   }
  ]
 }
