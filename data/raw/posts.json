@@ -11570,6 +11570,60 @@
    "text": "@thsottiaux @OpenAI what use are the resets and pro plan if the models are always at capacity and can’t even complete a single session without this interruption.",
    "referenced": [],
    "url": "https://x.com/jaesmeta/status/2114721709937078668"
+  },
+  {
+   "id": "2114725008211612153",
+   "author": "Stacki_TV",
+   "created_at": "2026-10-26T14:25:06Z",
+   "text": "What's going on with Codex today? 🤔🚨\n@thsottiaux\n\nI keep getting this error:\n\n\"Selected model is at capacity. Please try a different model.\"\n\nThe worst part? You start a long task, come back an hour later, and realize Codex stopped working ages ago. 😩\n\nI thought OpenAI had already addressed these capacity issues.\n\nThis is incredibly frustrating, especially when relying on agents for longer autonomous tasks.\n\nAnyone else experiencing this more frequently today?\n\n#Codex #OpenAI #AIAgents",
+   "referenced": [],
+   "url": "https://x.com/Stacki_TV/status/2114725008211612153"
+  },
+  {
+   "id": "2114725442607325615",
+   "author": "imkhway",
+   "created_at": "2026-10-26T14:26:49Z",
+   "text": "@thsottiaux is codex down ?",
+   "referenced": [],
+   "url": "https://x.com/imkhway/status/2114725442607325615"
+  },
+  {
+   "id": "2114729629336703348",
+   "author": "iamabhinendra",
+   "created_at": "2026-10-26T14:43:28Z",
+   "text": "Codex down? @thsottiaux @OpenAI \n\nFrequently getting this error even when using single chat widnow https://t.co/265msthMcI",
+   "referenced": [],
+   "url": "https://x.com/iamabhinendra/status/2114729629336703348"
+  },
+  {
+   "id": "2114734404170088925",
+   "author": "jiaojiaolab",
+   "created_at": "2026-10-26T15:02:26Z",
+   "text": "@thsottiaux Selected model is at capacity. Please try a different model.",
+   "referenced": [
+    "2114595002210783279"
+   ],
+   "url": "https://x.com/jiaojiaolab/status/2114734404170088925"
+  },
+  {
+   "id": "2114740520966816067",
+   "author": "freerepublic81",
+   "created_at": "2026-10-26T15:26:44Z",
+   "text": "@thsottiaux all today it's ■ Error running remote compact task: Selected model is at capacity. Please try a different model.",
+   "referenced": [
+    "2114595002210783279"
+   ],
+   "url": "https://x.com/freerepublic81/status/2114740520966816067"
+  },
+  {
+   "id": "2114800277677092936",
+   "author": "thsottiaux",
+   "created_at": "2026-10-26T19:24:11Z",
+   "text": "Day 22/ Terra is back! \n\nOur first model that is significantly better at writing,  personality and nuanced understanding of requests.\n\nPacks a punch across the board, very good at computer use, and gives 2X more usage than 6.1 Sol across API and subscriptions. https://t.co/1ilnCkAPuy",
+   "referenced": [
+    "2114780711664398349"
+   ],
+   "url": "https://x.com/thsottiaux/status/2114800277677092936"
   }
  ]
 }
