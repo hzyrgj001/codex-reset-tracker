@@ -11642,6 +11642,116 @@
    "text": "@OpenAI @thsottiaux is #codex down?",
    "referenced": [],
    "url": "https://x.com/krisco655/status/2114865111584387419"
+  },
+  {
+   "id": "2114901718551183732",
+   "author": "zhangqys185",
+   "created_at": "2026-10-27T02:07:17Z",
+   "text": "@thsottiaux 你们每次更新新模型，重置，就会直接让我的账户降智，现在一直弹Selected model is at capacity. Please try a different model.然后鹈鹕测试直接降智！！！我真的服了！！！ https://t.co/pqpZBwrdG7",
+   "referenced": [
+    "2114800277677092936"
+   ],
+   "url": "https://x.com/zhangqys185/status/2114901718551183732"
+  },
+  {
+   "id": "2114904453954560330",
+   "author": "DreamMarkCv",
+   "created_at": "2026-10-27T02:18:09Z",
+   "text": "@thsottiaux ⚠ Selected model is at capacity. Please try a different model.\n⚠ Selected model is at capacity. Please try a different model.\n⚠ Selected model is at capacity. Please try a different model.",
+   "referenced": [
+    "2114800277677092936"
+   ],
+   "url": "https://x.com/DreamMarkCv/status/2114904453954560330"
+  },
+  {
+   "id": "2114905453855732189",
+   "author": "INIT_CENTER",
+   "created_at": "2026-10-27T02:22:07Z",
+   "text": "@thsottiaux \"Selected model is at capacity. Please try a different model.\" is back.😅",
+   "referenced": [
+    "2114800277677092936"
+   ],
+   "url": "https://x.com/INIT_CENTER/status/2114905453855732189"
+  },
+  {
+   "id": "2114907038652526941",
+   "author": "Rc70919559",
+   "created_at": "2026-10-27T02:28:25Z",
+   "text": "@thsottiaux was good for like 30+ hours and now it’s giving me \"Selected model is at capacity. Please try a different model.\" again 😭 smh",
+   "referenced": [
+    "2110750421367287996"
+   ],
+   "url": "https://x.com/Rc70919559/status/2114907038652526941"
+  },
+  {
+   "id": "2114908824608100453",
+   "author": "YongTaiSin",
+   "created_at": "2026-10-27T02:35:31Z",
+   "text": "@thsottiaux Selected model is at capacity. Please try a different model. Selected model is at capacity. Please try a different model. Selected model is at capacity. Please try a different model. \nTibo, what the hell are you doing?",
+   "referenced": [
+    "2114800277677092936"
+   ],
+   "url": "https://x.com/YongTaiSin/status/2114908824608100453"
+  },
+  {
+   "id": "2114920856342405301",
+   "author": "haoh40449",
+   "created_at": "2026-10-27T03:23:20Z",
+   "text": "@thsottiaux selected model is at capacity，came back again！",
+   "referenced": [
+    "2114800277677092936"
+   ],
+   "url": "https://x.com/haoh40449/status/2114920856342405301"
+  },
+  {
+   "id": "2114922867205067171",
+   "author": "HiroekiLu",
+   "created_at": "2026-10-27T03:31:19Z",
+   "text": "@thsottiaux @TokenGremlin Selected model is at capacity",
+   "referenced": [
+    "2114922374978277786"
+   ],
+   "url": "https://x.com/HiroekiLu/status/2114922867205067171"
+  },
+  {
+   "id": "2114926723355824316",
+   "author": "jackqqhrz",
+   "created_at": "2026-10-27T03:46:38Z",
+   "text": "@thsottiaux This Selected model is at capacity. Please try a different model. error is not intermittent — we get it every single day. Retries at various times still return the capacity-full message, and we cannot use the model reliably, which is disruptive. please please please",
+   "referenced": [
+    "2114800277677092936"
+   ],
+   "url": "https://x.com/jackqqhrz/status/2114926723355824316"
+  },
+  {
+   "id": "2114928011879620624",
+   "author": "TCm308844534913",
+   "created_at": "2026-10-27T03:51:46Z",
+   "text": "@thsottiaux 我的账号又被降智 并且at capacity 到底什么时候能修复这个问题？",
+   "referenced": [
+    "2114800277677092936"
+   ],
+   "url": "https://x.com/TCm308844534913/status/2114928011879620624"
+  },
+  {
+   "id": "2114944856523170192",
+   "author": "letcola798",
+   "created_at": "2026-10-27T04:58:42Z",
+   "text": "@thsottiaux We don't need 'Selected model is at capacity. Please try a different model'.",
+   "referenced": [
+    "2114800277677092936"
+   ],
+   "url": "https://x.com/letcola798/status/2114944856523170192"
+  },
+  {
+   "id": "2114944874789437810",
+   "author": "letcola798",
+   "created_at": "2026-10-27T04:58:46Z",
+   "text": "@thsottiaux Every single day, people are complaining about the constant 'Selected model is at capacity. Please try a different model' issue. Why isn't this being fixed? They are paying their money but not getting the service they deserve.",
+   "referenced": [
+    "2114800277677092936"
+   ],
+   "url": "https://x.com/letcola798/status/2114944874789437810"
   }
  ]
 }
