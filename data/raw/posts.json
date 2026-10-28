@@ -12988,6 +12988,16 @@
    "text": "@thsottiaux So I wake up to my overnight chat that ran into \"Selected Model Is at Capacity\", and it's 42 minutes into what should have been 6 hours of it's goal. Why the fuck does it not auto retry?!",
    "referenced": [],
    "url": "https://x.com/ChadGabs/status/2115513311697723775"
+  },
+  {
+   "id": "2115520367519576258",
+   "author": "SeedDeskLinux",
+   "created_at": "2026-10-28T19:05:34Z",
+   "text": "@thsottiaux Just got hit with a \"model at capacity\" for the first time. With a pro 500 sub.",
+   "referenced": [
+    "2115273064481218829"
+   ],
+   "url": "https://x.com/SeedDeskLinux/status/2115520367519576258"
   }
  ]
 }
