@@ -6,7 +6,7 @@ Post times are not per-account delivery times.
 
 | # | Day | Kind | Status | Announce TPE | Announce UTC | Confirm TPE | Confirm UTC | Lag h | Triggers | Co-signals | Notes |
 |---|---|---|---|---|---|---|---|---|---|---|---|
-| 1 | 23 | full | announced | [2026-10-28 10:42](https://x.com/thsottiaux/status/2115273064481218829) | 2026-10-28 02:42 | — | — |  | campaign_day |  | auto-detected; review before relying on it |
+| 1 | 23 | full | confirmed | [2026-10-28 10:42](https://x.com/thsottiaux/status/2115273064481218829) | 2026-10-28 02:42 | [2026-10-28 14:29](https://x.com/thsottiaux/status/2115330127886463244) | 2026-10-28 06:29 | 3.78 | campaign_day |  | auto-detected; review before relying on it |
 | 2 | 21 | full | announced | [2026-10-26 13:21](https://x.com/thsottiaux/status/2114588174249071102) | 2026-10-26 05:21 | — | — |  | campaign_day |  | auto-detected; review before relying on it |
 | 3 | 20 | full | confirmed | — | — | [2026-10-25 14:06](https://x.com/thsottiaux/status/2114237083652882932) | 2026-10-25 06:06 |  |  |  | auto-detected; review before relying on it |
 | 4 | 20 | full | confirmed | [2026-10-25 11:39](https://x.com/thsottiaux/status/2114200152701575656) | 2026-10-25 03:39 | [2026-10-25 13:30](https://x.com/thsottiaux/status/2114228044072403055) | 2026-10-25 05:30 | 1.85 | campaign_day |  | auto-detected; review before relying on it |
