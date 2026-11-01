@@ -14107,6 +14107,54 @@
     "2116692529970311254"
    ],
    "url": "https://x.com/codex_resets/status/2116692584248623511"
+  },
+  {
+   "id": "2116732422733832435",
+   "author": "qianguoyizhong",
+   "created_at": "2026-11-01T03:21:51Z",
+   "text": "@thsottiaux 一直给我报错Selected model is at capacity. Please try a different model. 我草泥马",
+   "referenced": [
+    "2116692529970311254"
+   ],
+   "url": "https://x.com/qianguoyizhong/status/2116732422733832435"
+  },
+  {
+   "id": "2116749719347294620",
+   "author": "akshay81844",
+   "created_at": "2026-11-01T04:30:35Z",
+   "text": "OpenAI just spent 28 days shipping improvements to ChatGPT, Codex, and AI agents. 🚀\n\nNot just new models. Faster inference, bigger context windows, better developer tools, higher usage limits, and smoother AI workflows.\n\nLed by @thsottiaux, the 28 Days of Shipping campaign ran from October 5 to November 1, 2026.\n\nI put together a visual recap of the entire campaign.\n\nHere's what OpenAI announced across all 28 days 👇\n\n🚀 WEEK 1: Faster Models & Better Coding\n\nDay 1: GPT-6 Astra and GPT-6.1 Sol became approximately 50% faster by default.\n\nDay 2: Free auto-review in Codex, simplified API tiers, Meetings plugin beta, and Decisions API public beta.\n\nDay 3: GPT-6 in Chat, Codex Cloud improvements, and banked usage resets.\n\nDay 4: Instant steering and GPT-6.1 Sol Ultrafast, offering up to 8× the speed of Sol Standard.\n\nDay 5: Composer predictions in Codex, mobile dot creation and messaging, and ChatGPT plan support in Devin.\n\nDay 6: Full usage-limit reset for subscribers.\n\nDay 7: GPT-6.1 Sol's default context expanded to 500K tokens, configurable up to 1 million tokens.\n\n⚡ WEEK 2: Performance, Efficiency & Desktop\n\nDay 8: Full usage-limit reset.\n\nDay 9: Desktop app storage optimizations, reducing local state by approximately 60%.\n\nDay 10: Another full usage-limit reset.\n\nDay 11: Fewer model-at-capacity errors and improved automatic recovery.\n\nDay 12: Better context reuse, caching, and routing to improve subscription efficiency.\n\nDay 13: Full usage-limit reset.\n\nDay 14: Ability to edit previous messages inside desktop conversation threads.\n\n🤖 WEEK 3: Agents, APIs & Developer Experience\n\nDay 15: Codex preview/broadcast improvements and a usage reset.\n\nDay 16: 12-hour API prompt caching and persistent cached context for logged-in Codex and Work users.\n\nDay 17: Another usage reset announced.\n\nDay 18: Decisions API became generally available, OpenResponses joined the Linux Foundation, and performance improvements continued.\n\nDay 19: Faster dot calls, reasoning changes without cache invalidation, and Codex CLI upgrades.\n\nDay 20: Full usage-limit reset.\n\nDay 21: Another usage reset announced.\n\n🔥 WEEK 4: More Powerful AI & Better User Experience\n\nDay 22: GPT-6.1 Terra returned with improved writing, computer use, and more generous subscription usage.\n\nDay 23: Usage reset and additional plugin updates.\n\nDay 24: Dots became accessible through iMessage/RCS, including forwarded content, voice notes, and Siri requests.\n\nDay 25: Doubled usage limits for select Pro and Business plans. The planned Pro 200 reduction was canceled.\n\nDay 26: Multi-account switching arrived on ChatGPT mobile, with desktop support planned.\n\nDay 27: Banked usage resets were teased for the final two days.\n\nDay 28: Final campaign day - the specific final announcement still needs confirmation.\n\n📌 THE BIGGEST TAKEAWAYS\n\n→ AI models became faster.\n\n→ Context windows grew to as much as 1M tokens.\n\n→ Codex gained better developer workflows.\n\n→ Agents became easier to access and interact with.\n\n→ Caching and routing improvements reduced friction.\n\n→ Subscribers received additional usage allowances and resets.\n\n→ Desktop and mobile experiences improved.\n\nWhat I find most interesting is the direction of these releases.\n\nFor years, AI companies competed primarily on model intelligence and benchmark scores.\n\nNow the competition is increasingly about the entire developer experience.\n\nSpeed. Reliability. Context. Tooling. Agent orchestration. Usage economics.\n\nA powerful model is useful.\n\nA powerful model that developers can use reliably, repeatedly, and affordably is much more valuable.\n\nKudos to @thsottiaux and the OpenAI team for the shipping momentum.\n\nWhich update made the biggest difference to your workflow?\n\nI've attached my visual breakdown below. 👇",
+   "referenced": [],
+   "url": "https://x.com/akshay81844/status/2116749719347294620"
+  },
+  {
+   "id": "2116786653247512839",
+   "author": "zhangyuxin_new",
+   "created_at": "2026-11-01T06:57:20Z",
+   "text": "@thsottiaux selected  model is at capacity.",
+   "referenced": [
+    "2116405414921384099"
+   ],
+   "url": "https://x.com/zhangyuxin_new/status/2116786653247512839"
+  },
+  {
+   "id": "2116799821826924913",
+   "author": "qianguoyizhong",
+   "created_at": "2026-11-01T07:49:40Z",
+   "text": "@thsottiaux 肏你妈，你们这个狗几把玩意，Selected model is at capacity. Please try a different model.\n重试\n这个是你马勒戈壁",
+   "referenced": [
+    "2116692529970311254"
+   ],
+   "url": "https://x.com/qianguoyizhong/status/2116799821826924913"
+  },
+  {
+   "id": "2116801691567951984",
+   "author": "DrFreeman666",
+   "created_at": "2026-11-01T07:57:06Z",
+   "text": "@justinkalland @thsottiaux @AnthropicAI True true, how much extra compute do they have though, there’s always frequent ‘selected model at capacity’ errors reported on X at least which makes you think there isn’t a ton of spare compute.",
+   "referenced": [
+    "2116665557726712094"
+   ],
+   "url": "https://x.com/DrFreeman666/status/2116801691567951984"
   }
  ]
 }
