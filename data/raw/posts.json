@@ -14155,6 +14155,90 @@
     "2116665557726712094"
    ],
    "url": "https://x.com/DrFreeman666/status/2116801691567951984"
+  },
+  {
+   "id": "2116862458342347080",
+   "author": "CCximvm",
+   "created_at": "2026-11-01T11:58:34Z",
+   "text": "Still seeing the \"Selected model is at capacity\" error. 😅 \"Significant improvements\" promised, but it's literally still happening and blocking me from working. @thsottiaux any ETA on a real fix?",
+   "referenced": [],
+   "url": "https://x.com/CCximvm/status/2116862458342347080"
+  },
+  {
+   "id": "2116863211748360402",
+   "author": "CCximvm",
+   "created_at": "2026-11-01T12:01:33Z",
+   "text": "@thsottiaux Still seeing the \"Selected model is at capacity\" error. 😅 \"Significant improvements\" promised, but it's literally still happening and blocking me from working. @thsottiaux any ETA on a real fix?",
+   "referenced": [
+    "2110750421367287996"
+   ],
+   "url": "https://x.com/CCximvm/status/2116863211748360402"
+  },
+  {
+   "id": "2116867453137338861",
+   "author": "CodexUpdate",
+   "created_at": "2026-11-01T12:18:24Z",
+   "text": "Codex this week: 9 changes, 5 user pain points, all here.\n\nOct 25 to Nov 1, checked against OpenAI's posts, help pages and GitHub.\n\nReleases\n1. GPT-6.1 Terra rolled out in Codex for Plus, Pro, Enterprise and Edu (Oct 26). Tibo says it gives 2x the usage of 6.1 Sol.\n2. CLI v0.165.0 (Oct 27): built-in Vertex AI provider, change reasoning effort mid-chat, memory v2 on by default.\n3. CLI v0.166.0 (Oct 29): Terra in the Vertex AI and Bedrock catalogs, codex doctor --network-only, transcript search, and a fix for early compaction after resume or fork.\n4. Text your dot over iMessage or RCS (Pro, US preview). Multi-account switching landed on mobile, with desktop \"coming soon\".\n\nLimits and pricing\n5. Limits doubled for Pro 100, 200, 500 and Business Premium, and the Oct 30 Pro 200 cut was cancelled.\n6. Pro and Business now get monthly API credits ($100 to $500 on Pro). They don't raise your Codex allowance.\n7. Confirmed: from December, ChatGPT and Codex share one token-based allowance on Plus, Pro and Business.\n8. New device limits: one machine can only hold so many paid accounts, or you get \"Device limit reached\".\n9. Banked reset 1 of 2 is live. Redeem it in Usage settings or with /usage in the CLI.\n\nIncidents and security\n- Oct 27: GPT-6.1 Sol was degraded for about 78 minutes, then resolved.\n- Don't run Codex inside ~/Downloads (Forever Security found a planted AGENTS.md), and don't install it from reseller one-liners (Symantec caught one turning the sandbox off).\n- Forever Security says a local HTML page opened in Codex's built-in browser can read files on disk. Still unpatched as of Oct 29, per their write-up.\n\nWhat users are saying\n- 429 and \"at capacity\" errors with most of the allowance left, mostly VS Code on Linux. The busiest new GitHub issue this week (#57084, 87 comments). No fix yet. Switch models with /model, and codex resume picks the session back up.\n- VS Code extension 26.1021.22027 \"could not start its user interface\" on Linux and Windows, across several issues. Reported workarounds: the pre-release build, an older version, or launching with code --disable-gpu.\n- Usage rings vanished from the desktop app sidebar after recent updates (#57656, Windows and Mac). Check Settings > Usage or /status meanwhile.\n- Max or Ultra missing from the reasoning slider after 26.1027 (#58201). Fix confirmed by several users: Settings > General > Available reasoning efforts, re-check the level.\n- The shared December pool is the loudest topic on X, and a GitHub request to keep Plus allowances separate is gaining votes (#58530).\n\nWhat people are asking OpenAI for: publish how chat and Codex tokens will be counted before December, bring the usage rings back, post a status note when 429s hit accounts with quota left, and give a fix date for the built-in browser issue.\n\nCommunity shoutout\n@talkaboutdesign built agent-stat, which shows your local Codex usage, per-request cost and live limits in one place: npx agent-stat@latest\n\nTip\nHold your banked reset until you need it. It only redeems once an allowance is under 80% remaining, and it moves your weekly reset date to the day you use it.\n\nSources: openai/codex releases and issues on GitHub, https://t.co/FSo3kNQaTR, @thsottiaux and @OpenAI on X",
+   "referenced": [],
+   "url": "https://x.com/CodexUpdate/status/2116867453137338861"
+  },
+  {
+   "id": "2116890550167019692",
+   "author": "CodexUpdate",
+   "created_at": "2026-11-01T13:50:11Z",
+   "text": "9 stable releases and a 28-day run: Codex's October, all in one post.\n\nEverything that shipped or changed in October 2026, checked against GitHub, OpenAI's changelog, help pages and official posts. Bookmark it for reference.\n\n1. Biggest launches\n- GPT-6.1 Terra came to Codex on Oct 26 for Plus, Pro, Business, Enterprise and Edu. Tibo says it gives 2x the usage of 6.1 Sol.\n- GPT-6.1 Sol Ultrafast arrived Oct 8. OpenAI says it's up to 8x faster than Sol Standard. Pro $500 and eligible Enterprise and Edu only.\n- Sol's default context in Codex went from 272k to 500k tokens on Oct 11, with no long-context fees on a ChatGPT plan.\n- Tibo started a 28-day run on Oct 4: one clear improvement or a full limits reset every day.\n- Also shipped: composer predictions (beta, Pro), a re-shipped Codex cloud with Tailscale support, a new Windows sandbox built on Microsoft's MXC, editing earlier messages in the desktop app, and about 60% less app data on disk plus a Storage tab.\n\n2. Every stable CLI release\n- 0.160.0 (Oct 1): start sessions outside a project, fewer SQLite stalls, Windows sandbox fixes\n- 0.160.1 (Oct 5): keeps Windows env vars for remote MCP servers\n- 0.161.0 (Oct 7): GPT-6.1 Sol becomes the default model, /mcp login, mic and speaker picker\n- 0.162.0 (Oct 8): managed Git worktrees, pin tasks with p, /copy, clickable links\n- 0.162.1 (Oct 9): fixes a TUI crash and background-server startup failures\n- 0.163.0 (Oct 15): searchable /config, steer mid-response, leader key in /keymap, /daemon restart\n- 0.164.0 (Oct 23): ten /presets slots, inline /model and /permissions, image previews\n- 0.165.0 (Oct 27): built-in Vertex AI provider, Terra in the catalog, memory v2 on by default\n- 0.166.0 (Oct 29): codex doctor --network-only, transcript search, codex queue --resume\n\n3. Pricing, plans and limits\n- Full limit resets landed again and again during the run, including Days 6, 8, 10, 13, 15, 21 and 23. The run closes with banked resets you redeem yourself.\n- Auto-review (\"Approve for me\") stopped counting against usage (Day 2). Day 12 stretched usage with longer caching, and Day 16 made the cache keep with no expiry for logged-in users.\n- GPT-5.5 left Codex for ChatGPT sign-in on Oct 14. API-key sessions kept it.\n- About 40,000 accounts had limits that didn't match their plan. OpenAI fixed it and added credits. Pro 500 upgraders hit by a separate bug got 25,000 credits.\n- Codex for OSS grants moved up to the Pro 200 tier.\n- Oct 29: limits doubled for Pro 100, 200, 500 and Business Premium, and the planned Pro 200 cut was cancelled.\n- Pro and Business now get monthly API credits. They don't add to your Codex allowance.\n- New device limits cap how many paid accounts one machine can hold (\"Device limit reached\").\n- Coming in December: ChatGPT and Codex share one token-based allowance on Plus, Pro and Business.\n\n4. What people hit, and the fixes\n- Sudden usage drain (mid-month): a confirmed bug, now fixed. If it happens again, run /feedback in the affected session and check /usage daily.\n- \"Selected model is at capacity\" or 429s with quota left (GitHub #57084): no official fix yet. Switch with /model, then codex resume to continue.\n- VS Code extension 26.1021 won't start its UI: users report the pre-release build, rolling back with Install Specific Version, or launching with code --disable-gpu.\n- Worktree chats fail with \"Cannot serialize value\" on Windows and Linux: Local mode still works.\n- Max or Ultra missing from the reasoning slider (#58201): re-check it in Settings > General > Available reasoning efforts.\n- Usage rings gone from the desktop sidebar (#57656): use Settings > Usage or /status.\n- Security: don't launch Codex inside ~/Downloads, where Forever Security found a planted AGENTS.md. Don't install from reseller one-liners either. Symantec caught one turning the sandbox off.\n\n5. Three tips worth keeping\n- Get a baseline before December's shared pool: /usage daily and /usage weekly in the CLI.\n- Pipe anything into Codex: npm test 2>&1 | codex exec \"summarize the failures and propose the smallest fix\"\n- Mind the AGENTS.md cap. Codex merges your AGENTS.md files and stops at 32 KiB (project_doc_max_bytes), so split rules into nested folders.\n\nAsk for November: publish the per-plan token allowance before the shared pool starts, so users can do the maths.\n\nSources: https://t.co/mg3VYMWlcI releases and issues, https://t.co/3VRNkUYtHb, https://t.co/FSo3kNQaTR, and posts from @OpenAI, @OpenAIDevs and @thsottiaux",
+   "referenced": [],
+   "url": "https://x.com/CodexUpdate/status/2116890550167019692"
+  },
+  {
+   "id": "2116907718980317610",
+   "author": "formuf97376",
+   "created_at": "2026-11-01T14:58:25Z",
+   "text": "@thsottiaux @OpenAI @OpenAIHelp I paid $200 for ChatGPT Pro, but my account has shown “model at capacity in your region” for 15 days. Another account works fine on the same device and network. Why? Please fix this and compensate me.\n\nAccount: a449315362@gmail.com",
+   "referenced": [
+    "2116692529970311254"
+   ],
+   "url": "https://x.com/formuf97376/status/2116907718980317610"
+  },
+  {
+   "id": "2116907981367644274",
+   "author": "formuf97376",
+   "created_at": "2026-11-01T14:59:27Z",
+   "text": "@thsottiaux @OpenAI @OpenAIHelp I paid $200 for ChatGPT Pro, but my account has shown “model at capacity in your region” for 15 days. Another account works fine on the same device and network. Why? Please fix this and compensate me.\n\nAccount: a449315362@gmail.com",
+   "referenced": [
+    "2116405414921384099"
+   ],
+   "url": "https://x.com/formuf97376/status/2116907981367644274"
+  },
+  {
+   "id": "2116908006076256435",
+   "author": "formuf97376",
+   "created_at": "2026-11-01T14:59:33Z",
+   "text": "@thsottiaux @OpenAI @OpenAIHelp I paid $200 for ChatGPT Pro, but my account has shown “model at capacity in your region” for 15 days. Another account works fine on the same device and network. Why? Please fix this and compensate me.\n\nAccount: a449315362@gmail.com",
+   "referenced": [
+    "2115890336107233347"
+   ],
+   "url": "https://x.com/formuf97376/status/2116908006076256435"
+  },
+  {
+   "id": "2116908042109534711",
+   "author": "formuf97376",
+   "created_at": "2026-11-01T14:59:42Z",
+   "text": "@thsottiaux @OpenAI @OpenAIHelp I paid $200 for ChatGPT Pro, but my account has shown “model at capacity in your region” for 15 days. Another account works fine on the same device and network. Why? Please fix this and compensate me.\n\nAccount: a449315362@gmail.com",
+   "referenced": [
+    "2115851621137784832"
+   ],
+   "url": "https://x.com/formuf97376/status/2116908042109534711"
+  },
+  {
+   "id": "2116908074493771783",
+   "author": "formuf97376",
+   "created_at": "2026-11-01T14:59:49Z",
+   "text": "@thsottiaux @OpenAI @OpenAIHelp I paid $200 for ChatGPT Pro, but my account has shown “model at capacity in your region” for 15 days. Another account works fine on the same device and network. Why? Please fix this and compensate me.\n\nAccount: a449315362@gmail.com",
+   "referenced": [
+    "2115588390414581916"
+   ],
+   "url": "https://x.com/formuf97376/status/2116908074493771783"
   }
  ]
 }
