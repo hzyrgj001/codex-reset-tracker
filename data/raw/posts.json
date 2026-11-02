@@ -14480,6 +14480,294 @@
     "2117035794678546764"
    ],
    "url": "https://x.com/8Zhangyang/status/2117153061772951800"
+  },
+  {
+   "id": "2117164931560718442",
+   "author": "tobitech",
+   "created_at": "2026-11-02T08:00:29Z",
+   "text": "getting selected model is at capacity for Astra 🤦‍♂️ \n@thsottiaux",
+   "referenced": [],
+   "url": "https://x.com/tobitech/status/2117164931560718442"
+  },
+  {
+   "id": "2117171942994428201",
+   "author": "chen_cauch60272",
+   "created_at": "2026-11-02T08:28:21Z",
+   "text": "@thsottiaux I just wonder when would u solve this f**king \"Selected model is at capacity. Please try a different model.\"\nDue to this reason, we nearly could do nothing, although u provide these reset. It just makes us feel we are jokers!!!!🤮",
+   "referenced": [
+    "2117035794678546764"
+   ],
+   "url": "https://x.com/chen_cauch60272/status/2117171942994428201"
+  },
+  {
+   "id": "2117173630467760568",
+   "author": "8Zhangyang",
+   "created_at": "2026-11-02T08:35:03Z",
+   "text": "@thsottiaux @OpenAI @OpenAI 我订阅ChatGPT Pro 20x，只为用Codex的Astra Ultra、Sol 6.1 Ultra做多代理研究。两者实测都报“Selected model is at capacity”，任务无法启动，切换无效。每周额度仍剩94%，点数12,497。工单#18906502附有两条失败线程。低档PONG成功≠Ultra可用。不要补偿，只要工程团队修复！",
+   "referenced": [
+    "2117153061772951800"
+   ],
+   "url": "https://x.com/8Zhangyang/status/2117173630467760568"
+  },
+  {
+   "id": "2117178055659794844",
+   "author": "xMezbah",
+   "created_at": "2026-11-02T08:52:38Z",
+   "text": "@thsottiaux “Selected model is at capacity” has hit me multiple times in the last few hours, the worst I’ve ever seen. I’m mid-task, tools already ran, and it just dies. This is really frustrating. https://t.co/NF8Of7sPse",
+   "referenced": [],
+   "url": "https://x.com/xMezbah/status/2117178055659794844"
+  },
+  {
+   "id": "2117188120286478457",
+   "author": "maxxwey12489",
+   "created_at": "2026-11-02T09:32:37Z",
+   "text": "@thsottiaux I am paying 20x the price, yet for at least one week every month, the \"selected model is at capacity\" error makes the service unusable. I suggest that the premium price be reduced to account for the periods when users are unable to access the service.😵 https://t.co/tYJ7rs4mVa",
+   "referenced": [
+    "2117035794678546764"
+   ],
+   "url": "https://x.com/maxxwey12489/status/2117188120286478457"
+  },
+  {
+   "id": "2117189517702828400",
+   "author": "PopboxAi",
+   "created_at": "2026-11-02T09:38:11Z",
+   "text": "Selected model is at capacity. Please try a different model.\n今天两个账号都遇到了这种问题了，是啥故障吗？\n@thsottiaux",
+   "referenced": [],
+   "url": "https://x.com/PopboxAi/status/2117189517702828400"
+  },
+  {
+   "id": "2117190730376696132",
+   "author": "AnsonZhaosq",
+   "created_at": "2026-11-02T09:43:00Z",
+   "text": "@thsottiaux My codex is displayed as a whole\n：Selected model is at capacity. Please try a different model ：）",
+   "referenced": [
+    "2117035794678546764"
+   ],
+   "url": "https://x.com/AnsonZhaosq/status/2117190730376696132"
+  },
+  {
+   "id": "2117193090280935895",
+   "author": "poteto",
+   "created_at": "2026-11-02T09:52:22Z",
+   "text": "@thsottiaux &gt; Game so good\n\nthanks https://t.co/6pbSKT3pqy",
+   "referenced": [
+    "2117151734506397716"
+   ],
+   "url": "https://x.com/poteto/status/2117193090280935895"
+  },
+  {
+   "id": "2117194453043831108",
+   "author": "poteto",
+   "created_at": "2026-11-02T09:57:47Z",
+   "text": "@thsottiaux yay",
+   "referenced": [
+    "2117151862705230048"
+   ],
+   "url": "https://x.com/poteto/status/2117194453043831108"
+  },
+  {
+   "id": "2117206839251312989",
+   "author": "mazuofu1",
+   "created_at": "2026-11-02T10:47:00Z",
+   "text": "@thsottiaux 为什么今天在Codex桌面端和Codex CLI上的所有请求都返回Selected modelis at capacity?出什么问题了",
+   "referenced": [
+    "2117035794678546764"
+   ],
+   "url": "https://x.com/mazuofu1/status/2117206839251312989"
+  },
+  {
+   "id": "2117207627910312170",
+   "author": "rafmib",
+   "created_at": "2026-11-02T10:50:08Z",
+   "text": "@thsottiaux @poteto How about you fix \"Selected model is at capacity. Please try a different model.\" instead of playing games?\nIt has been happening all the time for the past month, making it impossible to use Codex.",
+   "referenced": [
+    "2117151734506397716"
+   ],
+   "url": "https://x.com/rafmib/status/2117207627910312170"
+  },
+  {
+   "id": "2117208425486770467",
+   "author": "xiaomizhaMt",
+   "created_at": "2026-11-02T10:53:19Z",
+   "text": "@thsottiaux I’ve been consistently receiving the error message \"Selected model is at capacity. Please try a different model\" in Codex. The issue is particularly severe around 16:30 (UTC+8). Furthermore, whenever this message appears, the quality of the model's output also tends to decline.",
+   "referenced": [
+    "2117035794678546764"
+   ],
+   "url": "https://x.com/xiaomizhaMt/status/2117208425486770467"
+  },
+  {
+   "id": "2117210642860118373",
+   "author": "DinerTuncay4",
+   "created_at": "2026-11-02T11:02:07Z",
+   "text": "@thsottiaux always : Selected model is at capacity. Please try a different model.",
+   "referenced": [
+    "2117035794678546764"
+   ],
+   "url": "https://x.com/DinerTuncay4/status/2117210642860118373"
+  },
+  {
+   "id": "2117211203495993685",
+   "author": "cxanfilm",
+   "created_at": "2026-11-02T11:04:21Z",
+   "text": "@thsottiaux Just got the selected model (astra) is at capacity the first time mid 20 min task wtf?",
+   "referenced": [
+    "2110750421367287996"
+   ],
+   "url": "https://x.com/cxanfilm/status/2117211203495993685"
+  },
+  {
+   "id": "2117212229527609653",
+   "author": "berxiongda1x",
+   "created_at": "2026-11-02T11:08:26Z",
+   "text": "@thsottiaux Selected model is at capacity. Please try a different model.",
+   "referenced": [
+    "2117035794678546764"
+   ],
+   "url": "https://x.com/berxiongda1x/status/2117212229527609653"
+  },
+  {
+   "id": "2117212360360538213",
+   "author": "berxiongda1x",
+   "created_at": "2026-11-02T11:08:57Z",
+   "text": "@thsottiaux Selected model is at capacity. Please try a different model.@thsottiaux",
+   "referenced": [
+    "2117035794678546764"
+   ],
+   "url": "https://x.com/berxiongda1x/status/2117212360360538213"
+  },
+  {
+   "id": "2117220169185726960",
+   "author": "formuf97376",
+   "created_at": "2026-11-02T11:39:59Z",
+   "text": "@thsottiaux @OpenAI @OpenAIHelp\n\nI paid $200 for ChatGPT Pro, but I’ve been unable to use my paid model for nearly 15 days because of the “model at capacity in your region” error.\n\nAnother account works fine on the SAME device and network.\n\nMy account: a449315362@gmail.com https://t.co/DZp9GqklfM",
+   "referenced": [
+    "2116935650511585696"
+   ],
+   "url": "https://x.com/formuf97376/status/2117220169185726960"
+  },
+  {
+   "id": "2117237363453620606",
+   "author": "MosAndreiC",
+   "created_at": "2026-11-02T12:48:18Z",
+   "text": "@thsottiaux A lot of problems today... Very slow astra max and a lot of \"Selected model is at capacity. Please try a different model\" any news? https://t.co/Iw3GjkgD8x",
+   "referenced": [
+    "2117035794678546764"
+   ],
+   "url": "https://x.com/MosAndreiC/status/2117237363453620606"
+  },
+  {
+   "id": "2117240397982204287",
+   "author": "dshurikov20",
+   "created_at": "2026-11-02T13:00:21Z",
+   "text": "@sama @thsottiaux Guys, what was the point of the 28 days of “improvements or resets” if Codex itself still doesn’t actually work?Models sit at capacity for days or even weeks at a time. Whole days where you simply can’t use the product. Same issue hits other models too. What’s the point of all the resets and banked resets if you can’t use them? And everyone stays silent. Officially neither OpenAI nor anyone from the Codex team acknowledges it. You just keep posting “something shipped” every day while the actual product stays broken. What’s going on?  #codex",
+   "referenced": [],
+   "url": "https://x.com/dshurikov20/status/2117240397982204287"
+  },
+  {
+   "id": "2117244022091874500",
+   "author": "ChrisTranGG",
+   "created_at": "2026-11-02T13:14:46Z",
+   "text": "Tibo gave his team a rule for 28 days: ship one improvement or reset everyone's limits.\n\n14 of the 28 days had a reset.\n\nThat tells you a lot about what heavy AI users want right now. Ship or reset, which would you pick? https://t.co/gYDqKr2nVf",
+   "referenced": [],
+   "url": "https://x.com/ChrisTranGG/status/2117244022091874500"
+  },
+  {
+   "id": "2117258414795760101",
+   "author": "lucasbrown922",
+   "created_at": "2026-11-02T14:11:57Z",
+   "text": "@thsottiaux 救救我，我才开始用呀！3天了，Selected model is at capacity. Please try a different model.",
+   "referenced": [
+    "2117035794678546764"
+   ],
+   "url": "https://x.com/lucasbrown922/status/2117258414795760101"
+  },
+  {
+   "id": "2117271016972185894",
+   "author": "Henry_Li87",
+   "created_at": "2026-11-02T15:02:02Z",
+   "text": "@thsottiaux Selected model is at capacity. Please try a different model.",
+   "referenced": [
+    "2117035794678546764"
+   ],
+   "url": "https://x.com/Henry_Li87/status/2117271016972185894"
+  },
+  {
+   "id": "2117272754651345126",
+   "author": "SenseNopedOut",
+   "created_at": "2026-11-02T15:08:56Z",
+   "text": "@OpenAI @thsottiaux \nselected model is at capacity\nselected model is at capacity\nselected model is at capacity\nselected model is at capacity\nselected model is at capacity\nselected model is at capacity",
+   "referenced": [],
+   "url": "https://x.com/SenseNopedOut/status/2117272754651345126"
+  },
+  {
+   "id": "2117284111681483101",
+   "author": "OoldTiger",
+   "created_at": "2026-11-02T15:54:04Z",
+   "text": "@thsottiaux hi tibo,I'm really getting annoyed by this.😭\nSelected model is at capacity. Please try a different model.",
+   "referenced": [
+    "2117283124833055196"
+   ],
+   "url": "https://x.com/OoldTiger/status/2117284111681483101"
+  },
+  {
+   "id": "2117285133422121327",
+   "author": "Ykxc69S5sR57242",
+   "created_at": "2026-11-02T15:58:07Z",
+   "text": "@thsottiaux Selected model is at capacity. Please try a different model.是必须带给我们的惩罚吗？无论是任何订阅的客户",
+   "referenced": [
+    "2117283124833055196"
+   ],
+   "url": "https://x.com/Ykxc69S5sR57242/status/2117285133422121327"
+  },
+  {
+   "id": "2117286494444618172",
+   "author": "Ecmo9jvp",
+   "created_at": "2026-11-02T16:03:32Z",
+   "text": "@ScarletKc @thsottiaux 如果是真的的话希望dot不要搞codex那一套at capacity不给用的情况😭",
+   "referenced": [
+    "2117283249018020290"
+   ],
+   "url": "https://x.com/Ecmo9jvp/status/2117286494444618172"
+  },
+  {
+   "id": "2117287192318120204",
+   "author": "TheBurritoLion",
+   "created_at": "2026-11-02T16:06:18Z",
+   "text": "@thsottiaux Models are already at capacity. What’s your fix for this? https://t.co/a85CR1J8Tm",
+   "referenced": [
+    "2117283355427495983"
+   ],
+   "url": "https://x.com/TheBurritoLion/status/2117287192318120204"
+  },
+  {
+   "id": "2117288999056478469",
+   "author": "PojIeSb",
+   "created_at": "2026-11-02T16:13:29Z",
+   "text": "@thsottiaux Models are already at capacity. What’s your fix for this?",
+   "referenced": [
+    "2117283355427495983"
+   ],
+   "url": "https://x.com/PojIeSb/status/2117288999056478469"
+  },
+  {
+   "id": "2117289383879721418",
+   "author": "PojIeSb",
+   "created_at": "2026-11-02T16:15:01Z",
+   "text": "@thsottiaux Models are already at capacity. What’s your fix for this?",
+   "referenced": [
+    "2117283124833055196"
+   ],
+   "url": "https://x.com/PojIeSb/status/2117289383879721418"
+  },
+  {
+   "id": "2117296353164628114",
+   "author": "oikantik_basu",
+   "created_at": "2026-11-02T16:42:42Z",
+   "text": "@thsottiaux Selected model is at capacity. Please try a different model. BTW it's GPT-6 Astra at ULTRA, How about add some Resets for this Month :)",
+   "referenced": [
+    "2117283124833055196"
+   ],
+   "url": "https://x.com/oikantik_basu/status/2117296353164628114"
   }
  ]
 }
