@@ -17216,6 +17216,26 @@
    "text": "Model at capacity -&gt; Goal stalled.  @thsottiaux  please fix",
    "referenced": [],
    "url": "https://x.com/AlienVakeel/status/2118384227200737382"
+  },
+  {
+   "id": "2118443897349349591",
+   "author": "nisxant",
+   "created_at": "2026-11-05T20:42:38Z",
+   "text": "@Jbm_dev @thsottiaux yea, i sometimes get “ model is at capacity “ when I’m working thats too much annoying.",
+   "referenced": [
+    "2118443570936111360"
+   ],
+   "url": "https://x.com/nisxant/status/2118443897349349591"
+  },
+  {
+   "id": "2118470016127598724",
+   "author": "thsottiaux",
+   "created_at": "2026-11-05T22:26:25Z",
+   "text": "If I count well, that's more than 500M images per day.",
+   "referenced": [
+    "2118469621011677521"
+   ],
+   "url": "https://x.com/thsottiaux/status/2118470016127598724"
   }
  ]
 }
