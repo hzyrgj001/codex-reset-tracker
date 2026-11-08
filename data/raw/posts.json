@@ -17388,6 +17388,24 @@
    "text": "Saw some confusions, but all Pro plans have no 5-hour limits, and give the following usage compared to Plus.\n\n✅ Pro 100 = 10X\n✅ Pro 200 = 20X\n✅ Pro 500 = 50X, access to ultrafast",
    "referenced": [],
    "url": "https://x.com/thsottiaux/status/2119296267545419987"
+  },
+  {
+   "id": "2119327494293909551",
+   "author": "uy3315172019956",
+   "created_at": "2026-11-08T07:13:44Z",
+   "text": "@thsottiaux select model is at capacity",
+   "referenced": [
+    "2119305294291612140"
+   ],
+   "url": "https://x.com/uy3315172019956/status/2119327494293909551"
+  },
+  {
+   "id": "2119409894541455436",
+   "author": "CodexUpdate",
+   "created_at": "2026-11-08T12:41:10Z",
+   "text": "Codex this week: 7 changes, 5 user pain points, all here.\n\nNov 1 to Nov 8, checked against OpenAI's posts, changelog, status page and GitHub.\n\nReleases\n1. CLI v0.167.0 (Nov 6): agent command center via codex agents --no-daemon, switch backends without losing your draft, opt-in system proxy, and saved chats no longer vanish when you change model providers.\n2. GPT-Image-2.6 came to Codex and the API (Nov 4). OpenAI says the new Flare and Sunburst API models generate images 50% faster.\n3. GPT-6 Cyber launched Nov 5, in Codex and the API for approved Daybreak Red orgs only.\n4. ChatGPT iOS 1.2026.300 (Nov 2): follow-ups steer the running task by default, and you can manage attachments in the full-screen composer.\n5. Dots on iOS: reply inline from a notification, share straight to your dot, open it from the Action button. Tibo says Terra and Astra will power dots too.\n\nLimits and pricing\n6. Banked reset 2 of 2 landed Nov 1, the last day of Tibo's 28-day run. Redeem it in Usage settings or with /usage before it expires.\n7. Tibo spelled out current Pro rates: Pro 100/200/500 = 10x/20x/50x Plus usage, no 5-hour cap on any Pro plan, ultrafast on Pro 500 only. Not a new increase. He also asked whether a Pro 50 tier would make sense. Just a question for now.\n\nIncidents\n- Nov 5: errors in ChatGPT Work and dots for about 1h40m until a mitigation went in.\n\nWhat users are saying\n- \"Selected model is at capacity\" with plenty of quota left. The loudest complaint of the week, on X and in several GitHub issues (#58824, #58858, #59059), across CLI and desktop, Plus and Pro. Several reporters say switching models doesn't help. No official explanation yet.\n- Local projects vanish from the desktop sidebar after the 26.1103 update when you switch accounts (#59895, Windows and Mac). Chats and folders are still on disk. One user got them all back by re-adding a project with the exact same name and folder, then deleting the duplicate.\n- Attaching an .xlsx leaves Send spinning (#58660 Windows, #59362 Mac). Two reporters got around it by typing the file's local path in the message instead.\n- Typing lag in dot chats in the Mac desktop app (#59301). Several users say the same dot runs fine in Chrome.\n- Pushback on December's shared ChatGPT + Codex pool continues on GitHub (#58742, #58655).\n\nWhat people are asking OpenAI for: a status note or a clearer error when accounts with quota left get \"at capacity\", local projects shared across accounts on one machine again, and per-plan token numbers before December.\n\nCommunity shoutout\n@turushan built Codex Whip, a free, open-source Mac menu bar app. When Codex CLI stops on a capacity error or usage limit, it waits, then continues the same session with the same model: https://t.co/tdugX5sRKe\n\nTip\nReopen your latest CLI session in this folder, no picker:\ncodex resume --last\n\nSources: openai/codex releases and issues on GitHub, the ChatGPT & Codex changelog, https://t.co/HiR0RKHua4, @OpenAI, @OpenAIDevs, @thsottiaux and @_samirism on X",
+   "referenced": [],
+   "url": "https://x.com/CodexUpdate/status/2119409894541455436"
   }
  ]
 }
