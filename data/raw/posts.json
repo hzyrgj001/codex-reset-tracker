@@ -17414,6 +17414,34 @@
    "text": "Selected model is at capacity. Please try a different model. why???\n#gpt @thsottiaux",
    "referenced": [],
    "url": "https://x.com/legeling567/status/2119630325282382304"
+  },
+  {
+   "id": "2119761615411417143",
+   "author": "YuhangLan31949",
+   "created_at": "2026-11-09T11:58:47Z",
+   "text": "@thsottiaux I keep getting “Selected model is at capacity. Please try a different model.” when using Codex. Has anyone else run into this? Any suggestions on how to fix it?",
+   "referenced": [
+    "2119305294291612140"
+   ],
+   "url": "https://x.com/YuhangLan31949/status/2119761615411417143"
+  },
+  {
+   "id": "2119806911759655033",
+   "author": "HopeTruthxx",
+   "created_at": "2026-11-09T14:58:46Z",
+   "text": "@thsottiaux @OpenAI @OpenAIDevs \nHi Tibo and the official team, here is my Weekly Roundup #4!\n\nAnother week, another health check. Some recovered. Some are improving. Some are still waiting. And one apparently came back from the dead just to disappear again. \n\nWeekly score: 15 suggestion rounds, 18 tracked requests.\n\n3 solved, 1 partially solved, 13 still waiting, 1 regression.\n\nMy feedback portfolio keeps growing. Unfortunately, its returns remain highly volatile. (¬‿¬)\n\n#1 Permission Center\n[Still waiting] Multiple tasks, multiple approval requests, endless clicking. A centralized permission hub would save time and sanity.\n\n#2 Quick Chat Sync Speed\n[Solved] \n\n#3 Always-visible Usage\n[Solved] Finally, both Windows and Mac users can see their usage more easily! \n\n#4 In-app Auto Updates\n[Still waiting] Could Codex update in the background without constantly requiring restarts? An optional auto-update setting would make life much smoother.\n\n#5A Share Files to Existing ChatGPT Chats\n[Still waiting] Please let us choose an existing ChatGPT conversation when sharing files from Codex. Not every file needs to start a new life in a new chat.\n\n#5B Loyalty Rewards\n[Still waiting] Long-term Free, Plus, Pro, and Business users could earn points or small perks. Loyalty deserves XP too. (¬‿¬)\n\n#6A Cookie Preferences Space\n[Solved] The cookies have finally learned to respect personal space. Thank you! (‘▽’)\n\n#6B Project Sorting\n[Still waiting] \"Sort by latest update\" still doesn't reliably reflect recent activity. My Projects apparently have their own understanding of time. (・・?)\n\n#7 Open in a Quick Chat\n[Regressed]\n\n#8A Full Project List in Schedule\n[Still waiting] \"Run on computer\" only shows some Projects. Please give us the complete list, ideally with search.\n\n#8B Web Projects for Cloud Scheduling\n[Still waiting] Without \"Run on computer,\" Project selection disappears. But ChatGPT Web already has Projects. Cloud tasks deserve a home too!\n\n#9 Project Cleanup and Archiving\n[Partially solved] The recent disk-state optimization targeting around 60% less storage is wonderful news. \n\nStill hoping for Light, Medium, and Deep cleanup, with ZIP or tar.gz archiving and recovery.\n\n#10 Model at Capacity\n[Still waiting] Long-running tasks shouldn't stop permanently when capacity runs out. Automatic retries, checkpoints, and task resumption would help.\n\n#11 Restore Open in a Quick Chat\n[Still waiting] This one still matters a lot.\n\n#12 Codex Project Sidebar Scrolling\n[Still waiting] Collapsing a local Project makes the sidebar jump to its conversation. Please preserve the scroll position.\n\n#13 Draft Awareness Mode\n[Still waiting] Could Codex optionally understand how we revise prompts before pressing Send?\n\nA strictly opt-in mode could help it understand evolving intentions. Deleted drafts should never become executable instructions.\n\n#14 Agent Usage Budget\n[Still waiting] Could users allocate usage budgets to individual tasks?\n\nFor example, Task A gets 10% of the weekly allowance, while Task B gets 20%.\n\nWarn us near the limit. Save progress and pause when reached.\n\n#15 Missing Local Projects on Windows\n[ waiting] After the latest Windows update, local Projects seem to have disappeared from the Codex sidebar.\n\nFinal score: 3 solved, 1 partially solved, 13 pending, 1 regression.\n\nTibo and the team, thank you for the improvements so far. I genuinely appreciate the progress.\n\nI'll be back next week. Hopefully with more fixes, fewer regressions, and perhaps a reply before suggestion #1000.",
+   "referenced": [],
+   "url": "https://x.com/HopeTruthxx/status/2119806911759655033"
+  },
+  {
+   "id": "2119875790485741964",
+   "author": "poteto",
+   "created_at": "2026-11-09T19:32:28Z",
+   "text": "reset rolling out! https://t.co/9qREQgV1wm",
+   "referenced": [
+    "2119871982946971659"
+   ],
+   "url": "https://x.com/poteto/status/2119875790485741964"
   }
  ]
 }
