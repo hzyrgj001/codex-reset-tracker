@@ -17542,6 +17542,86 @@
     "2120999993079451919"
    ],
    "url": "https://x.com/codex_resets/status/2121000048515321879"
+  },
+  {
+   "id": "2121068828348301680",
+   "author": "kun0219kun",
+   "created_at": "2026-11-13T02:33:10Z",
+   "text": "@thsottiaux Stop silent load-balancing downgrades. Getting \"at capacity\" errors or getting stealth-routed to lobotomized endpoints breaks trust faster than anything else. Fix your routing infrastructure.",
+   "referenced": [
+    "2121062974161092792"
+   ],
+   "url": "https://x.com/kun0219kun/status/2121068828348301680"
+  },
+  {
+   "id": "2121068996619645354",
+   "author": "iRainbowsaur",
+   "created_at": "2026-11-13T02:33:51Z",
+   "text": "@thsottiaux well you guys have \"fixed\" the \"this model is at capacity\" error with a fake timeout thing that will always go to 5/5 timeout reconnect attempts before actually starting your prompt after like ten minutes. \n\ni would rather you just be honest and literally queue our prompt.",
+   "referenced": [
+    "2121062974161092792"
+   ],
+   "url": "https://x.com/iRainbowsaur/status/2121068996619645354"
+  },
+  {
+   "id": "2121079212044165485",
+   "author": "omprashantjain",
+   "created_at": "2026-11-13T03:14:26Z",
+   "text": "@thsottiaux Make it a better employee for other agents 😄 Mine is driven by Claude, not by me. Two asks: don't hang when a background run leaves stdin open, and say clearly whether it's \"at capacity\" or \"out of usage\". To an orchestrator those look identical.",
+   "referenced": [
+    "2121062974161092792"
+   ],
+   "url": "https://x.com/omprashantjain/status/2121079212044165485"
+  },
+  {
+   "id": "2121080570763694554",
+   "author": "Jacelldn",
+   "created_at": "2026-11-13T03:19:50Z",
+   "text": "@thsottiaux Selected model is at capacity. Please try a different model.\n\nSelected model is at capacity. Please try a different model.\n\nSelected model is at capacity. Please try a different model.\n\nSelected model is at capacity. Please try a different model.",
+   "referenced": [
+    "2121062974161092792"
+   ],
+   "url": "https://x.com/Jacelldn/status/2121080570763694554"
+  },
+  {
+   "id": "2121083738717094389",
+   "author": "harrison_0x821",
+   "created_at": "2026-11-13T03:32:25Z",
+   "text": "@thsottiaux improve? why don't we talk about this before anything else, \"Selected model is at capacity. Please try a different model.\"",
+   "referenced": [
+    "2121062974161092792"
+   ],
+   "url": "https://x.com/harrison_0x821/status/2121083738717094389"
+  },
+  {
+   "id": "2121088693272506452",
+   "author": "zzz_zzx74837",
+   "created_at": "2026-11-13T03:52:07Z",
+   "text": "@thsottiaux How about making Codex actually work on my account first? \nI’ve been getting “Selected model is at capacity” across every model since October 22. Same device, same network, different account works perfectly\nThree weeks, a Pro subscription, and still no fix. Please save my Codex! https://t.co/mGBax71teL",
+   "referenced": [
+    "2121062974161092792"
+   ],
+   "url": "https://x.com/zzz_zzx74837/status/2121088693272506452"
+  },
+  {
+   "id": "2121106826829729868",
+   "author": "0xw2w",
+   "created_at": "2026-11-13T05:04:10Z",
+   "text": "@thsottiaux Auto-polling &amp; resume when \"Selected model is at capacity. Please try a different model\"",
+   "referenced": [
+    "2121062974161092792"
+   ],
+   "url": "https://x.com/0xw2w/status/2121106826829729868"
+  },
+  {
+   "id": "2121120768771895461",
+   "author": "jamgames2",
+   "created_at": "2026-11-13T05:59:34Z",
+   "text": "@thsottiaux auto-continue on \"/goal\" when \"Selected model is at capacity\" error",
+   "referenced": [
+    "2121062974161092792"
+   ],
+   "url": "https://x.com/jamgames2/status/2121120768771895461"
   }
  ]
 }
