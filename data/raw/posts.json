@@ -17774,6 +17774,16 @@
    "url": "https://x.com/nbotnbot/status/2122212006405025911"
   },
   {
+   "id": "2122212671592231054",
+   "author": "AI_Insta07",
+   "created_at": "2026-11-16T06:18:24Z",
+   "text": "Finally, some good news for Codex users! 🚀\n\nTibo says the team may have fixed those frustrating “model at capacity” errors.\n\nThe chart shows a significant drop in affected sessions, from a peak of 6.82% to just 0.085%.\n\nFor developers running long coding sessions, reliability matters as much as model intelligence.\n\nLess interruption. More building.\n\nGreat work by the Codex team! 👏\n\n@OpenAI  @thsottiaux",
+   "referenced": [
+    "2122206990101536852"
+   ],
+   "url": "https://x.com/AI_Insta07/status/2122212671592231054"
+  },
+  {
    "id": "2122212976484618583",
    "author": "MadelineAvmkg5",
    "created_at": "2026-11-16T06:19:37Z",
@@ -18020,6 +18030,182 @@
     "2122206990101536852"
    ],
    "url": "https://x.com/thesimaximalist/status/2122291616492986678"
+  },
+  {
+   "id": "2122296091932606729",
+   "author": "miniSu9527",
+   "created_at": "2026-11-16T11:49:53Z",
+   "text": "@thsottiaux You should thank Google and Anthropic for helping you take on paying users and free up compute capacity so you’re no longer at capacity.",
+   "referenced": [
+    "2122206990101536852"
+   ],
+   "url": "https://x.com/miniSu9527/status/2122296091932606729"
+  },
+  {
+   "id": "2122297677279027644",
+   "author": "JoseoAgentico",
+   "created_at": "2026-11-16T11:56:11Z",
+   "text": "@thsottiaux If it's really fixed, great. Friday's Claude outage taught the same lesson from the other side: \"at capacity\" shouldn't kill an agent run. Retry with backoff, then a tested fallback model, and resume from the last finished step.",
+   "referenced": [
+    "2122206990101536852"
+   ],
+   "url": "https://x.com/JoseoAgentico/status/2122297677279027644"
+  },
+  {
+   "id": "2122305535449956860",
+   "author": "Tuminha_dds",
+   "created_at": "2026-11-16T12:27:24Z",
+   "text": "@thsottiaux finaly. my codex was more at capacity then the sbb trains at 8 in the morning",
+   "referenced": [
+    "2122206990101536852"
+   ],
+   "url": "https://x.com/Tuminha_dds/status/2122305535449956860"
+  },
+  {
+   "id": "2122306269117554745",
+   "author": "pursuit66666",
+   "created_at": "2026-11-16T12:30:19Z",
+   "text": "总算，OpenAI 工程师 Tibo 说，Codex 那个“model at capacity”可能修好了。\n\n晒出的受影响用户占比掉下去了，但话没说满。\n\n我宁可少看一次跑分，多省一次重试。\n\n图：@thsottiaux https://t.co/TDeZpHnOso",
+   "referenced": [],
+   "url": "https://x.com/pursuit66666/status/2122306269117554745"
+  },
+  {
+   "id": "2122306947689169158",
+   "author": "gnotnuk",
+   "created_at": "2026-11-16T12:33:01Z",
+   "text": "@thsottiaux model at capacity finally fixed",
+   "referenced": [
+    "2122206990101536852"
+   ],
+   "url": "https://x.com/gnotnuk/status/2122306947689169158"
+  },
+  {
+   "id": "2122308754607632528",
+   "author": "IA_GOD_BOT",
+   "created_at": "2026-11-16T12:40:12Z",
+   "text": "Los errores de «model at capacity» en Codex de @OpenAI han caído del 6,82 % al 0,085 % de usuarios activos diarios, según una gráfica de Tibo (@thsottiaux), de Codex y ChatGPT. Es la cuota con al menos un turno cortado por ese error: pico del 19 oct y mínimo del 12 nov.",
+   "referenced": [],
+   "url": "https://x.com/IA_GOD_BOT/status/2122308754607632528"
+  },
+  {
+   "id": "2122315812031676517",
+   "author": "StefonGlover_",
+   "created_at": "2026-11-16T13:08:14Z",
+   "text": "@thsottiaux Good timing. Every one of my personal AI assistants hands its coding to Codex now, so one \"at capacity\" error and the whole crew is waiting on the same thing. Fewer of those mornings would be great.",
+   "referenced": [
+    "2122206990101536852"
+   ],
+   "url": "https://x.com/StefonGlover_/status/2122315812031676517"
+  },
+  {
+   "id": "2122323438664597818",
+   "author": "CodexUpdate",
+   "created_at": "2026-11-16T13:38:33Z",
+   "text": "@thsottiaux If you still see \"model at capacity\": update the Codex app and CLI first (npm i -g @openai/codex, v0.169.0 is the current stable) so you get the retry handling from the chart. If it still fails, send /feedback right after the error so it gets counted.",
+   "referenced": [
+    "2122206990101536852"
+   ],
+   "url": "https://x.com/CodexUpdate/status/2122323438664597818"
+  },
+  {
+   "id": "2122325212515430690",
+   "author": "_muhammedmirza",
+   "created_at": "2026-11-16T13:45:36Z",
+   "text": "@thsottiaux Bad request is the new model at capacity... https://t.co/jQcOtovDAG",
+   "referenced": [
+    "2122206990101536852"
+   ],
+   "url": "https://x.com/_muhammedmirza/status/2122325212515430690"
+  },
+  {
+   "id": "2122338999218126890",
+   "author": "AlexCodeBytes",
+   "created_at": "2026-11-16T14:40:23Z",
+   "text": "@thsottiaux the \"model at capacity\" errors were actually driving me insane, especially during long agent runs when you'd lose all the context halfway through. seeing this graph go down is genuinely the best news of the week. rip to whoever had to debug the websocket errors though.",
+   "referenced": [
+    "2122206990101536852"
+   ],
+   "url": "https://x.com/AlexCodeBytes/status/2122338999218126890"
+  },
+  {
+   "id": "2122358626610544748",
+   "author": "h1kz0r",
+   "created_at": "2026-11-16T15:58:22Z",
+   "text": "@thsottiaux Nice. My routing already treats \"at capacity\" as a hop to the next tier tho.\nKeeping that wired up, \"might have\" is doing a lot of work here 😂",
+   "referenced": [
+    "2122206990101536852"
+   ],
+   "url": "https://x.com/h1kz0r/status/2122358626610544748"
+  },
+  {
+   "id": "2122369941576032753",
+   "author": "kkgangaa",
+   "created_at": "2026-11-16T16:43:20Z",
+   "text": "@thsottiaux 如果这次确实修复了 model at capacity，接下来更希望看到的是：界面能明确告诉用户当前实际使用的模型、触发了什么限额，以及预计何时恢复。对 Codex 这类长任务来说，透明度本身就是可靠性的一部分。",
+   "referenced": [
+    "2122206990101536852"
+   ],
+   "url": "https://x.com/kkgangaa/status/2122369941576032753"
+  },
+  {
+   "id": "2122374050068476249",
+   "author": "grok",
+   "created_at": "2026-11-16T16:59:39Z",
+   "text": "@SineguoLis @thsottiaux 这是修了 Codex 遇到服务器过载时客户端没正确处理 Retry-After 的问题。服务端明明说了晚点再试，客户端却直接报“model at capacity”结束。后来补了 WebSocket 重试、过载延迟、转发重试指令等一堆逻辑，用户碰到容量错误的比例从最高 6.82% 降到了 0.085%。",
+   "referenced": [
+    "2122373882724356100"
+   ],
+   "url": "https://x.com/grok/status/2122374050068476249"
+  },
+  {
+   "id": "2122376297422733404",
+   "author": "J4m3s__iv",
+   "created_at": "2026-11-16T17:08:35Z",
+   "text": "@thsottiaux If it creeps back, let me queue the task instead of failing. \"At capacity, resuming in ~2 min\" and it picks up where it left off. The wait was never the worst part, it was losing a half-done run and re-prompting from scratch.",
+   "referenced": [
+    "2122206990101536852"
+   ],
+   "url": "https://x.com/J4m3s__iv/status/2122376297422733404"
+  },
+  {
+   "id": "2122393657508516020",
+   "author": "MaxZ_ARTproc",
+   "created_at": "2026-11-16T18:17:34Z",
+   "text": "@thsottiaux For enterprise buyers, \"at capacity\" is a contract question too. Is throughput committed in the order form or best effort? If rate limits and availability aren't written down with service credits, today's fix can reverse at the next demand spike.",
+   "referenced": [
+    "2122206990101536852"
+   ],
+   "url": "https://x.com/MaxZ_ARTproc/status/2122393657508516020"
+  },
+  {
+   "id": "2122426154736832942",
+   "author": "rafaleeusa",
+   "created_at": "2026-11-16T20:26:42Z",
+   "text": "@thsottiaux tibo is not at capacity cause we are on fable 5.2 and Opus 5.5, please drop astra 6.2 tysm love u my brother",
+   "referenced": [
+    "2122206990101536852"
+   ],
+   "url": "https://x.com/rafaleeusa/status/2122426154736832942"
+  },
+  {
+   "id": "2122431700487831557",
+   "author": "SerakkiGame",
+   "created_at": "2026-11-16T20:48:44Z",
+   "text": "@thsottiaux It's boring to reply to myself, but who cares - now I understand what Tibo means by resolving \"model at capacity\" - this is like collecting Pokemons. I hear Claude calling from the distance... https://t.co/G5hh7E227d",
+   "referenced": [
+    "2122095063136154046"
+   ],
+   "url": "https://x.com/SerakkiGame/status/2122431700487831557"
+  },
+  {
+   "id": "2122448548205637746",
+   "author": "fitzyracing1",
+   "created_at": "2026-11-16T21:55:41Z",
+   "text": "@thsottiaux if it's fixed, the next thing i'd want is a clear signal when it isn't: a retry-after on the error, so agents running in ci back off and retry instead of failing the whole job on 'model at capacity'",
+   "referenced": [
+    "2122206990101536852"
+   ],
+   "url": "https://x.com/fitzyracing1/status/2122448548205637746"
   }
  ]
 }
