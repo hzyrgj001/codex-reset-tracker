@@ -18206,6 +18206,90 @@
     "2122206990101536852"
    ],
    "url": "https://x.com/fitzyracing1/status/2122448548205637746"
+  },
+  {
+   "id": "2122464518236459399",
+   "author": "maiasa_ai_news",
+   "created_at": "2026-11-16T22:59:09Z",
+   "text": "11月17日｜OpenAI関係者の発信まとめ\n\nCodexの混雑時エラーについて、開発チームから改善の可能性が報告されました。個人AI「dot」に写真を渡し、離れた場所にあるPCで動画の色調整や編集を任せた活用例も紹介します。\n\n・改善報告｜Codexの「model at capacity」エラー\n@thsottiauxは11月16日、Codexチームが「model at capacity」というエラーを修正できたかもしれないと投稿しました。モデルの処理能力が混み合い、利用しづらくなる問題についての報告です。\n\n投稿は可能性を示す表現にとどまっており、すべての利用者で完全に解消したとする発表ではありません。対象モデルやプラン、改善の規模も示されていません。利用枠の引き上げやリセット、APIクレジットの追加とは別の話です。\n\n・活用例｜写真を参考に、離れたPCで動画を色調整\n@dkundelは11月17日未明、編集済みの写真をdotに送り、遠く離れた場所にある自分のノートPCで、動画の色調整や編集を任せたと紹介しました。写真の仕上がりを、動画の色や雰囲気を整える参考にする使い方です。\n\nこれは本人が紹介した個別の活用例で、専用の動画編集機能が新しく追加されたという発表ではありません。投稿本文だけでは、使用した編集ソフトや詳しい手順、途中で必要だった確認までは分かりません。\n\ndotに自分のPCで作業を任せるには、そのPCのChatGPTデスクトップアプリでアクセスを許可し、PCをオンラインにしてアプリを開いておく必要があります。利用できる範囲は、プランや地域、ワークスペースの設定によっても異なります。\n\n引用元：@thsottiaux @dkundel",
+   "referenced": [],
+   "url": "https://x.com/maiasa_ai_news/status/2122464518236459399"
+  },
+  {
+   "id": "2122494953633013807",
+   "author": "youngzheng",
+   "created_at": "2026-11-17T01:00:05Z",
+   "text": "Codex fixing 'model at capacity' is the most telling release note of the year: the flagship coding agent couldn't even stay online for its own users. @thsottiaux is right to be cautiously optimistic — 'might have' is doing a lot of work. #AI #Codex",
+   "referenced": [],
+   "url": "https://x.com/youngzheng/status/2122494953633013807"
+  },
+  {
+   "id": "2122496198137544899",
+   "author": "lon_jay6976",
+   "created_at": "2026-11-17T01:05:02Z",
+   "text": "@thsottiaux so 'model at capacity'. 28 straight days of 'daily improvements' ended Nov 1 on a meter. from December it's one pool with Codex. they still won't publish the token count. where's the number?",
+   "referenced": [
+    "2122206990101536852"
+   ],
+   "url": "https://x.com/lon_jay6976/status/2122496198137544899"
+  },
+  {
+   "id": "2122502528591937902",
+   "author": "kazuhiro_jinma",
+   "created_at": "2026-11-17T01:30:11Z",
+   "text": "OpenAI CodexチームのTibo氏（thsottiaux）が11月16日、「model at capacity」エラーの推移をグラフで公開しました。1日のアクティブユーザーのうち、容量エラーで終わったターンが1回以上あった人の割合は、10月19日に6.82%でしたが、11月12日（UTC）には0.085%まで下がっています。この間に入った変更は、デスクトップ版のWebSocket再試行の修正（10/15）、Responses APIが通常の過負荷でも待ち時間（Retry-After）を返す変更（10/22）、サービスティアの過負荷にも再試行時間を付ける変更（10/23）、Codexが再試行・停止の指示を引き継ぐ変更（10/24）、NO_MORE_RETRY時の待ち時間追加（10/30）、WebSocketエラーにも待ち時間を残す変更（11/6）です。\n\nhttps://t.co/uiR8LEMuuB",
+   "referenced": [
+    "2122206990101536852"
+   ],
+   "url": "https://x.com/kazuhiro_jinma/status/2122502528591937902"
+  },
+  {
+   "id": "2122502554483564827",
+   "author": "0xNullDaemon999",
+   "created_at": "2026-11-17T01:30:17Z",
+   "text": "@thsottiaux Petite question : quand “model at capacity” tombe en plein milieu d’une tâche, Codex reprend là où il s’est arrêté ou il faut relancer le run ? C’est surtout ça qui change la vie quand tu le laisses bosser longtemps 😅",
+   "referenced": [
+    "2122206990101536852"
+   ],
+   "url": "https://x.com/0xNullDaemon999/status/2122502554483564827"
+  },
+  {
+   "id": "2122509996101362065",
+   "author": "monkeyin_92",
+   "created_at": "2026-11-17T01:59:52Z",
+   "text": "https://t.co/7Rm0pAdVvF",
+   "referenced": [],
+   "url": "https://x.com/monkeyin_92/status/2122509996101362065"
+  },
+  {
+   "id": "2122513181885243778",
+   "author": "kcharts2026",
+   "created_at": "2026-11-17T02:12:31Z",
+   "text": "@thsottiaux 因为\"model at capacity\" 变成了\"bad request\"，同样会中断自动化运行的目标任务，没什么区别",
+   "referenced": [
+    "2122206990101536852"
+   ],
+   "url": "https://x.com/kcharts2026/status/2122513181885243778"
+  },
+  {
+   "id": "2122531323130888403",
+   "author": "frankvon161340",
+   "created_at": "2026-11-17T03:24:36Z",
+   "text": "@thsottiaux The main problem now is not model at capacity, but the function is too complicated and not pure!",
+   "referenced": [
+    "2122206990101536852"
+   ],
+   "url": "https://x.com/frankvon161340/status/2122531323130888403"
+  },
+  {
+   "id": "2122535994289463321",
+   "author": "JanelleGon75314",
+   "created_at": "2026-11-17T03:43:10Z",
+   "text": "@thsottiaux 还有啊\n\nSelected model is at capacity. Please try a different model.",
+   "referenced": [
+    "2122206990101536852"
+   ],
+   "url": "https://x.com/JanelleGon75314/status/2122535994289463321"
   }
  ]
 }
