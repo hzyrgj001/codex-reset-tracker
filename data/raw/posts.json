@@ -18468,6 +18468,84 @@
     "2122797001465385073"
    ],
    "url": "https://x.com/thsottiaux/status/2122816458711548126"
+  },
+  {
+   "id": "2122838478765334870",
+   "author": "LilithLiJapan",
+   "created_at": "2026-11-17T23:45:08Z",
+   "text": "Codex を使っていて「Selected model is at capacity」と出て困った人は多かったはず。@thsottiaux によると、Codex チームが容量エラーの修正に取り組み、発生がかなり減ったそうです。添付のグラフでは 10 月 15 日から 11 月 12 日にかけて、容量エラーに当たったユーザー数が大きく下がっています。\n\n私も AI コーディングを使うとき、途中で止まるのが一番ストレスでした。エラーが減れば、長時間の作業を AI に任せやすくなりますね。ただ「might have actually fixed」という控えめな言い方なので、様子を見ていきたいです。\n\nhttps://t.co/3iRtq54OkM\n\n#Codex #OpenAI #AI",
+   "referenced": [
+    "2122206990101536852"
+   ],
+   "url": "https://x.com/LilithLiJapan/status/2122838478765334870"
+  },
+  {
+   "id": "2122858588385210649",
+   "author": "LilithLiJapan",
+   "created_at": "2026-11-18T01:05:02Z",
+   "text": "用 Codex 時遇到「Selected model is at capacity」的人應該不少。@thsottiaux 表示，Codex 團隊可能已經修復了困擾大家的容量錯誤問題，附圖顯示 10 月 15 日至 11 月 12 日期間遇到容量錯誤的用戶數大幅下降。\n\n我自己用 AI 寫程式時，最怕的就是做到一半被打斷。如果錯誤真的減少了，把長時間的任務交給 AI 會更安心。不過他用的是「might have actually fixed」，語氣還算保留，值得再觀察一陣子。\n\nhttps://t.co/3iRtq54OkM\n\n#Codex #OpenAI #AI",
+   "referenced": [
+    "2122206990101536852"
+   ],
+   "url": "https://x.com/LilithLiJapan/status/2122858588385210649"
+  },
+  {
+   "id": "2122870525672202437",
+   "author": "o_fabula",
+   "created_at": "2026-11-18T01:52:29Z",
+   "text": "@thsottiaux Just receieved this with Sol 6.2: Selected model is at capacity. Please try a different model.",
+   "referenced": [
+    "2122206990101536852"
+   ],
+   "url": "https://x.com/o_fabula/status/2122870525672202437"
+  },
+  {
+   "id": "2122881988923453644",
+   "author": "JanelleGon75314",
+   "created_at": "2026-11-18T02:38:02Z",
+   "text": "@thsottiaux @pradeepXkapoor Selected model is at capacity. Please try a different model.\n\nptsd……",
+   "referenced": [
+    "2122880282550481388"
+   ],
+   "url": "https://x.com/JanelleGon75314/status/2122881988923453644"
+  },
+  {
+   "id": "2122884974961639432",
+   "author": "JanelleGon75314",
+   "created_at": "2026-11-18T02:49:53Z",
+   "text": "@thsottiaux Selected model is at capacity. Please try a different model.",
+   "referenced": [
+    "2122206990101536852"
+   ],
+   "url": "https://x.com/JanelleGon75314/status/2122884974961639432"
+  },
+  {
+   "id": "2122891208968294400",
+   "author": "thsottiaux",
+   "created_at": "2026-11-18T03:14:40Z",
+   "text": "@JoshPurtell Beauty is in the eye of the beholder, but clearly the models are polarizing. A bit like we had in the early codex days. These models are clearly extremely capable but have a couple of rough edges that we will sand down over time.",
+   "referenced": [
+    "2122852757170213351"
+   ],
+   "url": "https://x.com/thsottiaux/status/2122891208968294400"
+  },
+  {
+   "id": "2122891925447684401",
+   "author": "HTele9",
+   "created_at": "2026-11-18T03:17:31Z",
+   "text": "@thsottiaux Stop pretending this is just a capacity issue. I have evidence that certain users are being routed to GPT-5.6 Luna regardless of their selected model, triggering “Selected model is at capacity” errors. Stop hiding behind vague excuses. Explain this routing behavior publicly. https://t.co/7gFmodBoCt",
+   "referenced": [
+    "2122206990101536852"
+   ],
+   "url": "https://x.com/HTele9/status/2122891925447684401"
+  },
+  {
+   "id": "2122904234592977213",
+   "author": "mickcodez",
+   "created_at": "2026-11-18T04:06:25Z",
+   "text": "@thsottiaux   Codex error event: Codex is at capacity, please try again later (code=turn_rate_limit_exceeded)\n   retry-after-ms=192000\n\nI smell a reset needed",
+   "referenced": [],
+   "url": "https://x.com/mickcodez/status/2122904234592977213"
   }
  ]
 }
