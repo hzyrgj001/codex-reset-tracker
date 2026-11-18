@@ -18546,6 +18546,182 @@
    "text": "@thsottiaux   Codex error event: Codex is at capacity, please try again later (code=turn_rate_limit_exceeded)\n   retry-after-ms=192000\n\nI smell a reset needed",
    "referenced": [],
    "url": "https://x.com/mickcodez/status/2122904234592977213"
+  },
+  {
+   "id": "2122942202431299929",
+   "author": "zhu11377",
+   "created_at": "2026-11-18T06:37:18Z",
+   "text": "@thsottiaux gpt-6.2-astra (launched today) keeps hitting \"model is at capacity\", but Codex shows nothing in the session. It silently waits ~5 min and retries, so it looks hung. 10 times today, once 5x in a row (~30 min). gpt-6-astra: 0 in 2 weeks. Please show capacity errors in the session.",
+   "referenced": [
+    "2122206990101536852"
+   ],
+   "url": "https://x.com/zhu11377/status/2122942202431299929"
+  },
+  {
+   "id": "2122942304994636238",
+   "author": "zhu11377",
+   "created_at": "2026-11-18T06:37:42Z",
+   "text": "@thsottiaux gpt-6.2-astra (launched today) keeps hitting \"model is at capacity\", but Codex shows nothing in the session. It silently waits ~5 min and retries, so it looks hung. 10 times today, once 5x in a row (~30 min). gpt-6-astra: 0 in 2 weeks. Please show capacity errors in the session.",
+   "referenced": [
+    "2122929634916679820"
+   ],
+   "url": "https://x.com/zhu11377/status/2122942304994636238"
+  },
+  {
+   "id": "2122951210408042701",
+   "author": "Trance76362913",
+   "created_at": "2026-11-18T07:13:05Z",
+   "text": "@thsottiaux 为什么我又出现 selected model is at capacity ？",
+   "referenced": [
+    "2122929634916679820"
+   ],
+   "url": "https://x.com/Trance76362913/status/2122951210408042701"
+  },
+  {
+   "id": "2122951274375323713",
+   "author": "lumi_inv",
+   "created_at": "2026-11-18T07:13:20Z",
+   "text": "@thsottiaux Fine with the model, just constantly getting selected model at capacity error",
+   "referenced": [
+    "2122929634916679820"
+   ],
+   "url": "https://x.com/lumi_inv/status/2122951274375323713"
+  },
+  {
+   "id": "2122952786836943338",
+   "author": "2034_SWE",
+   "created_at": "2026-11-18T07:19:21Z",
+   "text": "Lot of \"Selected model is at capacity\" going on with GPT-6.2 Astra/Sol btw\n\n@thsottiaux @OpenAIDevs @romainhuet @ajambrosino https://t.co/pDNRmAHDcx",
+   "referenced": [],
+   "url": "https://x.com/2034_SWE/status/2122952786836943338"
+  },
+  {
+   "id": "2122957631056924692",
+   "author": "wisereborn",
+   "created_at": "2026-11-18T07:38:36Z",
+   "text": "@thsottiaux @mattshumer_ Selected model is at capacity. Please try a different model.\n这个点不是你们夜里吗？",
+   "referenced": [
+    "2122954129094111394"
+   ],
+   "url": "https://x.com/wisereborn/status/2122957631056924692"
+  },
+  {
+   "id": "2122968151042449568",
+   "author": "uinom116818",
+   "created_at": "2026-11-18T08:20:24Z",
+   "text": "@thsottiaux Selected model is at capacity.",
+   "referenced": [
+    "2122929634916679820"
+   ],
+   "url": "https://x.com/uinom116818/status/2122968151042449568"
+  },
+  {
+   "id": "2122968437555351570",
+   "author": "cn00522321",
+   "created_at": "2026-11-18T08:21:33Z",
+   "text": "@thsottiaux `Selected model is at capacity. Please try a different model. `\nwhat the hall？",
+   "referenced": [
+    "2122206990101536852"
+   ],
+   "url": "https://x.com/cn00522321/status/2122968437555351570"
+  },
+  {
+   "id": "2122971213379043338",
+   "author": "Bogorad",
+   "created_at": "2026-11-18T08:32:34Z",
+   "text": "@thsottiaux \"Model at capacity\" is back. https://t.co/chwKQrwLZO",
+   "referenced": [
+    "2122929634916679820"
+   ],
+   "url": "https://x.com/Bogorad/status/2122971213379043338"
+  },
+  {
+   "id": "2122979742408376575",
+   "author": "yishi695897",
+   "created_at": "2026-11-18T09:06:28Z",
+   "text": "@thsottiaux @The_Alex Selected model is at capacity. Please try a different model.",
+   "referenced": [
+    "2122953953851879880"
+   ],
+   "url": "https://x.com/yishi695897/status/2122979742408376575"
+  },
+  {
+   "id": "2122981026293219698",
+   "author": "yishi695897",
+   "created_at": "2026-11-18T09:11:34Z",
+   "text": "@thsottiaux @pradeepXkapoor why 6.2sol/astra “Selected model is at capacity. Please try a different model.”？",
+   "referenced": [
+    "2122880282550481388"
+   ],
+   "url": "https://x.com/yishi695897/status/2122981026293219698"
+  },
+  {
+   "id": "2122981178001220027",
+   "author": "nicogyz",
+   "created_at": "2026-11-18T09:12:10Z",
+   "text": "@thsottiaux Selected model is at capacity. Please try a different model.Selected model is at capacity. Please try a different model.Selected model is at capacity. Please try a different model.",
+   "referenced": [
+    "2122929829863735594"
+   ],
+   "url": "https://x.com/nicogyz/status/2122981178001220027"
+  },
+  {
+   "id": "2122981197798424641",
+   "author": "nicogyz",
+   "created_at": "2026-11-18T09:12:15Z",
+   "text": "@thsottiaux ？？Selected model is at capacity. Please try a different model.",
+   "referenced": [
+    "2122929829863735594"
+   ],
+   "url": "https://x.com/nicogyz/status/2122981197798424641"
+  },
+  {
+   "id": "2122989657784991826",
+   "author": "TaoChen991",
+   "created_at": "2026-11-18T09:45:52Z",
+   "text": "@thsottiaux Selected model is at capacity. Please try a different model.",
+   "referenced": [
+    "2122929634916679820"
+   ],
+   "url": "https://x.com/TaoChen991/status/2122989657784991826"
+  },
+  {
+   "id": "2122993580855918927",
+   "author": "FrostBladeV",
+   "created_at": "2026-11-18T10:01:27Z",
+   "text": "@thsottiaux 6.2 astra always reports selected model is at capacity",
+   "referenced": [
+    "2122929634916679820"
+   ],
+   "url": "https://x.com/FrostBladeV/status/2122993580855918927"
+  },
+  {
+   "id": "2123001797761475031",
+   "author": "CdieumegardX",
+   "created_at": "2026-11-18T10:34:06Z",
+   "text": "Why \"model is at capacity\" still happening, @thsottiaux? Is it due to high demand right now?\n\nGPT-6.2 Sol – UltraFast mode https://t.co/W8Rw7rmGvE",
+   "referenced": [],
+   "url": "https://x.com/CdieumegardX/status/2123001797761475031"
+  },
+  {
+   "id": "2123027425273766137",
+   "author": "Kaushikmaddula7",
+   "created_at": "2026-11-18T12:15:56Z",
+   "text": "@xKaka1456 Same issue for me too 6.2 Sol is mostly at capacity @thsottiaux",
+   "referenced": [
+    "2122967495682437136"
+   ],
+   "url": "https://x.com/Kaushikmaddula7/status/2123027425273766137"
+  },
+  {
+   "id": "2123027993052455336",
+   "author": "haveacoke",
+   "created_at": "2026-11-18T12:18:12Z",
+   "text": "@thsottiaux spoke too soon, release a new model and constant model at capacity errors",
+   "referenced": [
+    "2122206990101536852"
+   ],
+   "url": "https://x.com/haveacoke/status/2123027993052455336"
   }
  ]
 }
