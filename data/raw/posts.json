@@ -18742,6 +18742,46 @@
     "2123113107048501273"
    ],
    "url": "https://x.com/mohit_114/status/2123113386594697227"
+  },
+  {
+   "id": "2123189432576831635",
+   "author": "YunHeSound",
+   "created_at": "2026-11-18T22:59:42Z",
+   "text": "@thsottiaux Just over 10 minutes ago, two of my agents running GPT-6.2 Sol High both hit “model at capacity” errors. Looks like the issue isn’t completely fixed yet. 😅",
+   "referenced": [
+    "2122206990101536852"
+   ],
+   "url": "https://x.com/YunHeSound/status/2123189432576831635"
+  },
+  {
+   "id": "2123206024190689365",
+   "author": "musilo5",
+   "created_at": "2026-11-19T00:05:38Z",
+   "text": "@chetaslua @thsottiaux Selected Tibo is at capacity. Please try a different Person",
+   "referenced": [
+    "2123123525641007134"
+   ],
+   "url": "https://x.com/musilo5/status/2123206024190689365"
+  },
+  {
+   "id": "2123250846188065171",
+   "author": "TaoChen991",
+   "created_at": "2026-11-19T03:03:44Z",
+   "text": "@thsottiaux Selected model is at capacity. Please try a different model.",
+   "referenced": [
+    "2123113107048501273"
+   ],
+   "url": "https://x.com/TaoChen991/status/2123250846188065171"
+  },
+  {
+   "id": "2123251134362181966",
+   "author": "cphongme",
+   "created_at": "2026-11-19T03:04:53Z",
+   "text": "@thsottiaux Selected model is at capacity. Please try a different model.",
+   "referenced": [
+    "2123113107048501273"
+   ],
+   "url": "https://x.com/cphongme/status/2123251134362181966"
   }
  ]
 }
