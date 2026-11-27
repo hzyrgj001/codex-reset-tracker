@@ -19702,6 +19702,46 @@
     "2125784147889393806"
    ],
    "url": "https://x.com/zhang34365069/status/2126141898469556628"
+  },
+  {
+   "id": "2126199097002778829",
+   "author": "RaoKunji",
+   "created_at": "2026-11-27T06:19:02Z",
+   "text": "@thsottiaux Selected model is at capacity",
+   "referenced": [
+    "2110750421367287996"
+   ],
+   "url": "https://x.com/RaoKunji/status/2126199097002778829"
+  },
+  {
+   "id": "2126219595933446485",
+   "author": "ifedorov09",
+   "created_at": "2026-11-27T07:40:29Z",
+   "text": "@thsottiaux Still having this issue unfortunately 😕 I'm on the Business plan ($125/month) using Codex on macOS, and keep getting \"Our servers are currently overloaded\" errors.\n\n\"Select model is at capacity\"... https://t.co/jdc8pKSuil",
+   "referenced": [
+    "2122206990101536852"
+   ],
+   "url": "https://x.com/ifedorov09/status/2126219595933446485"
+  },
+  {
+   "id": "2126241275263558082",
+   "author": "freshteapot",
+   "created_at": "2026-11-27T09:06:38Z",
+   "text": "@jacobtechtavern @thsottiaux It is very very annoying.\n\nThere github issues is littered with it.\nhttps://t.co/0GGFuAIgGy\n\nSome days I collectively have to wait over an hour.\n\"retrying sampling request\" either for 429 or \"Selected model is at capacity\".",
+   "referenced": [
+    "2126238622609227959"
+   ],
+   "url": "https://x.com/freshteapot/status/2126241275263558082"
+  },
+  {
+   "id": "2126278356631171324",
+   "author": "tonykin86962351",
+   "created_at": "2026-11-27T11:33:59Z",
+   "text": "@thsottiaux Selected model is at capacity",
+   "referenced": [
+    "2110750421367287996"
+   ],
+   "url": "https://x.com/tonykin86962351/status/2126278356631171324"
   }
  ]
 }
