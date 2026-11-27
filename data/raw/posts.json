@@ -19742,6 +19742,36 @@
     "2110750421367287996"
    ],
    "url": "https://x.com/tonykin86962351/status/2126278356631171324"
+  },
+  {
+   "id": "2126307697637404924",
+   "author": "AlexFengR",
+   "created_at": "2026-11-27T13:30:34Z",
+   "text": "@thsottiaux @thsottiaux $200 Pro stuck on \"Selected model is at capacity\" (309s-344s retry) across ALL models for 60+ hrs since Nov 24 (62% quota left, 0 429s). Still stalls on a fresh thread after re-login. Feedback ID: 01a21d2c-27da-7a21-9f94-5b081f13ca70 — could team check routing?",
+   "referenced": [
+    "2125853628250599730"
+   ],
+   "url": "https://x.com/AlexFengR/status/2126307697637404924"
+  },
+  {
+   "id": "2126340397999743404",
+   "author": "asdasd_sda83239",
+   "created_at": "2026-11-27T15:40:31Z",
+   "text": "@thsottiaux Selected model is at capacity. Please try a different model.",
+   "referenced": [
+    "2125853628250599730"
+   ],
+   "url": "https://x.com/asdasd_sda83239/status/2126340397999743404"
+  },
+  {
+   "id": "2126384791033720976",
+   "author": "toufumind2333",
+   "created_at": "2026-11-27T18:36:55Z",
+   "text": "@thsottiaux Reconnecting /5 Selected model is at capacity. Please try a different modelReconnecting /5 Selected model is at capacity. Please try a different modelReconnecting /5 Selected model is at capacity. Please try a different modelReconnecting /5 Selected model is at capacity.",
+   "referenced": [
+    "2125299248782778588"
+   ],
+   "url": "https://x.com/toufumind2333/status/2126384791033720976"
   }
  ]
 }
